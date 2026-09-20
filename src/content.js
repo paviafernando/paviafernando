@@ -12,6 +12,8 @@ export const profile = {
   // Change this if the GitHub user name is different.
   github: "paviafernando",
   repo: "paviafernando",
+  // The GitHub link in the footer is hidden until the repository exists and the user name is confirmed.
+  repoPublic: false,
   toptal: {
     profile: "https://talent.toptal.com/resume/developers/fernando-pavia",
     clientReferral: "https://toptal.com/Xp3oYQ/worlds-top-talent",
@@ -91,7 +93,7 @@ export const copy = {
       dark: "Dark",
       language: "Language",
       openMenu: "Choose theme",
-      footer: "Built with React. The source code is on GitHub.",
+      footer: "Built with React.",
       soon: "Details coming soon.",
     },
     toptal: {
@@ -317,7 +319,7 @@ export const copy = {
       dark: "Oscuro",
       language: "Idioma",
       openMenu: "Elegir tema",
-      footer: "Hecho con React. El código está en GitHub.",
+      footer: "Hecho con React.",
       soon: "Más detalles pronto.",
     },
     toptal: {
@@ -543,7 +545,7 @@ export const copy = {
       dark: "Escuro",
       language: "Idioma",
       openMenu: "Escolher tema",
-      footer: "Feito com React. O código está no GitHub.",
+      footer: "Feito com React.",
       soon: "Mais detalhes em breve.",
     },
     toptal: {
