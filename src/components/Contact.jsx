@@ -1,6 +1,7 @@
 import { profile } from "../content.js";
+import ToptalBadge from "./ToptalBadge.jsx";
 
-export default function Contact({ t }) {
+export default function Contact({ t, mode }) {
   return (
     <section className="section contact" id="contact">
       <div className="container section-grid">
@@ -21,8 +22,17 @@ export default function Contact({ t }) {
               {t.ui.cv}
             </button>
           </div>
+          <div className="toptal-block no-print">
+            <p>
+              {t.toptal.clientText}{" "}
+              <a href={profile.toptal.clientReferral} target="_blank" rel="noopener noreferrer">
+                {t.toptal.clientLink}
+              </a>
+            </p>
+            {profile.toptal.showBadge && <ToptalBadge mode={mode} title={t.toptal.badgeTitle} />}
+          </div>
           <p className="print-only">
-            {profile.phoneLabel} | {profile.linkedin}
+            {profile.phoneLabel} | {profile.linkedin} | {profile.toptal.profile}
           </p>
         </div>
       </div>

@@ -78,7 +78,7 @@ if (all.includes("\u2014")) fail("found an em dash in the text");
 
 for (const { code } of mod.languages) {
   const html = mod.render(code);
-  for (const needle of ["Fernando Pavia", "ComercIApp", "DriveProLink", "Translation Portal", "mailto:paviafernando@gmail.com"]) {
+  for (const needle of ["Fernando Pavia", "ComercIApp", "DriveProLink", "Translation Portal", "mailto:paviafernando@gmail.com", "talent.toptal.com/resume/developers/fernando-pavia"]) {
     if (!html.includes(needle)) fail(`${code}: missing "${needle}"`);
   }
   console.log(code, "rendered", html.length, "chars");

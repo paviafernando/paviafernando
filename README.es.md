@@ -2,7 +2,7 @@
 
 <img src="assets/banner.es.svg" alt="Fernando Pavia" width="100%">
 
-![disponible](https://img.shields.io/badge/disponible-part--time%20y%20por%20contrato-2f6b4f?style=flat-square) ![English](https://img.shields.io/badge/English-Cambridge%20C2-1a68ab?style=flat-square) ![timezone](https://img.shields.io/badge/timezone-UTC--3-555555?style=flat-square)
+![disponible](https://img.shields.io/badge/disponible-part--time%20y%20por%20contrato-2f6b4f?style=flat-square) ![English](https://img.shields.io/badge/English-Cambridge%20C2-1a68ab?style=flat-square) ![timezone](https://img.shields.io/badge/timezone-UTC--3-555555?style=flat-square) [![Toptal](https://img.shields.io/badge/Toptal-AI%20engineer-204ecf?style=flat-square)](https://talent.toptal.com/resume/developers/fernando-pavia)
 
 ![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
 
@@ -25,6 +25,8 @@ Tiene cinco temas, modo claro y oscuro, y funciona en inglés, español y portug
 ## Sobre mí
 
 Soy desarrollador senior, de Argentina. Trabajo sobre todo con .NET, Angular y React, y hoy desarrollo con agentes de IA. Soy desarrollador desde 2007.
+
+Soy miembro de Toptal como ingeniero de IA. Toptal dice que acepta al 3% superior de los postulantes. [Ver mi perfil en Toptal](https://talent.toptal.com/resume/developers/fernando-pavia)
 
 **2007 trabajando como desarrollador | 2017 remoto para clientes del exterior | C2 inglés Cambridge**
 

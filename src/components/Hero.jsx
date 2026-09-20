@@ -16,6 +16,12 @@ export default function Hero({ t }) {
           <h1 className="name">{profile.name}</h1>
           <p className="hero-title">{t.hero.title}</p>
           <p className="hero-intro">{t.hero.intro}</p>
+          <p className="toptal-line">
+            {t.toptal.line}{" "}
+            <a href={profile.toptal.profile} target="_blank" rel="noopener noreferrer">
+              {t.toptal.link}
+            </a>
+          </p>
           <div className="cta-row no-print">
             <a className="btn btn-primary" href={`mailto:${profile.email}`}>
               {t.ui.email}

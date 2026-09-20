@@ -120,6 +120,7 @@ function readme(lang) {
       badge(t.badgeLabel, t.badgeMessage, "2f6b4f"),
       badge("English", "Cambridge C2", "1a68ab"),
       badge("timezone", "UTC-3", "555555"),
+      `[${badge("Toptal", "AI engineer", "204ecf")}](${profile.toptal.profile})`,
     ].join(" "),
     ""
   );
@@ -143,6 +144,7 @@ function readme(lang) {
 
   push(`## ${t.about}`, "");
   push(c.hero.intro, "");
+  push(`${c.toptal.line} [${c.toptal.link}](${profile.toptal.profile})`, "");
   push(`**${c.hero.stats.map((s) => `${s.value} ${s.label}`).join(" | ")}**`, "");
 
   push(`### ${t.roles}`, "");

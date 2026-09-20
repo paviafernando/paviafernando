@@ -32,7 +32,7 @@ export default function App() {
         <Experience t={t} lang={prefs.lang} />
         <Skills t={t} />
         <About t={t} />
-        <Contact t={t} />
+        <Contact t={t} mode={prefs.mode} />
       </main>
       <Footer t={t} />
     </>

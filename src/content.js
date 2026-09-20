@@ -12,6 +12,13 @@ export const profile = {
   // Change this if the GitHub user name is different.
   github: "paviafernando",
   repo: "paviafernando",
+  toptal: {
+    profile: "https://talent.toptal.com/resume/developers/fernando-pavia",
+    clientReferral: "https://toptal.com/Xp3oYQ/worlds-top-talent",
+    // The official Toptal badge sends every click to Toptal, not to my own contact.
+    // Keep it off until it is decided. See src/toptalBadge.js.
+    showBadge: false,
+  },
 };
 
 export const languages = [
@@ -86,6 +93,13 @@ export const copy = {
       openMenu: "Choose theme",
       footer: "Built with React. The source code is on GitHub.",
       soon: "Details coming soon.",
+    },
+    toptal: {
+      line: "I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of applicants.",
+      link: "See my Toptal profile",
+      clientText: "If you prefer to hire through Toptal, you can start here.",
+      clientLink: "Hire through Toptal",
+      badgeTitle: "Toptal top 3% talent badge",
     },
     hero: {
       title: "Full-stack developer and technical lead",
@@ -306,6 +320,13 @@ export const copy = {
       footer: "Hecho con React. El código está en GitHub.",
       soon: "Más detalles pronto.",
     },
+    toptal: {
+      line: "Soy miembro de Toptal como ingeniero de IA. Toptal dice que acepta al 3% superior de los postulantes.",
+      link: "Ver mi perfil en Toptal",
+      clientText: "Si preferís contratar a través de Toptal, podés empezar acá.",
+      clientLink: "Contratar por Toptal",
+      badgeTitle: "Insignia Toptal top 3% de talento",
+    },
     hero: {
       title: "Desarrollador full-stack y líder técnico",
       intro:
@@ -524,6 +545,13 @@ export const copy = {
       openMenu: "Escolher tema",
       footer: "Feito com React. O código está no GitHub.",
       soon: "Mais detalhes em breve.",
+    },
+    toptal: {
+      line: "Sou membro da Toptal como engenheiro de IA. A Toptal diz que aceita os 3% melhores candidatos.",
+      link: "Ver meu perfil na Toptal",
+      clientText: "Se preferir contratar pela Toptal, pode começar por aqui.",
+      clientLink: "Contratar pela Toptal",
+      badgeTitle: "Selo Toptal top 3% de talentos",
     },
     hero: {
       title: "Desenvolvedor full-stack e líder técnico",
