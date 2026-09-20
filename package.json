@@ -1,0 +1,29 @@
+{
+  "name": "paviafernando",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Resume and portfolio site of Fernando Pavia. React, no backend.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "readme": "node scripts/build-readme.mjs",
+    "check": "node scripts/check-contrast.mjs && node scripts/smoke-test.mjs"
+  },
+  "dependencies": {
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "@fontsource-variable/inter": "^5.3.0",
+    "@fontsource-variable/jetbrains-mono": "^5.3.0",
+    "@fontsource-variable/manrope": "^5.3.0",
+    "@fontsource-variable/space-grotesk": "^5.3.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^6.1.1",
+    "esbuild": "^0.28.2",
+    "vite": "^8.3.0"
+  }
+}

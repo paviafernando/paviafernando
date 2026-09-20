@@ -1,0 +1,217 @@
+<div align="center">
+
+<img src="assets/banner.pt.svg" alt="Fernando Pavia" width="100%">
+
+![disponível](https://img.shields.io/badge/dispon%C3%ADvel-part--time%20e%20por%20contrato-2f6b4f?style=flat-square) ![English](https://img.shields.io/badge/English-Cambridge%20C2-1a68ab?style=flat-square) ![timezone](https://img.shields.io/badge/timezone-UTC--3-555555?style=flat-square)
+
+![.NET](https://img.shields.io/badge/.NET-512BD4?style=flat-square&logo=dotnet&logoColor=white) ![Angular](https://img.shields.io/badge/Angular-DD0031?style=flat-square&logo=angular&logoColor=white) ![React](https://img.shields.io/badge/React-20232A?style=flat-square&logo=react&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=flat-square&logo=nodedotjs&logoColor=white) ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-336791?style=flat-square&logo=postgresql&logoColor=white) ![Azure](https://img.shields.io/badge/Azure-0078D4?style=flat-square&logo=microsoftazure&logoColor=white)
+
+[English](README.md) | [Español](README.es.md) | **Português**
+
+</div>
+
+## A melhor forma de ler meu CV é o site
+
+Ele tem cinco temas, modo claro e escuro, e funciona em inglês, espanhol e português. Esta página tem o mesmo conteúdo em texto simples.
+
+<div align="center">
+
+[![Visitar o site](https://img.shields.io/badge/Visitar%20o%20site-paviafernando.vercel.app-1a68ab?style=for-the-badge)](https://paviafernando.vercel.app)
+
+</div>
+
+---
+
+## Sobre mim
+
+Sou desenvolvedor sênior, da Argentina. Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA. Sou desenvolvedor desde 2007.
+
+**2007 trabalhando como desenvolvedor | 2017 remoto para clientes do exterior | C2 inglês Cambridge**
+
+### Papéis que tive em projetos
+
+| Papel | Exemplo |
+| --- | --- |
+| **Desenvolvedor**<br><sub>Desde 2007</sub> | Primeiro desktop e web, depois .NET, Angular, React e Node.js. Hoje dirijo agentes de IA que escrevem boa parte do código. |
+| **Administrador de servidores**<br><sub>Janus Automation, GPI</sub> | Na Janus Automation administrei os servidores web e de banco de dados: atualizações, backups e segurança. Na GPI dei suporte aos servidores internos e aos ambientes dos projetos. |
+| **Administrador de banco de dados**<br><sub>Ternium, J.P. Morgan Chase, GPI</sub> | Escrevi e executei scripts SQL corretivos em bancos em produção, primeiro para as aplicações da Ternium e depois no setor bancário. Na GPI trabalhei em incidentes de performance de banco de dados. |
+| **Analista**<br><sub>Globant</sub> | Meu cargo na Globant foi developer analyst, em um projeto para o J.P. Morgan Chase. Análise de requisitos e de negócio fazem parte do meu trabalho diário. |
+| **Gestão de projetos**<br><sub>GPI, Innovate On Demand</sub> | Na GPI trabalhei com o gerente técnico em estimativas, orçamentos e divisão de tarefas para projetos web multilíngues. Como líder técnico, faço estimativas e planejamento de sprints. |
+| **Fundador**<br><sub>ComercIApp</sub> | Comecei o ComercIApp em 2025. Decido o produto, os fluxos e a arquitetura. Também converso direto com os donos de lojas e ajudo a carregar o catálogo. |
+| **Líder técnico**<br><sub>Innovate On Demand</sub> | Líder técnico desde setembro de 2025, em vários projetos de clientes. Cuido da arquitetura, dos deploys e das revisões de código. |
+
+### Como eu trabalho
+
+**Assumo a responsabilidade.** Quando pego um projeto, trato como meu. No DriveProLink cuidei da arquitetura, do deploy e da manutenção. No ComercIApp eu decido o produto, não só o código.
+
+**Busco que todos ganhem.** Antes de decidir algo, tento entender o que o outro lado precisa. No ComercIApp, me ofereço para ajudar os donos de lojas a cadastrar os primeiros produtos, para que não precisem resolver sozinhos. No trabalho com clientes, começo pelas regras de negócio e depois escolho a tecnologia.
+
+**A IA trabalha para mim.** Uso agentes de IA todos os dias: Claude Code, Cursor e a extensão do Claude no Visual Studio. Eu decido a arquitetura, escrevo tarefas claras e reviso o resultado. React e TypeScript são escritos principalmente pelos agentes, sob a minha direção. Assim consigo levar sozinho um produto como o ComercIApp.
+
+## Projetos
+
+**[ComercIApp](https://comerci.app)**
+
+Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequenos comércios da Argentina. Tem um agente de vendas com IA que atende os clientes no WhatsApp. Sou o fundador e cuido do produto, da arquitetura e da entrega.
+
+`.NET 8` `React` `PostgreSQL` `AI agent`
+
+**ComercIApp Academy**
+
+Parte do ComercIApp. Mais detalhes em breve.
+
+`ComercIApp`
+
+**[DriveProLink](https://driveprolink.com)**
+
+Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.
+
+`.NET` `Azure` `React` `Vercel` `PostgreSQL`
+
+**[Translation Portal and GPMS](https://www.translationportal.com)**
+
+O portal de clientes da GPI para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor de traduções e no GPMS.
+
+`Localization` `CMS connectors` `.NET`
+
+**DealerOMG**
+
+Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.
+
+`Node.js`
+
+**LeaseMax**
+
+Cotações de leasing de veículos com o motor de API MARSE, e os relatórios do LeaseMax.
+
+`Vehicle leasing` `Reports`
+
+**Outros projetos.** FlowCraft, um construtor de fluxos de trabalho low-code em Next.js. Um plugin de tradução para o Optimizely CMS 12 em .NET 8. A reengenharia de um projeto Yii (PHP) para Node.js. Apps pequenos para lojas: ponto de venda, delivery, uma loja de bicicletas e faturamento com ARCA/AFIP.
+
+**Setores.** Trabalhei em bancos (J.P. Morgan Chase, por meio da Globant), aço (Ternium), energia (AES), automação industrial, comunicações, saúde, tradução e localização, financiamento automotivo e varejo.
+
+## Experiência
+
+### Innovate On Demand
+
+**Líder técnico e engenheiro .NET sênior** | set 2025 - Atual
+
+*Remoto*
+
+- Trabalhei no DriveProLink desde a primeira versão, com uma equipe. Cuidei da arquitetura, do deploy e da manutenção.
+- Mantenho plataformas para concessionárias escritas em Node.js, como o DealerOMG.
+- Estabilizei um processo de deploy frágil e refatorei aos poucos um produto legado para concessionárias, sem parar a operação em produção.
+- Estimativas, planejamento de sprints e revisões de código. Agentes de IA no desenvolvimento diário.
+
+### ComercIApp
+
+**Fundador e líder de produto** | 2025 - Atual
+
+*Produto próprio*
+
+- Loja online, pedidos pelo WhatsApp e emissão de notas em um só app, feito para donos sem conhecimento técnico.
+- Um agente de vendas com IA atende os clientes no WhatsApp. O app também funciona offline e sincroniza depois.
+- API web em .NET 8, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.
+- Decido o produto, os fluxos e a arquitetura, e uso agentes de IA para programar mais rápido.
+
+### Globalization Partners International
+
+**Desenvolvedor .NET sênior, soluções de globalização** | dez 2017 - jul 2025
+
+*Contratado, 100% remoto, 7,5 anos*
+
+- Trabalhei no Translation Portal, incluindo o redesenho da interface em 2022: dashboard, gráficos e verificações de segurança.
+- Trabalhei no servidor de traduções, que recebe os pacotes de conteúdo para traduzir e os pedidos de orçamento.
+- Trabalhei no GPMS, o sistema interno de gestão de projetos da GPI.
+- Desenvolvi e mantive conectores de tradução para CMS: Sitecore XP e XM Cloud, Optimizely, Umbraco, Strapi e Amplience.
+- Automatizei fluxos de localização entre equipes de tradução, desenvolvedores e editores de CMS.
+- Resolvi incidentes em produção: performance de banco de dados, falhas de integração e patches de segurança.
+- Orçamentos e estimativas com o gerente técnico. Suporte aos servidores internos. Documentação para a certificação ISO.
+
+### Globant, J.P. Morgan Chase
+
+**Developer analyst .NET semi sênior** | mai 2016 - nov 2017
+
+*Setor bancário, no cliente, em um projeto do J.P. Morgan Chase*
+
+- Aplicações web e desktop Windows para operações bancárias.
+- Scripts SQL para processamento de dados, relatórios e manutenção de banco de dados.
+- Revisões de código, testes e deploys.
+
+### Janus Automation
+
+**Desenvolvedor semi sênior** | nov 2013 - mai 2016
+
+*Automação industrial. No primeiro ano, desenvolvedor de suporte na Ternium (aço)*
+
+- Trabalhei em um sistema SCADA com monitoramento em tempo real.
+- Publiquei aplicações web em produção e administrei os servidores web e de banco de dados: atualizações, backups e segurança.
+- Na Ternium: suporte às aplicações, com scripts SQL corretivos em bancos em produção.
+
+### AES Argentina (Infoseek and self-employed)
+
+**Desenvolvedor** | nov 2009 - jun 2013
+
+*Energia. Primeiro por conta própria, depois pela Infoseek*
+
+- Uma aplicação desktop com suporte a RFID, aplicações SharePoint e aplicações web.
+- Correção de aplicações web e bancos de dados em produção.
+
+### Freelance and Eniac Computación
+
+**Desenvolvedor freelance, e trainee na Eniac** | jun 2007 - nov 2009
+
+*Meus primeiros trabalhos*
+
+- Sites para clientes pequenos, com orçamentos e levantamento de requisitos. Parte foi remoto.
+- Suporte no local e depuração na Eniac Computación.
+
+## Habilidades
+
+**O que uso todos os dias.** .NET e C#, ASP.NET Web API e MVC, SQL Server, Angular, JavaScript e TypeScript, HTML e CSS, WordPress, integrações com CMS, fluxos de localização, Azure DevOps e CI/CD, servidores Windows e IIS.
+
+**O que já usei em produção.** Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.
+
+**IA.** Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app.
+
+**Onde sou menos forte.** Minha experiência com AWS (EC2, S3, Lambda) é mais limitada que a que tenho em .NET e Azure. Não montei um sistema RAG grande em produção. Python é uma lacuna. Não escrevo mais React e TypeScript à mão, os agentes fazem isso sob a minha direção. Mobile: só o básico. Não usei Kubernetes.
+
+## Formação e idiomas
+
+- Ensino médio técnico, Informática. Fray Luis Beltrán, 2006-2008
+- Estudos de análise de sistemas. ISFT N°38, 2008-2010
+- Estudos de engenharia de sistemas. UAI Rosario, 2011-2012
+- Curso de AngularJS. Code School, 2016
+
+- Inglês: Cambridge C2 (2015)
+- Espanhol: nativo
+- Português: intermediário
+
+## Contato
+
+Estou disponível para trabalho part-time e por contrato com clientes do exterior. Trabalho de forma assíncrona e estou em UTC-3. Escreva por e-mail ou LinkedIn.
+
+- Email: [paviafernando@gmail.com](mailto:paviafernando@gmail.com)
+- LinkedIn: [linkedin.com/in/paviafernando](https://www.linkedin.com/in/paviafernando)
+- WhatsApp: [+54 9 336 401-3120](https://wa.me/5493364013120)
+
+---
+
+## Sobre este repositório
+
+O site é um app React feito com Vite. Não tem backend. Todo o texto, em três idiomas, está em `src/content.js`. Os README são gerados a partir desse mesmo arquivo.
+
+- Temas: Celeste, Terminal, Editorial, Aurora, Pampa. Cada um tem modo claro e escuro.
+- O botão Baixar CV imprime a página com um layout limpo de CV. Na janela de impressão, escolha Salvar como PDF.
+- Stack do site: React, Vite, CSS. Sem backend nem banco de dados.
+
+### Rodar localmente
+
+```bash
+npm install
+npm run dev
+```
+
+### Deploy
+
+Importe o repositório na Vercel. O preset do Vite funciona sem mudanças.

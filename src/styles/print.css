@@ -1,0 +1,56 @@
+/* "Download CV" prints the page. This makes the print version a clean CV. */
+@media print {
+  :root[data-theme][data-mode] {
+    --bg: #ffffff;
+    --bg-elev: #ffffff;
+    --fg: #111111;
+    --muted: #444444;
+    --border: #cccccc;
+    --border-strong: #999999;
+    --accent: #111111;
+    --accent-fg: #ffffff;
+    --hero-bg: none;
+  }
+  html {
+    font-size: 11px;
+  }
+  body {
+    background: #fff;
+  }
+  .no-print {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  .hero,
+  .section {
+    padding-block: 1.2rem;
+    break-inside: auto;
+  }
+  .role-btn {
+    font-size: 1.2rem;
+    box-shadow: none;
+    padding: 0;
+    color: var(--fg);
+  }
+  .role-print p {
+    font-size: 0.95rem;
+    margin-bottom: 0.4rem;
+  }
+  .roles li {
+    animation: none !important;
+  }
+  .section-title {
+    position: static;
+  }
+  .job,
+  .feature,
+  .row,
+  .how-item {
+    break-inside: avoid;
+  }
+  a {
+    text-decoration: none;
+  }
+}

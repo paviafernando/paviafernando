@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="280" viewBox="0 0 1200 280" role="img" aria-label="Fernando Pavia">
+  <rect width="1200" height="280" rx="18" fill="#0b1b2e"/>
+  <rect x="60" y="64" width="72" height="6" rx="3" fill="#74acdf"/>
+  <rect x="140" y="64" width="24" height="6" rx="3" fill="#f6b40e"/>
+  <text x="60" y="152" font-family="Manrope, Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="78" font-weight="800" fill="#eaf2fa" letter-spacing="-2">Fernando Pavia</text>
+  <text x="62" y="205" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="30" fill="#9fb3c8">Desenvolvedor full-stack e líder técnico</text>
+  <text x="62" y="245" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="20" fill="#74acdf">.NET   Angular   React   Node.js   AI agents</text>
+</svg>
