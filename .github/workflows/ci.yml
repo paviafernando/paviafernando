@@ -5,6 +5,7 @@
 #       develop  -> staging     (alias paviafernando-staging.vercel.app)
 #       others   -> preview     (one URL per deploy, shown in the job summary and in the pull request)
 # Setup (secrets, first run): docs/DEPLOYMENT.md
+# Verified end to end (branch, develop, main) on 2026-09-21.
 name: CI and deploy
 
 on:
