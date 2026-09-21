@@ -1,6 +1,10 @@
 // Serverless function (Vercel). Receives a "Book a call" request from the
-// BookCall widget, verifies the captcha, and emails Fernando with the
-// visitor's contact info plus invisible metadata (IP, geo, user agent).
+// BookCall widget, verifies the captcha, creates the event on Fernando's
+// real Google Calendar (with a Meet link) when that's configured, and
+// always emails Fernando with the visitor's contact info plus invisible
+// metadata (IP, geo, user agent).
+
+import { insertEvent } from "./_lib/google.js";
 
 const TURNSTILE_VERIFY_URL = "https://challenges.cloudflare.com/turnstile/v0/siteverify";
 const RESEND_URL = "https://api.resend.com/emails";
@@ -60,6 +64,7 @@ export default async function handler(req, res) {
   const tz = clean(body?.tz, 60) || "unknown";
   const slotLocal = clean(body?.slotLocal, 120);
   const slotArt = clean(body?.slotArt, 60);
+  const slotUtc = typeof body?.slotUtc === "string" ? new Date(body.slotUtc) : null;
 
   const hasEmail = email && isValidEmail(email);
   const hasPhone = phone && isValidPhone(phone);
@@ -96,6 +101,35 @@ export default async function handler(req, res) {
   const userAgent = clean(req.headers["user-agent"], 300) || "unknown";
   const when = new Date().toISOString();
 
+  // Create the real calendar event (with a Meet link) if Google is set up.
+  // Falls back to email-only if not configured yet or if the call fails,
+  // so the form still works while that setup is pending.
+  let meetLink = null;
+  let calendarError = null;
+  const calendarId = process.env.GOOGLE_CALENDAR_ID;
+  if (calendarId && slotUtc && !Number.isNaN(slotUtc.getTime())) {
+    try {
+      const end = new Date(slotUtc.getTime() + 30 * 60000);
+      const attendees = hasEmail ? [{ email }] : [];
+      const event = await insertEvent(calendarId, {
+        summary: `Call with ${name}`,
+        description: [`Booked from paviafernando.vercel.app`, phone ? `Phone: ${phone}` : null]
+          .filter(Boolean)
+          .join("\n"),
+        start: { dateTime: slotUtc.toISOString() },
+        end: { dateTime: end.toISOString() },
+        attendees,
+        conferenceData: {
+          createRequest: { requestId: `${when}-${Math.random().toString(36).slice(2)}` },
+        },
+      });
+      meetLink = event.hangoutLink || null;
+    } catch (err) {
+      calendarError = err.message;
+      console.error("Calendar insert error", err);
+    }
+  }
+
   const lines = [
     `Name: ${name}`,
     email ? `Email: ${email}` : null,
@@ -104,6 +138,8 @@ export default async function handler(req, res) {
     `Requested slot: ${slotLocal}`,
     `Argentina time: ${slotArt}`,
     `Site language: ${lang}`,
+    meetLink ? `\nAdded to your calendar. Meet link: ${meetLink}` : null,
+    calendarError ? `\nCalendar event NOT created automatically (${calendarError}). Add it by hand.` : null,
     "",
     "--- metadata (not shown to the visitor) ---",
     `IP: ${ip}`,
@@ -139,5 +175,5 @@ export default async function handler(req, res) {
     return;
   }
 
-  res.status(200).json({ ok: true });
+  res.status(200).json({ ok: true, instant: !!meetLink });
 }

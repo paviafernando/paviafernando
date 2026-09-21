@@ -99,9 +99,9 @@ function Turnstile({ onToken }) {
 export default function BookCall({ t, lang }) {
   const locale = LOCALES[lang] || "en-US";
   const tz = useMemo(() => Intl.DateTimeFormat().resolvedOptions().timeZone, []);
-  const days = useMemo(() => nextBusinessDays(6), []);
+  const fallbackDays = useMemo(() => nextBusinessDays(6), []);
+  const [remoteDays, setRemoteDays] = useState(null); // null while loading / on fetch failure
   const [dayIdx, setDayIdx] = useState(0);
-  const slots = useMemo(() => slotsForDay(days[dayIdx]), [days, dayIdx]);
   const book = t.contact.book;
 
   const [selected, setSelected] = useState(null);
@@ -109,7 +109,35 @@ export default function BookCall({ t, lang }) {
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [token, setToken] = useState("");
-  const [status, setStatus] = useState("idle"); // idle | sending | done | error | invalid
+  const [status, setStatus] = useState("idle"); // idle | sending | done | doneInstant | error | invalid
+
+  const days = remoteDays || fallbackDays;
+  const slots = useMemo(() => {
+    const day = days[dayIdx];
+    if (remoteDays) return (day.slots || []).map((iso) => new Date(iso));
+    return slotsForDay(day);
+  }, [days, dayIdx, remoteDays]);
+
+  // Real availability from Fernando's calendar, once it loads, replaces the
+  // fixed-window guess. Falls back silently to the fixed windows if this
+  // isn't configured yet or the request fails.
+  useEffect(() => {
+    let cancelled = false;
+    fetch("/api/availability")
+      .then((r) => (r.ok ? r.json() : null))
+      .then((data) => {
+        if (!cancelled && data?.days) {
+          setRemoteDays(data.days);
+          setSelected(null);
+        }
+      })
+      .catch(() => {
+        /* keep the fallback fixed-window slots */
+      });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const dayLabel = (day) => {
     const noon = new Date(Date.UTC(day.y, day.m, day.d, 12));
@@ -164,7 +192,8 @@ export default function BookCall({ t, lang }) {
         }),
       });
       if (!res.ok) throw new Error("bad response");
-      setStatus("done");
+      const data = await res.json();
+      setStatus(data?.instant ? "doneInstant" : "done");
     } catch {
       setStatus("error");
     }
@@ -192,23 +221,27 @@ export default function BookCall({ t, lang }) {
           </button>
         ))}
       </div>
-      <ul className="book-slots">
-        {slots.map((slot, i) => (
-          <li key={i}>
-            <button
-              type="button"
-              className="book-slot"
-              aria-pressed={selected?.getTime() === slot.getTime()}
-              onClick={() => pickSlot(slot)}
-            >
-              <span className="book-slot-local">{timeLabel(slot)}</span>
-              <span className="book-slot-art">{artTimeLabel(slot)} ART</span>
-            </button>
-          </li>
-        ))}
-      </ul>
+      {slots.length > 0 ? (
+        <ul className="book-slots">
+          {slots.map((slot, i) => (
+            <li key={i}>
+              <button
+                type="button"
+                className="book-slot"
+                aria-pressed={selected?.getTime() === slot.getTime()}
+                onClick={() => pickSlot(slot)}
+              >
+                <span className="book-slot-local">{timeLabel(slot)}</span>
+                <span className="book-slot-art">{artTimeLabel(slot)} ART</span>
+              </button>
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <p className="book-no-slots">{book.noSlots}</p>
+      )}
 
-      {selected && status !== "done" && (
+      {selected && status !== "done" && status !== "doneInstant" && (
         <form className="book-form" onSubmit={submit}>
           <p className="book-form-slot">{book.requestLabel}: {timeLabel(selected)} ({artTimeLabel(selected)} ART)</p>
           <input
@@ -247,6 +280,7 @@ export default function BookCall({ t, lang }) {
         </form>
       )}
       {status === "done" && <p className="book-success">{book.success}</p>}
+      {status === "doneInstant" && <p className="book-success">{book.successInstant}</p>}
     </div>
   );
 }

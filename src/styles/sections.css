@@ -677,6 +677,11 @@
 .book-captcha {
   min-height: 65px;
 }
+.book-no-slots {
+  margin-top: 0.9rem;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
 .site-footer {
   padding-block: 2rem;
