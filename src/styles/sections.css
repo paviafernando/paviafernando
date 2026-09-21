@@ -601,13 +601,25 @@
   border: 1px solid var(--border-strong);
   border-radius: var(--radius-sm);
   padding: 0.5rem 0.4rem;
+  background: none;
+  font: inherit;
   text-decoration: none;
   color: var(--fg);
+  cursor: pointer;
 }
 .book-slot:hover,
 .book-slot:focus-visible {
   border-color: var(--accent);
   color: var(--accent);
+}
+.book-slot[aria-pressed="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+.book-slot[aria-pressed="true"] .book-slot-art {
+  color: inherit;
+  opacity: 0.85;
 }
 .book-slot-local {
   font-weight: 600;
@@ -616,6 +628,54 @@
 .book-slot-art {
   font-size: 0.72rem;
   color: var(--muted);
+}
+.book-form {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-strong);
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-width: 26rem;
+}
+.book-form-slot {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.book-form input {
+  width: 100%;
+  padding: 0.55rem 0.7rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--bg);
+  color: var(--fg);
+  font: inherit;
+}
+.book-form-row {
+  display: flex;
+  gap: 0.6rem;
+}
+.book-form-row input {
+  flex: 1;
+  min-width: 0;
+}
+.book-form-hint {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: -0.3rem;
+}
+.book-form-error {
+  font-size: 0.85rem;
+  color: var(--accent);
+}
+.book-success {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px dashed var(--border-strong);
+  font-weight: 600;
+}
+.book-captcha {
+  min-height: 65px;
 }
 
 .site-footer {
