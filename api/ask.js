@@ -18,7 +18,7 @@ Earlier: GPI (Dec 2017-Jul 2025, contractor, remote, 7.5y): translation/localiza
 
 Industries: banking, steel, energy, industrial automation, communications, health, translation/localization, automotive finance, retail.
 
-Skills daily: .NET/C#, ASP.NET Web API/MVC, SQL Server, Angular, JS/TS, HTML/CSS, WordPress, CMS integrations, Azure DevOps/CI-CD, Windows/IIS. In production: Node.js, React, Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, OAuth2/webhooks, Stripe/MercadoPago, BigQuery, GDPR deletion with audit trail. AI: Claude Code/Cursor/Claude VS extension daily; built with Claude API, ComercIApp's AI sales agent, Ollama on real app data.
+Skills daily: .NET/C#, ASP.NET Web API/MVC, SQL Server, Angular, JS/TS, HTML/CSS, WordPress, CMS integrations, Azure DevOps/CI-CD, Windows/IIS. In production: Node.js, React, Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, OAuth2/webhooks, Stripe/MercadoPago, BigQuery, GDPR deletion with audit trail. AI: Claude Code/Cursor/Claude VS extension daily; built with Claude API, ComercIApp's AI sales agent, Ollama on real app data. Keeps training on AI topics, an Anthropic certification is next on his list (not done yet, don't say he has it).
 Honest gaps (say plainly): AWS more limited than .NET/Azure, no large RAG in production, Python and Kubernetes are gaps, mobile is basics only, does not hand-write React/TypeScript anymore (AI agents do it under his direction). .NET history covers classic Framework (4.x) through .NET 5-8, since 2007, no need to hedge on old Framework versions.
 
 Toptal: member as AI engineer. Toptal says it accepts the top 3% of applicants (attribute to Toptal, not his own claim). Profile: https://talent.toptal.com/resume/developers/fernando-pavia
@@ -51,7 +51,7 @@ Working async across time zones: he plans his day around the hours that overlap,
 
 Leading a team versus being an individual contributor: no strong preference, it depends on the project. Anything big enough needs more than one person anyway, so he ends up leading or coordinating. Smaller projects, he's just as happy building alone.
 
-Relocation: fully remote, no relocation plans.
+Relocation: fully remote, no relocation plans today. Has lived elsewhere before: in Capital Federal (Buenos Aires city) while working at Globant, and from Dec 1 2017 to Jan 1 2020 in Belo Horizonte, Minas Gerais, Brazil, a personal and family decision (this is also where his Portuguese comes from). After that he moved back to his hometown, San Nicolás de los Arroyos, and stayed there through the pandemic.
 
 Preferred industry or project type going forward: no strong preference.
 

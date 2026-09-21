@@ -121,7 +121,7 @@ export const roleIds = ["dev", "server", "db", "analyst", "pm", "founder", "lead
 export const copy = {
   // ---------------------------------------------------------------- English
   en: {
-    meta: { htmlLang: "en", title: "Fernando Pavia | Full-stack developer and technical lead" },
+    meta: { htmlLang: "en", title: "Fernando Pavia | Full-stack developer and AI agent engineer" },
     ui: {
       nav: { work: "Work", experience: "Experience", skills: "Skills", contact: "Contact" },
       skip: "Skip to content",
@@ -147,7 +147,7 @@ export const copy = {
       badgeTitle: "Toptal top 3% talent badge",
     },
     hero: {
-      title: "Full-stack developer and technical lead",
+      title: "Full-stack developer and AI agent engineer",
       intro:
         "I'm a senior developer from Argentina. I work mostly with .NET, Angular and React, and today I build with AI agents. I've been a developer since 2007.",
       stats: [
@@ -349,7 +349,7 @@ export const copy = {
         },
         {
           title: "AI",
-          text: "I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data.",
+          text: "I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.",
         },
         {
           title: "Where I'm less strong",
@@ -398,7 +398,7 @@ export const copy = {
 
   // ---------------------------------------------------------------- Español
   es: {
-    meta: { htmlLang: "es", title: "Fernando Pavia | Desarrollador full-stack y líder técnico" },
+    meta: { htmlLang: "es", title: "Fernando Pavia | Desarrollador full-stack e ingeniero de agentes de IA" },
     ui: {
       nav: { work: "Proyectos", experience: "Experiencia", skills: "Habilidades", contact: "Contacto" },
       skip: "Saltar al contenido",
@@ -424,7 +424,7 @@ export const copy = {
       badgeTitle: "Insignia Toptal top 3% de talento",
     },
     hero: {
-      title: "Desarrollador full-stack y líder técnico",
+      title: "Desarrollador full-stack e ingeniero de agentes de IA",
       intro:
         "Soy desarrollador senior, de Argentina. Trabajo sobre todo con .NET, Angular y React, y hoy desarrollo con agentes de IA. Soy desarrollador desde 2007.",
       stats: [
@@ -626,7 +626,7 @@ export const copy = {
         },
         {
           title: "IA",
-          text: "Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app.",
+          text: "Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app. Sigo capacitándome en esto, y una certificación de Anthropic es lo próximo en mi lista.",
         },
         {
           title: "Donde soy menos fuerte",
@@ -675,7 +675,7 @@ export const copy = {
 
   // -------------------------------------------------------------- Português
   pt: {
-    meta: { htmlLang: "pt", title: "Fernando Pavia | Desenvolvedor full-stack e líder técnico" },
+    meta: { htmlLang: "pt", title: "Fernando Pavia | Desenvolvedor full-stack e engenheiro de agentes de IA" },
     ui: {
       nav: { work: "Projetos", experience: "Experiência", skills: "Habilidades", contact: "Contato" },
       skip: "Ir para o conteúdo",
@@ -701,7 +701,7 @@ export const copy = {
       badgeTitle: "Selo Toptal top 3% de talentos",
     },
     hero: {
-      title: "Desenvolvedor full-stack e líder técnico",
+      title: "Desenvolvedor full-stack e engenheiro de agentes de IA",
       intro:
         "Sou desenvolvedor sênior, da Argentina. Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA. Sou desenvolvedor desde 2007.",
       stats: [
@@ -903,7 +903,7 @@ export const copy = {
         },
         {
           title: "IA",
-          text: "Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app.",
+          text: "Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app. Continuo me capacitando nisso, e uma certificação da Anthropic é o próximo passo.",
         },
         {
           title: "Onde sou menos forte",
