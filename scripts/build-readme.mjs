@@ -151,7 +151,7 @@ function readme(lang) {
   push(`| ${t.role} | ${t.example} |`, "| --- | --- |");
   for (const id of roleIds) {
     const r = c.roles[id];
-    push(`| **${esc(r.name)}**<br><sub>${esc(r.where)}</sub> | ${esc(r.text)} |`);
+    push(`| **${esc(r.name)}** | ${esc(r.text)} |`);
   }
   push("");
 

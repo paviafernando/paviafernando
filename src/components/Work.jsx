@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { projects } from "../content.js";
 
 function host(url) {
@@ -27,9 +28,25 @@ function Name({ p }) {
   );
 }
 
+function Details({ t, p, open, onToggle }) {
+  const text = t.work.details?.[p.id];
+  if (!text) return null;
+  return (
+    <div className="details no-print">
+      <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
+        {open ? t.work.hideLabel : t.work.detailsLabel}
+      </button>
+      {open && <p className="details-text">{text}</p>}
+    </div>
+  );
+}
+
 export default function Work({ t }) {
   const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
+  const [openId, setOpenId] = useState(null);
+  const toggle = (id) => setOpenId((cur) => (cur === id ? null : id));
+
   return (
     <section className="section" id="work">
       <div className="container section-grid">
@@ -48,6 +65,7 @@ export default function Work({ t }) {
                 <p>{t.work.items[p.id]}</p>
                 {!p.url && <p className="soon">{t.ui.soon}</p>}
                 <Tags tags={p.tags} />
+                <Details t={t} p={p} open={openId === p.id} onToggle={() => toggle(p.id)} />
               </article>
             ))}
           </div>
@@ -63,6 +81,7 @@ export default function Work({ t }) {
                 </div>
                 <p>{t.work.items[p.id]}</p>
                 <Tags tags={p.tags} />
+                <Details t={t} p={p} open={openId === p.id} onToggle={() => toggle(p.id)} />
               </li>
             ))}
           </ul>
@@ -75,6 +94,11 @@ export default function Work({ t }) {
           <div className="more">
             <h3>{t.work.industriesTitle}</h3>
             <p>{t.work.industries}</p>
+          </div>
+
+          <div className="more">
+            <h3>{t.work.exploringTitle}</h3>
+            <p>{t.work.exploring}</p>
           </div>
         </div>
       </div>

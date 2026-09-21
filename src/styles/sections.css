@@ -301,13 +301,7 @@
   border: 1px solid var(--border);
   border-radius: var(--radius);
 }
-.role-where {
-  color: var(--accent);
-  font-weight: 700;
-  font-size: 0.95rem;
-}
 .role-text {
-  margin-top: 0.4rem;
   max-width: 34rem;
 }
 .roles-hint {
@@ -416,6 +410,28 @@
   border-radius: 999px;
   font-size: 0.82rem;
   color: var(--muted);
+}
+.details {
+  margin-top: 0.9rem;
+}
+.details-toggle {
+  border: none;
+  background: none;
+  padding: 0;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent);
+  cursor: pointer;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+.details-text {
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px dashed var(--border-strong);
+  color: var(--muted);
+  font-size: 0.92rem;
 }
 .rows {
   margin-top: 2rem;
@@ -528,6 +544,78 @@
   font-size: clamp(1.5rem, 4.4vw, 3rem);
   overflow-wrap: anywhere;
   text-decoration-thickness: 2px;
+}
+
+.book-call {
+  margin-top: 2rem;
+  padding: 1.25rem 1.4rem;
+  background: var(--bg-elev);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  max-width: 34rem;
+}
+.book-call h3 {
+  font-size: 1.15rem;
+}
+.book-intro {
+  margin-top: 0.35rem;
+  color: var(--muted);
+}
+.book-tz {
+  margin-top: 0.35rem;
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+.book-days {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-top: 1rem;
+}
+.book-day {
+  border: 1px solid var(--border-strong);
+  background: none;
+  color: var(--fg);
+  border-radius: var(--radius-sm);
+  padding: 0.35rem 0.65rem;
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+.book-day[aria-selected="true"] {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--accent-fg);
+}
+.book-slots {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(6.5rem, 1fr));
+  gap: 0.5rem;
+  margin-top: 0.9rem;
+}
+.book-slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.1rem;
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 0.5rem 0.4rem;
+  text-decoration: none;
+  color: var(--fg);
+}
+.book-slot:hover,
+.book-slot:focus-visible {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+.book-slot-local {
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.book-slot-art {
+  font-size: 0.72rem;
+  color: var(--muted);
 }
 
 .site-footer {

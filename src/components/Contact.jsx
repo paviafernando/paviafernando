@@ -1,7 +1,8 @@
 import { profile } from "../content.js";
 import ToptalBadge from "./ToptalBadge.jsx";
+import BookCall from "./BookCall.jsx";
 
-export default function Contact({ t, mode }) {
+export default function Contact({ t, mode, lang }) {
   return (
     <section className="section contact" id="contact">
       <div className="container section-grid">
@@ -22,6 +23,7 @@ export default function Contact({ t, mode }) {
               {t.ui.cv}
             </button>
           </div>
+          <BookCall t={t} lang={lang} />
           <div className="toptal-block no-print">
             <p>
               {t.toptal.clientText}{" "}

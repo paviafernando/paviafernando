@@ -34,21 +34,21 @@ I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of a
 
 | Role | Example |
 | --- | --- |
-| **Developer**<br><sub>Since 2007</sub> | Desktop and web at first, then .NET, Angular, React and Node.js. Today I direct AI agents that write a good part of the code. |
-| **Server admin**<br><sub>Janus Automation, GPI</sub> | At Janus Automation I managed the web and database servers: updates, backups and security. At GPI I supported the internal servers and the project environments. |
-| **Database admin**<br><sub>Ternium, J.P. Morgan Chase, GPI</sub> | I've written and run corrective SQL scripts on live databases, first for Ternium's applications and later in banking. At GPI I worked on database performance incidents. |
-| **Analyst**<br><sub>Globant</sub> | My title at Globant was developer analyst, on a project for J.P. Morgan Chase. Requirements and business analysis are part of my daily work. |
-| **Project manager**<br><sub>GPI, Innovate On Demand</sub> | At GPI I worked with the technical manager on estimates, quotes and task breakdowns for multilingual web projects. As technical lead I do estimation and sprint planning. |
-| **Founder**<br><sub>ComercIApp</sub> | I started ComercIApp in 2025. I decide the product, the flows and the architecture. I also talk to shop owners directly and help them load their catalog. |
-| **Technical lead**<br><sub>Innovate On Demand</sub> | Technical lead since September 2025, across several client projects. I take care of architecture, deploys and code reviews. |
+| **Developer** | I build desktop and web software. Started with .NET, moved through Angular, React and Node.js. Today I also direct AI agents that write a good part of the code. |
+| **Server admin** | I manage web and database servers: updates, backups, security and the environments a project runs on. |
+| **Database admin** | I write and run SQL directly on production databases, and work through the performance and data issues that come up in a live system. |
+| **Analyst** | I turn business needs into requirements a team can actually build from, before picking any technology. |
+| **Project manager** | I estimate, break work into tasks and plan sprints, from a single feature to a full project. |
+| **Founder** | I own a product end to end: what gets built, how it works for the people using it, and the technology behind it. |
+| **Technical lead** | I own architecture decisions, review code and keep deploys under control for a team. |
 
 ### How I work
 
-**I take ownership.** When I take a project, I treat it as mine. On a vehicle finance and lease platform I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.
+**I take ownership.** When I take a project, I treat it as mine: architecture, deploy and maintenance, not only the part of the code I was asked to write.
 
-**I look for a win-win.** Before I decide something, I try to understand what the other side needs. With ComercIApp, I offer to help shop owners load their first products, so they don't have to figure it out alone. In client work, I start with the business rules and then choose the technology.
+**I look for a win-win.** Before I decide something, I try to understand what the other side actually needs. I start from the business rules, then choose the technology.
 
-**AI works for me.** I use AI agents every day: Claude Code, Cursor and the Claude extension in Visual Studio. I decide the architecture, write clear tasks and review the result. React and TypeScript are written mostly by the agents under my direction. That's how I can carry a product like ComercIApp on my own.
+**AI works for me.** I use AI agents every day: Claude Code, Cursor and the Claude extension in Visual Studio. I decide the architecture, write clear tasks and review the result. React and TypeScript are written mostly by the agents under my direction.
 
 ## Work
 
@@ -62,7 +62,7 @@ Online store, WhatsApp orders and invoicing in one app for small shops in Argent
 
 Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finances and the AI features. I built it to help them get real value from the app, not just click through it.
 
-`ComercIApp` `Education`
+`ComercIApp` `Next.js` `WordPress (headless)`
 
 **Vehicle finance and lease platform**
 

@@ -65,7 +65,7 @@ export const timeline = [
 
 export const projects = [
   { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true, screenshot: "/screenshots/comerciapp.png" },
-  { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Education"], featured: true, screenshot: "/screenshots/academy.png" },
+  { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Next.js", "WordPress (headless)"], featured: true, screenshot: "/screenshots/academy.png" },
   { id: "driveprolink", name: "Vehicle finance and lease platform", url: null, tags: [".NET", "Azure", "React", "PostgreSQL"] },
   { id: "portal", name: "Translation and localization portal", url: null, tags: ["Localization", "CMS connectors", ".NET"] },
   { id: "dealeromg", name: "Dealer management platform", url: null, tags: ["Node.js"] },
@@ -112,43 +112,36 @@ export const copy = {
         { value: "C2", label: "Cambridge English" },
       ],
       rolesTitle: "Roles I've had in projects",
-      rolesHint: "Choose one to see a real example.",
+      rolesHint: "Choose one to read more.",
     },
     roles: {
       dev: {
         name: "Developer",
-        where: "Since 2007",
-        text: "Desktop and web at first, then .NET, Angular, React and Node.js. Today I direct AI agents that write a good part of the code.",
+        text: "I build desktop and web software. Started with .NET, moved through Angular, React and Node.js. Today I also direct AI agents that write a good part of the code.",
       },
       server: {
         name: "Server admin",
-        where: "Janus Automation, GPI",
-        text: "At Janus Automation I managed the web and database servers: updates, backups and security. At GPI I supported the internal servers and the project environments.",
+        text: "I manage web and database servers: updates, backups, security and the environments a project runs on.",
       },
       db: {
         name: "Database admin",
-        where: "Ternium, J.P. Morgan Chase, GPI",
-        text: "I've written and run corrective SQL scripts on live databases, first for Ternium's applications and later in banking. At GPI I worked on database performance incidents.",
+        text: "I write and run SQL directly on production databases, and work through the performance and data issues that come up in a live system.",
       },
       analyst: {
         name: "Analyst",
-        where: "Globant",
-        text: "My title at Globant was developer analyst, on a project for J.P. Morgan Chase. Requirements and business analysis are part of my daily work.",
+        text: "I turn business needs into requirements a team can actually build from, before picking any technology.",
       },
       pm: {
         name: "Project manager",
-        where: "GPI, Innovate On Demand",
-        text: "At GPI I worked with the technical manager on estimates, quotes and task breakdowns for multilingual web projects. As technical lead I do estimation and sprint planning.",
+        text: "I estimate, break work into tasks and plan sprints, from a single feature to a full project.",
       },
       founder: {
         name: "Founder",
-        where: "ComercIApp",
-        text: "I started ComercIApp in 2025. I decide the product, the flows and the architecture. I also talk to shop owners directly and help them load their catalog.",
+        text: "I own a product end to end: what gets built, how it works for the people using it, and the technology behind it.",
       },
       lead: {
         name: "Technical lead",
-        where: "Innovate On Demand",
-        text: "Technical lead since September 2025, across several client projects. I take care of architecture, deploys and code reviews.",
+        text: "I own architecture decisions, review code and keep deploys under control for a team.",
       },
     },
     how: {
@@ -156,15 +149,15 @@ export const copy = {
       items: [
         {
           title: "I take ownership",
-          text: "When I take a project, I treat it as mine. On a vehicle finance and lease platform I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.",
+          text: "When I take a project, I treat it as mine: architecture, deploy and maintenance, not only the part of the code I was asked to write.",
         },
         {
           title: "I look for a win-win",
-          text: "Before I decide something, I try to understand what the other side needs. With ComercIApp, I offer to help shop owners load their first products, so they don't have to figure it out alone. In client work, I start with the business rules and then choose the technology.",
+          text: "Before I decide something, I try to understand what the other side actually needs. I start from the business rules, then choose the technology.",
         },
         {
           title: "AI works for me",
-          text: "I use AI agents every day: Claude Code, Cursor and the Claude extension in Visual Studio. I decide the architecture, write clear tasks and review the result. React and TypeScript are written mostly by the agents under my direction. That's how I can carry a product like ComercIApp on my own.",
+          text: "I use AI agents every day: Claude Code, Cursor and the Claude extension in Visual Studio. I decide the architecture, write clear tasks and review the result. React and TypeScript are written mostly by the agents under my direction.",
         },
       ],
     },
@@ -185,9 +178,26 @@ export const copy = {
         dealeromg: "Client product, name not public. A dealer management platform written in Node.js. I maintain it at Innovate On Demand.",
         leasemax: "Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.",
       },
+      detailsLabel: "Tech details",
+      hideLabel: "Hide details",
+      details: {
+        comerciapp:
+          "Architecture: multi-tenant, each shop's data is isolated from the others. Offline-first on the shop floor, syncs automatically when the connection comes back. Payments with Stripe and MercadoPago, WhatsApp for orders, an AI sales agent built with the Claude API, and GDPR-style data deletion with an audit trail.",
+        academy:
+          "Next.js and React on the frontend. Content comes from a headless WordPress: PHP and MySQL behind the API, Next.js fetches and renders the tutorials and the search.",
+        driveprolink:
+          "Patterns: server-side rate and quote calculations, integrations with external finance and leasing rate providers. React frontend, .NET backend, deployed on Vercel.",
+        portal:
+          "Patterns: role-based access per client account, CMS connectors that push translated content back automatically. .NET backend, dashboard charts for spend and turnaround time.",
+        dealeromg: "Node.js services. Incremental refactors of a legacy codebase without stopping live operations.",
+        leasemax: "A calculation engine for lease quotes, plus a reporting layer for the sales team.",
+      },
       industriesTitle: "Industries",
       industries:
         "I've worked in banking (J.P. Morgan Chase, through Globant), steel (Ternium), energy (AES), industrial automation, communications, health, translation and localization, automotive finance and retail.",
+      exploringTitle: "What's next",
+      exploring:
+        "I'm building new AI-agent products right now. Too early to share details, I'll post them here once they're live.",
     },
     experience: {
       title: "Experience",
@@ -299,6 +309,14 @@ export const copy = {
     contact: {
       title: "Contact",
       text: "I'm open to part-time and contract work with international clients. I work async and I'm based in UTC-3. Write to me by email or LinkedIn.",
+      book: {
+        title: "Book a 30 min call",
+        intro: "Pick a slot that works for you. I'll confirm by email, usually within a day.",
+        timezoneNote: "Times shown in your time zone ({tz}). I'm based in Argentina (UTC-3).",
+        requestLabel: "Request this time",
+        subject: "30 min call request",
+        bodyIntro: "Hi Fernando, I'd like to book a 30 min call at:",
+      },
     },
   },
 
@@ -339,43 +357,36 @@ export const copy = {
         { value: "C2", label: "inglés Cambridge" },
       ],
       rolesTitle: "Roles que tuve en proyectos",
-      rolesHint: "Elegí uno para ver un ejemplo real.",
+      rolesHint: "Elegí uno para leer más.",
     },
     roles: {
       dev: {
         name: "Desarrollador",
-        where: "Desde 2007",
-        text: "Primero escritorio y web, después .NET, Angular, React y Node.js. Hoy dirijo agentes de IA que escriben buena parte del código.",
+        text: "Construyo software de escritorio y web. Empecé con .NET, después Angular, React y Node.js. Hoy también dirijo agentes de IA que escriben buena parte del código.",
       },
       server: {
         name: "Administrador de servidores",
-        where: "Janus Automation, GPI",
-        text: "En Janus Automation administré los servidores web y de bases de datos: actualizaciones, backups y seguridad. En GPI di soporte a los servidores internos y a los entornos de los proyectos.",
+        text: "Administro servidores web y de bases de datos: actualizaciones, backups, seguridad y los entornos donde corre un proyecto.",
       },
       db: {
         name: "Administrador de bases de datos",
-        where: "Ternium, J.P. Morgan Chase, GPI",
-        text: "Escribí y ejecuté scripts SQL correctivos sobre bases en producción, primero para las aplicaciones de Ternium y después en banca. En GPI trabajé en incidentes de performance de base de datos.",
+        text: "Escribo y ejecuto SQL directo sobre bases en producción, y resuelvo los problemas de performance y datos que aparecen en un sistema vivo.",
       },
       analyst: {
         name: "Analista",
-        where: "Globant",
-        text: "Mi puesto en Globant fue developer analyst, en un proyecto para J.P. Morgan Chase. El análisis de requisitos y de negocio es parte de mi trabajo diario.",
+        text: "Convierto necesidades de negocio en requisitos que un equipo puede construir, antes de elegir cualquier tecnología.",
       },
       pm: {
         name: "Gestión de proyectos",
-        where: "GPI, Innovate On Demand",
-        text: "En GPI trabajé con el gerente técnico en estimaciones, cotizaciones y división de tareas para proyectos web multilingües. Como líder técnico hago estimaciones y planificación de sprints.",
+        text: "Estimo, divido el trabajo en tareas y planifico sprints, desde una sola feature hasta un proyecto completo.",
       },
       founder: {
         name: "Fundador",
-        where: "ComercIApp",
-        text: "Empecé ComercIApp en 2025. Decido el producto, los flujos y la arquitectura. También hablo directo con los dueños de comercios y los ayudo a cargar su catálogo.",
+        text: "Soy dueño de un producto de punta a punta: qué se construye, cómo funciona para quien lo usa, y la tecnología detrás.",
       },
       lead: {
         name: "Líder técnico",
-        where: "Innovate On Demand",
-        text: "Líder técnico desde septiembre de 2025, en varios proyectos de clientes. Me ocupo de la arquitectura, los deploys y las revisiones de código.",
+        text: "Defino decisiones de arquitectura, reviso código y mantengo los deploys bajo control para un equipo.",
       },
     },
     how: {
@@ -383,15 +394,15 @@ export const copy = {
       items: [
         {
           title: "Me hago cargo",
-          text: "Cuando tomo un proyecto, lo trato como propio. En una plataforma de financiación y leasing de vehículos me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.",
+          text: "Cuando tomo un proyecto, lo trato como propio: arquitectura, deploy y mantenimiento, no solo la parte de código que me pidieron escribir.",
         },
         {
           title: "Busco que ganemos todos",
-          text: "Antes de decidir algo, trato de entender qué necesita la otra parte. Con ComercIApp me ofrezco a ayudar a los dueños de comercios a cargar sus primeros productos, para que no tengan que resolverlo solos. En trabajo para clientes, empiezo por las reglas de negocio y después elijo la tecnología.",
+          text: "Antes de decidir algo, trato de entender qué necesita de verdad la otra parte. Arranco por las reglas de negocio y después elijo la tecnología.",
         },
         {
           title: "La IA trabaja para mí",
-          text: "Uso agentes de IA todos los días: Claude Code, Cursor y la extensión de Claude en Visual Studio. Yo decido la arquitectura, escribo tareas claras y reviso el resultado. React y TypeScript los escriben sobre todo los agentes, bajo mi dirección. Así puedo llevar yo solo un producto como ComercIApp.",
+          text: "Uso agentes de IA todos los días: Claude Code, Cursor y la extensión de Claude en Visual Studio. Yo decido la arquitectura, escribo tareas claras y reviso el resultado. React y TypeScript los escriben sobre todo los agentes, bajo mi dirección.",
         },
       ],
     },
@@ -412,9 +423,26 @@ export const copy = {
         dealeromg: "Producto de un cliente, el nombre no es público. Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.",
         leasemax: "Producto de un cliente, el nombre no es público. Un motor de cotizaciones de leasing de vehículos, más los reportes para el equipo comercial.",
       },
+      detailsLabel: "Detalles técnicos",
+      hideLabel: "Ocultar detalles",
+      details: {
+        comerciapp:
+          "Arquitectura: multi-tenant, los datos de cada comercio están aislados de los demás. Offline-first en el local, sincroniza solo cuando vuelve la conexión. Pagos con Stripe y MercadoPago, pedidos por WhatsApp, un agente de ventas con IA hecho con la API de Claude, y eliminación de datos según GDPR con registro de auditoría.",
+        academy:
+          "Next.js y React en el frontend. El contenido viene de un WordPress headless: PHP y MySQL detrás de la API, Next.js trae y renderiza los tutoriales y la búsqueda.",
+        driveprolink:
+          "Patrones: cálculos de tasas y cotizaciones en el servidor, integraciones con proveedores externos de tasas de financiación y leasing. Frontend en React, backend en .NET, deploy en Vercel.",
+        portal:
+          "Patrones: acceso según rol por cuenta de cliente, conectores CMS que devuelven el contenido traducido de forma automática. Backend en .NET, gráficos del dashboard de gasto y tiempos de entrega.",
+        dealeromg: "Servicios en Node.js. Refactors incrementales de un código legado sin frenar la operación.",
+        leasemax: "Un motor de cálculo para cotizaciones de leasing, más una capa de reportes para el equipo comercial.",
+      },
       industriesTitle: "Industrias",
       industries:
         "Trabajé en banca (J.P. Morgan Chase, a través de Globant), acero (Ternium), energía (AES), automatización industrial, comunicaciones, salud, traducción y localización, financiación automotriz y comercio.",
+      exploringTitle: "Lo que sigue",
+      exploring:
+        "Estoy armando nuevos productos con agentes de IA. Todavía es muy pronto para dar detalles, los voy a publicar acá cuando estén en marcha.",
     },
     experience: {
       title: "Experiencia",
@@ -526,6 +554,14 @@ export const copy = {
     contact: {
       title: "Contacto",
       text: "Estoy disponible para trabajo part-time y por contrato con clientes del exterior. Trabajo de forma asíncrona y estoy en UTC-3. Escribime por email o por LinkedIn.",
+      book: {
+        title: "Reservá una llamada de 30 min",
+        intro: "Elegí un horario que te sirva. Te confirmo por email, por lo general en menos de un día.",
+        timezoneNote: "Horarios en tu zona horaria ({tz}). Yo estoy en Argentina (UTC-3).",
+        requestLabel: "Pedir este horario",
+        subject: "Pedido de llamada de 30 min",
+        bodyIntro: "Hola Fernando, quiero reservar una llamada de 30 min a las:",
+      },
     },
   },
 
@@ -566,43 +602,36 @@ export const copy = {
         { value: "C2", label: "inglês Cambridge" },
       ],
       rolesTitle: "Papéis que tive em projetos",
-      rolesHint: "Escolha um para ver um exemplo real.",
+      rolesHint: "Escolha um para ler mais.",
     },
     roles: {
       dev: {
         name: "Desenvolvedor",
-        where: "Desde 2007",
-        text: "Primeiro desktop e web, depois .NET, Angular, React e Node.js. Hoje dirijo agentes de IA que escrevem boa parte do código.",
+        text: "Construo software de desktop e web. Comecei com .NET, depois Angular, React e Node.js. Hoje também dirijo agentes de IA que escrevem boa parte do código.",
       },
       server: {
         name: "Administrador de servidores",
-        where: "Janus Automation, GPI",
-        text: "Na Janus Automation administrei os servidores web e de banco de dados: atualizações, backups e segurança. Na GPI dei suporte aos servidores internos e aos ambientes dos projetos.",
+        text: "Administro servidores web e de banco de dados: atualizações, backups, segurança e os ambientes onde um projeto roda.",
       },
       db: {
         name: "Administrador de banco de dados",
-        where: "Ternium, J.P. Morgan Chase, GPI",
-        text: "Escrevi e executei scripts SQL corretivos em bancos em produção, primeiro para as aplicações da Ternium e depois no setor bancário. Na GPI trabalhei em incidentes de performance de banco de dados.",
+        text: "Escrevo e executo SQL direto em bancos em produção, e resolvo os problemas de performance e dados que aparecem em um sistema vivo.",
       },
       analyst: {
         name: "Analista",
-        where: "Globant",
-        text: "Meu cargo na Globant foi developer analyst, em um projeto para o J.P. Morgan Chase. Análise de requisitos e de negócio fazem parte do meu trabalho diário.",
+        text: "Transformo necessidades de negócio em requisitos que um time consegue construir, antes de escolher qualquer tecnologia.",
       },
       pm: {
         name: "Gestão de projetos",
-        where: "GPI, Innovate On Demand",
-        text: "Na GPI trabalhei com o gerente técnico em estimativas, orçamentos e divisão de tarefas para projetos web multilíngues. Como líder técnico, faço estimativas e planejamento de sprints.",
+        text: "Estimo, divido o trabalho em tarefas e planejo sprints, de uma única feature até um projeto inteiro.",
       },
       founder: {
         name: "Fundador",
-        where: "ComercIApp",
-        text: "Comecei o ComercIApp em 2025. Decido o produto, os fluxos e a arquitetura. Também converso direto com os donos de lojas e ajudo a carregar o catálogo.",
+        text: "Sou dono de um produto de ponta a ponta: o que é construído, como funciona para quem usa, e a tecnologia por trás.",
       },
       lead: {
         name: "Líder técnico",
-        where: "Innovate On Demand",
-        text: "Líder técnico desde setembro de 2025, em vários projetos de clientes. Cuido da arquitetura, dos deploys e das revisões de código.",
+        text: "Defino decisões de arquitetura, revejo código e mantenho os deploys sob controle para um time.",
       },
     },
     how: {
@@ -610,15 +639,15 @@ export const copy = {
       items: [
         {
           title: "Assumo a responsabilidade",
-          text: "Quando pego um projeto, trato como meu. Em uma plataforma de financiamento e leasing de veículos cuidei da arquitetura, do deploy e da manutenção. No ComercIApp eu decido o produto, não só o código.",
+          text: "Quando pego um projeto, trato como meu: arquitetura, deploy e manutenção, não só a parte de código que me pediram para escrever.",
         },
         {
           title: "Busco que todos ganhem",
-          text: "Antes de decidir algo, tento entender o que o outro lado precisa. No ComercIApp, me ofereço para ajudar os donos de lojas a cadastrar os primeiros produtos, para que não precisem resolver sozinhos. No trabalho com clientes, começo pelas regras de negócio e depois escolho a tecnologia.",
+          text: "Antes de decidir algo, tento entender o que o outro lado realmente precisa. Começo pelas regras de negócio e depois escolho a tecnologia.",
         },
         {
           title: "A IA trabalha para mim",
-          text: "Uso agentes de IA todos os dias: Claude Code, Cursor e a extensão do Claude no Visual Studio. Eu decido a arquitetura, escrevo tarefas claras e reviso o resultado. React e TypeScript são escritos principalmente pelos agentes, sob a minha direção. Assim consigo levar sozinho um produto como o ComercIApp.",
+          text: "Uso agentes de IA todos os dias: Claude Code, Cursor e a extensão do Claude no Visual Studio. Eu decido a arquitetura, escrevo tarefas claras e reviso o resultado. React e TypeScript são escritos principalmente pelos agentes, sob a minha direção.",
         },
       ],
     },
@@ -639,9 +668,26 @@ export const copy = {
         dealeromg: "Produto de um cliente, o nome não é público. Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.",
         leasemax: "Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.",
       },
+      detailsLabel: "Detalhes técnicos",
+      hideLabel: "Ocultar detalhes",
+      details: {
+        comerciapp:
+          "Arquitetura: multi-tenant, os dados de cada comércio ficam isolados dos demais. Offline-first na loja, sincroniza automaticamente quando a conexão volta. Pagamentos com Stripe e MercadoPago, pedidos pelo WhatsApp, um agente de vendas com IA feito com a API do Claude, e exclusão de dados conforme a GDPR com trilha de auditoria.",
+        academy:
+          "Next.js e React no frontend. O conteúdo vem de um WordPress headless: PHP e MySQL por trás da API, o Next.js busca e renderiza os tutoriais e a busca.",
+        driveprolink:
+          "Padrões: cálculos de taxas e cotações no servidor, integrações com provedores externos de taxas de financiamento e leasing. Frontend em React, backend em .NET, deploy na Vercel.",
+        portal:
+          "Padrões: acesso por perfil de cada conta de cliente, conectores de CMS que devolvem o conteúdo traduzido automaticamente. Backend em .NET, gráficos do dashboard de gasto e prazos de entrega.",
+        dealeromg: "Serviços em Node.js. Refatorações incrementais de um código legado sem parar a operação.",
+        leasemax: "Um motor de cálculo para cotações de leasing, mais uma camada de relatórios para o time comercial.",
+      },
       industriesTitle: "Setores",
       industries:
         "Trabalhei em bancos (J.P. Morgan Chase, por meio da Globant), aço (Ternium), energia (AES), automação industrial, comunicações, saúde, tradução e localização, financiamento automotivo e varejo.",
+      exploringTitle: "O que vem a seguir",
+      exploring:
+        "Estou construindo novos produtos com agentes de IA. Ainda é cedo para dar detalhes, vou publicar aqui quando estiverem no ar.",
     },
     experience: {
       title: "Experiência",
@@ -753,6 +799,14 @@ export const copy = {
     contact: {
       title: "Contato",
       text: "Estou disponível para trabalho part-time e por contrato com clientes do exterior. Trabalho de forma assíncrona e estou em UTC-3. Escreva por e-mail ou LinkedIn.",
+      book: {
+        title: "Agende uma call de 30 min",
+        intro: "Escolha um horário que funcione para você. Eu confirmo por e-mail, geralmente em menos de um dia.",
+        timezoneNote: "Horários no seu fuso ({tz}). Eu estou na Argentina (UTC-3).",
+        requestLabel: "Pedir este horário",
+        subject: "Pedido de call de 30 min",
+        bodyIntro: "Oi Fernando, quero agendar uma call de 30 min às:",
+      },
     },
   },
 };

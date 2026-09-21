@@ -34,21 +34,21 @@ Sou membro da Toptal como engenheiro de IA. A Toptal diz que aceita os 3% melhor
 
 | Papel | Exemplo |
 | --- | --- |
-| **Desenvolvedor**<br><sub>Desde 2007</sub> | Primeiro desktop e web, depois .NET, Angular, React e Node.js. Hoje dirijo agentes de IA que escrevem boa parte do código. |
-| **Administrador de servidores**<br><sub>Janus Automation, GPI</sub> | Na Janus Automation administrei os servidores web e de banco de dados: atualizações, backups e segurança. Na GPI dei suporte aos servidores internos e aos ambientes dos projetos. |
-| **Administrador de banco de dados**<br><sub>Ternium, J.P. Morgan Chase, GPI</sub> | Escrevi e executei scripts SQL corretivos em bancos em produção, primeiro para as aplicações da Ternium e depois no setor bancário. Na GPI trabalhei em incidentes de performance de banco de dados. |
-| **Analista**<br><sub>Globant</sub> | Meu cargo na Globant foi developer analyst, em um projeto para o J.P. Morgan Chase. Análise de requisitos e de negócio fazem parte do meu trabalho diário. |
-| **Gestão de projetos**<br><sub>GPI, Innovate On Demand</sub> | Na GPI trabalhei com o gerente técnico em estimativas, orçamentos e divisão de tarefas para projetos web multilíngues. Como líder técnico, faço estimativas e planejamento de sprints. |
-| **Fundador**<br><sub>ComercIApp</sub> | Comecei o ComercIApp em 2025. Decido o produto, os fluxos e a arquitetura. Também converso direto com os donos de lojas e ajudo a carregar o catálogo. |
-| **Líder técnico**<br><sub>Innovate On Demand</sub> | Líder técnico desde setembro de 2025, em vários projetos de clientes. Cuido da arquitetura, dos deploys e das revisões de código. |
+| **Desenvolvedor** | Construo software de desktop e web. Comecei com .NET, depois Angular, React e Node.js. Hoje também dirijo agentes de IA que escrevem boa parte do código. |
+| **Administrador de servidores** | Administro servidores web e de banco de dados: atualizações, backups, segurança e os ambientes onde um projeto roda. |
+| **Administrador de banco de dados** | Escrevo e executo SQL direto em bancos em produção, e resolvo os problemas de performance e dados que aparecem em um sistema vivo. |
+| **Analista** | Transformo necessidades de negócio em requisitos que um time consegue construir, antes de escolher qualquer tecnologia. |
+| **Gestão de projetos** | Estimo, divido o trabalho em tarefas e planejo sprints, de uma única feature até um projeto inteiro. |
+| **Fundador** | Sou dono de um produto de ponta a ponta: o que é construído, como funciona para quem usa, e a tecnologia por trás. |
+| **Líder técnico** | Defino decisões de arquitetura, revejo código e mantenho os deploys sob controle para um time. |
 
 ### Como eu trabalho
 
-**Assumo a responsabilidade.** Quando pego um projeto, trato como meu. Em uma plataforma de financiamento e leasing de veículos cuidei da arquitetura, do deploy e da manutenção. No ComercIApp eu decido o produto, não só o código.
+**Assumo a responsabilidade.** Quando pego um projeto, trato como meu: arquitetura, deploy e manutenção, não só a parte de código que me pediram para escrever.
 
-**Busco que todos ganhem.** Antes de decidir algo, tento entender o que o outro lado precisa. No ComercIApp, me ofereço para ajudar os donos de lojas a cadastrar os primeiros produtos, para que não precisem resolver sozinhos. No trabalho com clientes, começo pelas regras de negócio e depois escolho a tecnologia.
+**Busco que todos ganhem.** Antes de decidir algo, tento entender o que o outro lado realmente precisa. Começo pelas regras de negócio e depois escolho a tecnologia.
 
-**A IA trabalha para mim.** Uso agentes de IA todos os dias: Claude Code, Cursor e a extensão do Claude no Visual Studio. Eu decido a arquitetura, escrevo tarefas claras e reviso o resultado. React e TypeScript são escritos principalmente pelos agentes, sob a minha direção. Assim consigo levar sozinho um produto como o ComercIApp.
+**A IA trabalha para mim.** Uso agentes de IA todos os dias: Claude Code, Cursor e a extensão do Claude no Visual Studio. Eu decido a arquitetura, escrevo tarefas claras e reviso o resultado. React e TypeScript são escritos principalmente pelos agentes, sob a minha direção.
 
 ## Projetos
 
@@ -62,7 +62,7 @@ Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequen
 
 Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, loja online, equipe, finanças e os recursos de IA. Eu criei para que eles tirem valor real do app, não só para clicar por clicar.
 
-`ComercIApp` `Education`
+`ComercIApp` `Next.js` `WordPress (headless)`
 
 **Vehicle finance and lease platform**
 

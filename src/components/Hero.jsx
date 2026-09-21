@@ -63,15 +63,12 @@ export default function Hero({ t, theme }) {
                   {t.roles[id].name}
                 </button>
                 <div className="role-print print-only">
-                  <p>
-                    <strong>{t.roles[id].where}.</strong> {t.roles[id].text}
-                  </p>
+                  <p>{t.roles[id].text}</p>
                 </div>
               </li>
             ))}
           </ol>
           <div className="role-panel no-print" aria-live="polite">
-            <p className="role-where">{role.where}</p>
             <p className="role-text">{role.text}</p>
           </div>
           <p className="roles-hint no-print">{t.hero.rolesHint}</p>

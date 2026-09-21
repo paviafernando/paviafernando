@@ -34,21 +34,21 @@ Soy miembro de Toptal como ingeniero de IA. Toptal dice que acepta al 3% superio
 
 | Rol | Ejemplo |
 | --- | --- |
-| **Desarrollador**<br><sub>Desde 2007</sub> | Primero escritorio y web, después .NET, Angular, React y Node.js. Hoy dirijo agentes de IA que escriben buena parte del código. |
-| **Administrador de servidores**<br><sub>Janus Automation, GPI</sub> | En Janus Automation administré los servidores web y de bases de datos: actualizaciones, backups y seguridad. En GPI di soporte a los servidores internos y a los entornos de los proyectos. |
-| **Administrador de bases de datos**<br><sub>Ternium, J.P. Morgan Chase, GPI</sub> | Escribí y ejecuté scripts SQL correctivos sobre bases en producción, primero para las aplicaciones de Ternium y después en banca. En GPI trabajé en incidentes de performance de base de datos. |
-| **Analista**<br><sub>Globant</sub> | Mi puesto en Globant fue developer analyst, en un proyecto para J.P. Morgan Chase. El análisis de requisitos y de negocio es parte de mi trabajo diario. |
-| **Gestión de proyectos**<br><sub>GPI, Innovate On Demand</sub> | En GPI trabajé con el gerente técnico en estimaciones, cotizaciones y división de tareas para proyectos web multilingües. Como líder técnico hago estimaciones y planificación de sprints. |
-| **Fundador**<br><sub>ComercIApp</sub> | Empecé ComercIApp en 2025. Decido el producto, los flujos y la arquitectura. También hablo directo con los dueños de comercios y los ayudo a cargar su catálogo. |
-| **Líder técnico**<br><sub>Innovate On Demand</sub> | Líder técnico desde septiembre de 2025, en varios proyectos de clientes. Me ocupo de la arquitectura, los deploys y las revisiones de código. |
+| **Desarrollador** | Construyo software de escritorio y web. Empecé con .NET, después Angular, React y Node.js. Hoy también dirijo agentes de IA que escriben buena parte del código. |
+| **Administrador de servidores** | Administro servidores web y de bases de datos: actualizaciones, backups, seguridad y los entornos donde corre un proyecto. |
+| **Administrador de bases de datos** | Escribo y ejecuto SQL directo sobre bases en producción, y resuelvo los problemas de performance y datos que aparecen en un sistema vivo. |
+| **Analista** | Convierto necesidades de negocio en requisitos que un equipo puede construir, antes de elegir cualquier tecnología. |
+| **Gestión de proyectos** | Estimo, divido el trabajo en tareas y planifico sprints, desde una sola feature hasta un proyecto completo. |
+| **Fundador** | Soy dueño de un producto de punta a punta: qué se construye, cómo funciona para quien lo usa, y la tecnología detrás. |
+| **Líder técnico** | Defino decisiones de arquitectura, reviso código y mantengo los deploys bajo control para un equipo. |
 
 ### Cómo trabajo
 
-**Me hago cargo.** Cuando tomo un proyecto, lo trato como propio. En una plataforma de financiación y leasing de vehículos me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.
+**Me hago cargo.** Cuando tomo un proyecto, lo trato como propio: arquitectura, deploy y mantenimiento, no solo la parte de código que me pidieron escribir.
 
-**Busco que ganemos todos.** Antes de decidir algo, trato de entender qué necesita la otra parte. Con ComercIApp me ofrezco a ayudar a los dueños de comercios a cargar sus primeros productos, para que no tengan que resolverlo solos. En trabajo para clientes, empiezo por las reglas de negocio y después elijo la tecnología.
+**Busco que ganemos todos.** Antes de decidir algo, trato de entender qué necesita de verdad la otra parte. Arranco por las reglas de negocio y después elijo la tecnología.
 
-**La IA trabaja para mí.** Uso agentes de IA todos los días: Claude Code, Cursor y la extensión de Claude en Visual Studio. Yo decido la arquitectura, escribo tareas claras y reviso el resultado. React y TypeScript los escriben sobre todo los agentes, bajo mi dirección. Así puedo llevar yo solo un producto como ComercIApp.
+**La IA trabaja para mí.** Uso agentes de IA todos los días: Claude Code, Cursor y la extensión de Claude en Visual Studio. Yo decido la arquitectura, escribo tareas claras y reviso el resultado. React y TypeScript los escriben sobre todo los agentes, bajo mi dirección.
 
 ## Proyectos
 
@@ -62,7 +62,7 @@ Tienda online, pedidos por WhatsApp y facturación en una sola app para comercio
 
 Tutoriales para los dueños de comercios que usan ComercIApp: ventas, catálogo, tienda online, personal, finanzas y las funciones de IA. La armé para que le saquen valor real a la app, no solo para que la usen a los tumbos.
 
-`ComercIApp` `Education`
+`ComercIApp` `Next.js` `WordPress (headless)`
 
 **Vehicle finance and lease platform**
 
