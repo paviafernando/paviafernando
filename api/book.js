@@ -17,6 +17,19 @@ const SUBJECTS = {
   es: "Pedido de llamada",
   pt: "Pedido de call",
 };
+const VISITOR_SUBJECTS = {
+  en: "Your call with Fernando Pavia",
+  es: "Tu llamada con Fernando Pavia",
+  pt: "Sua call com Fernando Pavia",
+};
+function visitorBody(lang, slotLocal, meetLink) {
+  const lines = {
+    en: [`Hi,`, ``, `You're booked with Fernando Pavia:`, slotLocal, ``, meetLink ? `Join here: ${meetLink}` : null, ``, `If you need to reschedule, just reply to this email.`],
+    es: [`Hola,`, ``, `Quedaste agendado con Fernando Pavia:`, slotLocal, ``, meetLink ? `Unite acá: ${meetLink}` : null, ``, `Si necesitás cambiar el horario, respondé este mail.`],
+    pt: [`Oi,`, ``, `Você está agendado com Fernando Pavia:`, slotLocal, ``, meetLink ? `Entre aqui: ${meetLink}` : null, ``, `Se precisar remarcar, responda este e-mail.`],
+  };
+  return (lines[lang] || lines.en).filter((l) => l !== null).join("\n");
+}
 
 function isValidEmail(s) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
@@ -101,29 +114,42 @@ export default async function handler(req, res) {
   const userAgent = clean(req.headers["user-agent"], 300) || "unknown";
   const when = new Date().toISOString();
 
-  // Create the real calendar event (with a Meet link) if Google is set up.
-  // Falls back to email-only if not configured yet or if the call fails,
-  // so the form still works while that setup is pending.
+  // Create the real calendar event if Google is set up. Falls back to
+  // email-only if not configured yet or if the call fails, so the form
+  // still works while that setup is pending.
+  //
+  // Two Google-side restrictions that apply to a bare service account
+  // (no Workspace domain-wide delegation) on a personal Gmail calendar,
+  // neither fixable from this code:
+  // 1. It cannot create Google Meet conferences, so the join link is a
+  //    Jitsi Meet room instead (no account or API key needed, always works).
+  // 2. It cannot invite attendees ("Service accounts cannot invite
+  //    attendees without Domain-Wide Delegation"), so the event is
+  //    created without an attendee list. The visitor still gets the
+  //    time and the join link through the email below.
   let meetLink = null;
   let calendarError = null;
   const calendarId = process.env.GOOGLE_CALENDAR_ID;
   if (calendarId && slotUtc && !Number.isNaN(slotUtc.getTime())) {
+    const room = `PaviaFernandoCall-${Math.random().toString(36).slice(2, 10)}`;
+    const jitsiLink = `https://meet.jit.si/${room}`;
     try {
       const end = new Date(slotUtc.getTime() + 30 * 60000);
-      const attendees = hasEmail ? [{ email }] : [];
-      const event = await insertEvent(calendarId, {
+      await insertEvent(calendarId, {
         summary: `Call with ${name}`,
-        description: [`Booked from paviafernando.vercel.app`, phone ? `Phone: ${phone}` : null]
+        description: [
+          `Video call: ${jitsiLink}`,
+          `Booked from paviafernando.vercel.app`,
+          email ? `Email: ${email}` : null,
+          phone ? `Phone: ${phone}` : null,
+        ]
           .filter(Boolean)
           .join("\n"),
+        location: jitsiLink,
         start: { dateTime: slotUtc.toISOString() },
         end: { dateTime: end.toISOString() },
-        attendees,
-        conferenceData: {
-          createRequest: { requestId: `${when}-${Math.random().toString(36).slice(2)}` },
-        },
       });
-      meetLink = event.hangoutLink || null;
+      meetLink = jitsiLink;
     } catch (err) {
       calendarError = err.message;
       console.error("Calendar insert error", err);
@@ -173,6 +199,31 @@ export default async function handler(req, res) {
     console.error("Handler error", err);
     res.status(502).json({ error: "Send failed" });
     return;
+  }
+
+  // Best effort: let the visitor know too, since Calendar can't invite them
+  // directly (see the comment above insertEvent). Never fails the request,
+  // Resend's sandbox mode may not allow sending to arbitrary recipients
+  // until Fernando verifies a domain.
+  if (hasEmail) {
+    try {
+      const visitorRes = await fetch(RESEND_URL, {
+        method: "POST",
+        headers: { Authorization: `Bearer ${resendKey}`, "Content-Type": "application/json" },
+        body: JSON.stringify({
+          from: FROM_EMAIL,
+          to: [email],
+          reply_to: TO_EMAIL,
+          subject: VISITOR_SUBJECTS[lang],
+          text: visitorBody(lang, slotLocal, meetLink),
+        }),
+      });
+      if (!visitorRes.ok) {
+        console.error("Visitor email not sent (likely Resend sandbox limit)", visitorRes.status, await visitorRes.text());
+      }
+    } catch (err) {
+      console.error("Visitor email error", err);
+    }
   }
 
   res.status(200).json({ ok: true, instant: !!meetLink });
