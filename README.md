@@ -216,4 +216,4 @@ npm run dev
 
 ### Deploy
 
-Import the repository in Vercel. The Vite preset works with no changes.
+Every push runs the checks and publishes to Vercel from GitHub Actions. `main` goes to production, `develop` to staging, any other branch to a preview URL. Setup is in [docs/DEPLOYMENT.md](docs/DEPLOYMENT.md).

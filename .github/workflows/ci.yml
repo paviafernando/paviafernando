@@ -1,0 +1,114 @@
+# Runs on every push and pull request.
+#  1. check:  checks (contrast + render in 3 languages), build, README files up to date
+#  2. deploy: publishes to Vercel by branch
+#       main     -> production  (paviafernando.vercel.app)
+#       develop  -> staging     (alias paviafernando-staging.vercel.app)
+#       others   -> preview     (one URL per deploy, shown in the job summary and in the pull request)
+# Setup (secrets, first run): docs/DEPLOYMENT.md
+name: CI and deploy
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run build
+      - name: README files must be up to date (generated from src/content.js)
+        run: |
+          npm run readme
+          git diff --exit-code -- README.md README.es.md README.pt.md assets
+
+  deploy:
+    needs: check
+    # No deploy for pull requests from forks (they have no access to secrets).
+    if: github.event_name == 'push' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      pull-requests: write
+    environment:
+      name: ${{ github.ref_name == 'main' && 'production' || (github.ref_name == 'develop' && 'staging' || 'preview') }}
+      url: ${{ steps.deploy.outputs.url }}
+    env:
+      VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
+      VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+      VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+      BRANCH: ${{ github.head_ref || github.ref_name }}
+      SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Install Vercel CLI
+        run: npm install --global vercel@latest
+
+      - name: Choose the target from the branch
+        id: target
+        run: |
+          if [ "${{ github.event_name }}" = "push" ] && [ "$BRANCH" = "main" ]; then
+            echo "env=production" >> "$GITHUB_OUTPUT"
+            echo "flag=--prod" >> "$GITHUB_OUTPUT"
+          else
+            echo "env=preview" >> "$GITHUB_OUTPUT"
+            echo "flag=" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Pull Vercel settings
+        run: vercel pull --yes --environment="${{ steps.target.outputs.env }}" --token="$VERCEL_TOKEN"
+
+      - name: Build
+        run: vercel build ${{ steps.target.outputs.flag }} --token="$VERCEL_TOKEN"
+
+      - name: Deploy
+        id: deploy
+        run: |
+          url=$(vercel deploy --prebuilt ${{ steps.target.outputs.flag }} --token="$VERCEL_TOKEN" \
+            --meta githubBranch="$BRANCH" --meta githubSha="$SHA")
+          echo "url=$url" >> "$GITHUB_OUTPUT"
+
+      - name: Stable staging address (branch develop)
+        if: github.event_name == 'push' && github.ref_name == 'develop'
+        run: vercel alias set "${{ steps.deploy.outputs.url }}" paviafernando-staging.vercel.app --token="$VERCEL_TOKEN"
+
+      - name: Job summary
+        run: |
+          {
+            echo "### Deployed to ${{ steps.target.outputs.env }}"
+            echo ""
+            echo "Branch: \`$BRANCH\`"
+            echo ""
+            echo "${{ steps.deploy.outputs.url }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+
+      - name: Comment the preview URL in the pull request
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        env:
+          DEPLOY_URL: ${{ steps.deploy.outputs.url }}
+        with:
+          script: |
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body: `Preview: ${process.env.DEPLOY_URL}`,
+            });
