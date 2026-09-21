@@ -13,7 +13,7 @@ export const profile = {
   github: "paviafernando",
   repo: "paviafernando",
   // The GitHub link in the footer is hidden until the repository exists and the user name is confirmed.
-  repoPublic: false,
+  repoPublic: true,
   toptal: {
     profile: "https://talent.toptal.com/resume/developers/fernando-pavia",
     clientReferral: "https://toptal.com/Xp3oYQ/worlds-top-talent",
