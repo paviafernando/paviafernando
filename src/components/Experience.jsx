@@ -1,9 +1,31 @@
+import { useState } from "react";
 import { timeline, formatPeriod } from "../content.js";
 
 const EARLIER_FROM = 4; // jobs at this index and beyond collapse to one line in print
 
+function StackDetails({ t, job, open, onToggle }) {
+  if (!job.stack?.length) return null;
+  return (
+    <div className="details no-print">
+      <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
+        {open ? t.work.hideLabel : t.work.detailsLabel}
+      </button>
+      {open && (
+        <ul className="tags">
+          {job.stack.map((s) => (
+            <li key={s}>{s}</li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
+
 export default function Experience({ t, lang }) {
   const earlier = timeline.slice(EARLIER_FROM);
+  const [openId, setOpenId] = useState(null);
+  const toggle = (id) => setOpenId((cur) => (cur === id ? null : id));
+
   return (
     <section className="section" id="experience">
       <div className="container section-grid">
@@ -23,6 +45,7 @@ export default function Experience({ t, lang }) {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
+                  <StackDetails t={t} job={job} open={openId === job.id} onToggle={() => toggle(job.id)} />
                 </div>
               </li>
             );

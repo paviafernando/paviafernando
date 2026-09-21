@@ -54,13 +54,55 @@ export function formatPeriod(from, to, lang) {
 
 // Shared facts (not translated)
 export const timeline = [
-  { id: "iod", company: "Innovate On Demand", from: "2025-09", to: null },
-  { id: "comerciapp", company: "ComercIApp", from: "2025", to: null },
-  { id: "gpi", company: "Globalization Partners International", from: "2017-12", to: "2025-07" },
-  { id: "globant", company: "Globant, J.P. Morgan Chase", from: "2016-05", to: "2017-11" },
-  { id: "janus", company: "Janus Automation", from: "2013-11", to: "2016-05" },
-  { id: "aes", company: "AES Argentina (Infoseek and self-employed)", from: "2009-11", to: "2013-06" },
-  { id: "early", company: "Freelance and Eniac Computación", from: "2007-06", to: "2009-11" },
+  {
+    id: "iod",
+    company: "Innovate On Demand",
+    from: "2025-09",
+    to: null,
+    stack: [".NET", "Node.js", "React", "Azure", "PostgreSQL"],
+  },
+  {
+    id: "comerciapp",
+    company: "ComercIApp",
+    from: "2025",
+    to: null,
+    stack: [".NET 8", "React", "PostgreSQL", "Claude API"],
+  },
+  {
+    id: "gpi",
+    company: "Globalization Partners International",
+    from: "2017-12",
+    to: "2025-07",
+    stack: [".NET", "Sitecore", "Optimizely", "Umbraco", "Strapi", "Amplience", "SQL Server"],
+  },
+  {
+    id: "globant",
+    company: "Globant, J.P. Morgan Chase",
+    from: "2016-05",
+    to: "2017-11",
+    stack: [".NET", "SQL Server", "Windows desktop"],
+  },
+  {
+    id: "janus",
+    company: "Janus Automation",
+    from: "2013-11",
+    to: "2016-05",
+    stack: ["SCADA", "SQL Server", "Windows/IIS servers"],
+  },
+  {
+    id: "aes",
+    company: "AES Argentina (Infoseek and self-employed)",
+    from: "2009-11",
+    to: "2013-06",
+    stack: ["RFID", "SharePoint", "Windows desktop"],
+  },
+  {
+    id: "early",
+    company: "Freelance and Eniac Computación",
+    from: "2007-06",
+    to: "2009-11",
+    stack: ["Web basics"],
+  },
 ];
 
 export const projects = [

@@ -489,17 +489,17 @@
   color: var(--muted);
   font-size: 0.95rem;
 }
-.job-body ul {
+.job-body ul:not(.tags) {
   margin-top: 0.85rem;
   display: grid;
   gap: 0.4rem;
   max-width: 46rem;
 }
-.job-body li {
+.job-body li:not(.tags li) {
   position: relative;
   padding-inline-start: 1.1rem;
 }
-.job-body li::before {
+.job-body li:not(.tags li)::before {
   content: "";
   position: absolute;
   left: 0;
