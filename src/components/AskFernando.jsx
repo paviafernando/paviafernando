@@ -2,6 +2,30 @@ import { useEffect, useRef, useState } from "react";
 import { profile } from "../content.js";
 import { track } from "../lib/analytics.js";
 
+// The assistant is told to emit these literal tokens instead of writing out
+// the real address/number itself, so the contact info shown is always the
+// real one, not whatever the model might type out.
+function renderMessage(text) {
+  const parts = text.split(/(\[EMAIL\]|\[WHATSAPP\])/g);
+  return parts.map((part, i) => {
+    if (part === "[EMAIL]") {
+      return (
+        <a key={i} href={`mailto:${profile.email}`}>
+          {profile.email}
+        </a>
+      );
+    }
+    if (part === "[WHATSAPP]") {
+      return (
+        <a key={i} href={`https://wa.me/${profile.whatsapp}`} target="_blank" rel="noopener noreferrer">
+          WhatsApp
+        </a>
+      );
+    }
+    return part;
+  });
+}
+
 function ChatIcon() {
   return (
     <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -124,7 +148,7 @@ export default function AskFernando({ t, lang }) {
             <p className="ask-intro">{c.intro}</p>
             {messages.map((m, i) => (
               <p key={i} className={`ask-msg ask-${m.role}`}>
-                {m.text}
+                {m.role === "assistant" ? renderMessage(m.text) : m.text}
               </p>
             ))}
             {sending && <p className="ask-msg ask-assistant ask-pending">{c.sending}</p>}
