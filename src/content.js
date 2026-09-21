@@ -65,8 +65,7 @@ export const timeline = [
 
 export const projects = [
   { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true },
-  // TODO: Fernando has to tell what the Academy is and give the link.
-  { id: "academy", name: "ComercIApp Academy", url: null, tags: ["ComercIApp"], featured: true },
+  { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Education"], featured: true },
   { id: "driveprolink", name: "DriveProLink", url: "https://driveprolink.com", tags: [".NET", "Azure", "React", "Vercel", "PostgreSQL"] },
   { id: "portal", name: "Translation Portal and GPMS", url: "https://www.translationportal.com", tags: ["Localization", "CMS connectors", ".NET"] },
   { id: "dealeromg", name: "DealerOMG", url: null, tags: ["Node.js"] },
@@ -177,7 +176,8 @@ export const copy = {
       items: {
         comerciapp:
           "Online store, WhatsApp orders and invoicing in one app for small shops in Argentina. It has an AI sales agent that answers customers on WhatsApp. I'm the founder and I own product, architecture and delivery.",
-        academy: "Part of ComercIApp.",
+        academy:
+          "Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finances and the AI features. I built it to help them get real value from the app, not just click through it.",
         driveprolink:
           "Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.",
         portal:
@@ -403,7 +403,8 @@ export const copy = {
       items: {
         comerciapp:
           "Tienda online, pedidos por WhatsApp y facturación en una sola app para comercios chicos de Argentina. Tiene un agente de ventas con IA que atiende a los clientes por WhatsApp. Soy el fundador y me ocupo del producto, la arquitectura y la entrega.",
-        academy: "Parte de ComercIApp.",
+        academy:
+          "Tutoriales para los dueños de comercios que usan ComercIApp: ventas, catálogo, tienda online, personal, finanzas y las funciones de IA. La armé para que le saquen valor real a la app, no solo para que la usen a los tumbos.",
         driveprolink:
           "Da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.",
         portal:
@@ -629,7 +630,8 @@ export const copy = {
       items: {
         comerciapp:
           "Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequenos comércios da Argentina. Tem um agente de vendas com IA que atende os clientes no WhatsApp. Sou o fundador e cuido do produto, da arquitetura e da entrega.",
-        academy: "Parte do ComercIApp.",
+        academy:
+          "Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, loja online, equipe, finanças e os recursos de IA. Eu criei para que eles tirem valor real do app, não só para clicar por clicar.",
         driveprolink:
           "Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.",
         portal:

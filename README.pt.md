@@ -58,11 +58,11 @@ Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequen
 
 `.NET 8` `React` `PostgreSQL` `AI agent`
 
-**ComercIApp Academy**
+**[ComercIApp Academy](https://academy.comerci.app)**
 
-Parte do ComercIApp. Mais detalhes em breve.
+Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, loja online, equipe, finanças e os recursos de IA. Eu criei para que eles tirem valor real do app, não só para clicar por clicar.
 
-`ComercIApp`
+`ComercIApp` `Education`
 
 **[DriveProLink](https://driveprolink.com)**
 

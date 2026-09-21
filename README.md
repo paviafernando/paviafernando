@@ -58,11 +58,11 @@ Online store, WhatsApp orders and invoicing in one app for small shops in Argent
 
 `.NET 8` `React` `PostgreSQL` `AI agent`
 
-**ComercIApp Academy**
+**[ComercIApp Academy](https://academy.comerci.app)**
 
-Part of ComercIApp. Details coming soon.
+Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finances and the AI features. I built it to help them get real value from the app, not just click through it.
 
-`ComercIApp`
+`ComercIApp` `Education`
 
 **[DriveProLink](https://driveprolink.com)**
 
