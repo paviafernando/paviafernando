@@ -184,11 +184,11 @@ Client product, name not public. A quotation engine for vehicle leasing, plus re
 
 **What I use every day.** .NET and C#, ASP.NET Web API and MVC, SQL Server, Angular, JavaScript and TypeScript, HTML and CSS, WordPress, CMS integrations, localization workflows, Azure DevOps and CI/CD, Windows and IIS servers.
 
-**What I've used in production.** Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.
+**What I've used in production.** Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.
 
 **AI.** I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.
 
-**Where I'm still growing.** AWS is a smaller part of my stack than .NET and Azure. I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.
+**Where I'm still growing.** I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.
 
 ## Education and languages
 

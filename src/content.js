@@ -345,7 +345,7 @@ export const copy = {
         },
         {
           title: "What I've used in production",
-          text: "Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.",
+          text: "Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.",
         },
         {
           title: "AI",
@@ -353,7 +353,7 @@ export const copy = {
         },
         {
           title: "Where I'm still growing",
-          text: "AWS is a smaller part of my stack than .NET and Azure. I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.",
+          text: "I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.",
         },
       ],
     },
@@ -622,7 +622,7 @@ export const copy = {
         },
         {
           title: "Lo que usé en producción",
-          text: "Node.js, React y Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, APIs de terceros con OAuth2 y webhooks, pagos con Stripe y MercadoPago, BigQuery, eliminación de datos personales según GDPR con registro de auditoría.",
+          text: "Node.js, React y Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceros con OAuth2 y webhooks, pagos con Stripe y MercadoPago, BigQuery, eliminación de datos personales según GDPR con registro de auditoría.",
         },
         {
           title: "IA",
@@ -630,7 +630,7 @@ export const copy = {
         },
         {
           title: "Donde sigo creciendo",
-          text: "AWS es una parte más chica de mi stack que .NET y Azure. Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.",
+          text: "Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.",
         },
       ],
     },
@@ -899,7 +899,7 @@ export const copy = {
         },
         {
           title: "O que já usei em produção",
-          text: "Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.",
+          text: "Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.",
         },
         {
           title: "IA",
@@ -907,7 +907,7 @@ export const copy = {
         },
         {
           title: "Onde ainda estou crescendo",
-          text: "AWS é uma parte menor do meu stack do que .NET e Azure. Ainda não montei um sistema RAG em grande escala, Python e Kubernetes continuam na minha lista, e em mobile estou em um nível básico.",
+          text: "Ainda não montei um sistema RAG em grande escala, Python e Kubernetes continuam na minha lista, e em mobile estou em um nível básico.",
         },
       ],
     },

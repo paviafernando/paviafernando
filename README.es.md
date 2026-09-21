@@ -184,11 +184,11 @@ Producto de un cliente, el nombre no es público. Un motor de cotizaciones de le
 
 **Lo que uso todos los días.** .NET y C#, ASP.NET Web API y MVC, SQL Server, Angular, JavaScript y TypeScript, HTML y CSS, WordPress, integraciones con CMS, flujos de localización, Azure DevOps y CI/CD, servidores Windows e IIS.
 
-**Lo que usé en producción.** Node.js, React y Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, GitHub Actions, APIs de terceros con OAuth2 y webhooks, pagos con Stripe y MercadoPago, BigQuery, eliminación de datos personales según GDPR con registro de auditoría.
+**Lo que usé en producción.** Node.js, React y Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceros con OAuth2 y webhooks, pagos con Stripe y MercadoPago, BigQuery, eliminación de datos personales según GDPR con registro de auditoría.
 
 **IA.** Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app. Sigo capacitándome en esto, y una certificación de Anthropic es lo próximo en mi lista.
 
-**Donde sigo creciendo.** AWS es una parte más chica de mi stack que .NET y Azure. Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.
+**Donde sigo creciendo.** Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.
 
 ## Educación e idiomas
 
