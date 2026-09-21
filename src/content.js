@@ -30,11 +30,11 @@ export const languages = [
 ];
 
 export const themes = [
-  { id: "celeste", name: "Celeste" },
-  { id: "terminal", name: "Terminal" },
-  { id: "editorial", name: "Editorial" },
-  { id: "aurora", name: "Aurora" },
-  { id: "pampa", name: "Pampa" },
+  { id: "celeste", name: "Argentina" },
+  { id: "terminal", name: "Matrix" },
+  { id: "editorial", name: "Multinational" },
+  { id: "aurora", name: "Arcade" },
+  { id: "pampa", name: "Patagonia" },
 ];
 
 const MONTHS = {
@@ -64,12 +64,12 @@ export const timeline = [
 ];
 
 export const projects = [
-  { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true },
-  { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Education"], featured: true },
-  { id: "driveprolink", name: "DriveProLink", url: "https://driveprolink.com", tags: [".NET", "Azure", "React", "Vercel", "PostgreSQL"] },
-  { id: "portal", name: "Translation Portal and GPMS", url: "https://www.translationportal.com", tags: ["Localization", "CMS connectors", ".NET"] },
-  { id: "dealeromg", name: "DealerOMG", url: null, tags: ["Node.js"] },
-  { id: "leasemax", name: "LeaseMax", url: null, tags: ["Vehicle leasing", "Reports"] },
+  { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true, screenshot: "/screenshots/comerciapp.png" },
+  { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Education"], featured: true, screenshot: "/screenshots/academy.png" },
+  { id: "driveprolink", name: "Vehicle finance and lease platform", url: null, tags: [".NET", "Azure", "React", "PostgreSQL"] },
+  { id: "portal", name: "Translation and localization portal", url: null, tags: ["Localization", "CMS connectors", ".NET"] },
+  { id: "dealeromg", name: "Dealer management platform", url: null, tags: ["Node.js"] },
+  { id: "leasemax", name: "Vehicle lease quotation engine", url: null, tags: ["Vehicle leasing", "Reports"] },
 ];
 
 export const roleIds = ["dev", "server", "db", "analyst", "pm", "founder", "lead"];
@@ -156,7 +156,7 @@ export const copy = {
       items: [
         {
           title: "I take ownership",
-          text: "When I take a project, I treat it as mine. On DriveProLink I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.",
+          text: "When I take a project, I treat it as mine. On a vehicle finance and lease platform I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.",
         },
         {
           title: "I look for a win-win",
@@ -172,18 +172,18 @@ export const copy = {
       title: "Work",
       more: "More builds",
       moreText:
-        "FlowCraft, a low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.",
+        "A low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.",
       items: {
         comerciapp:
           "Online store, WhatsApp orders and invoicing in one app for small shops in Argentina. It has an AI sales agent that answers customers on WhatsApp. I'm the founder and I own product, architecture and delivery.",
         academy:
           "Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finances and the AI features. I built it to help them get real value from the app, not just click through it.",
         driveprolink:
-          "Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.",
+          "Client product, name not public. Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.",
         portal:
-          "GPI's client portal for quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the translation server and on GPMS.",
-        dealeromg: "A dealer platform written in Node.js. I maintain it at Innovate On Demand.",
-        leasemax: "Vehicle lease quotations with the MARSE API engine, and the LeaseMax reports.",
+          "Client product, name not public. A client portal for a localization company, for translation quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the server that receives the translation packages and quotes, and on the internal project management system.",
+        dealeromg: "Client product, name not public. A dealer management platform written in Node.js. I maintain it at Innovate On Demand.",
+        leasemax: "Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.",
       },
       industriesTitle: "Industries",
       industries:
@@ -196,8 +196,8 @@ export const copy = {
           role: "Technical lead and senior .NET engineer",
           note: "Remote",
           bullets: [
-            "Worked on DriveProLink from the first version, with a team. I covered architecture, deploy and maintenance.",
-            "Maintain dealer platforms written in Node.js, like DealerOMG.",
+            "Worked on a vehicle finance and lease platform from the first version, with a team. I covered architecture, deploy and maintenance.",
+            "Maintain dealer platforms written in Node.js.",
             "Stabilized a fragile deployment process and refactored a legacy dealer product in small steps, without stopping live operations.",
             "Estimation, sprint planning and code reviews. AI agents in the daily development.",
           ],
@@ -216,9 +216,9 @@ export const copy = {
           role: ".NET senior developer, globalization solutions",
           note: "Contractor, fully remote, 7.5 years",
           bullets: [
-            "Worked on the Translation Portal, including the 2022 UI re-design: dashboard, charts and security checks.",
+            "Worked on a translation and localization client portal, including the 2022 UI re-design: dashboard, charts and security checks.",
             "Worked on the translation server that receives the content packages to translate and the quote requests.",
-            "Worked on GPMS, GPI's internal project management system.",
+            "Worked on GPI's internal project management system.",
             "Built and maintained translation connectors for CMS platforms: Sitecore XP and XM Cloud, Optimizely, Umbraco, Strapi and Amplience.",
             "Automated localization workflows between translation teams, developers and CMS editors.",
             "Fixed production incidents: database performance, integration failures and security patches.",
@@ -278,7 +278,7 @@ export const copy = {
         },
         {
           title: "Where I'm less strong",
-          text: "My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work. I haven't built a large RAG system in production. Python is a gap. I don't write React and TypeScript by hand anymore, the agents do it under my direction. Mobile: basics only. I haven't used Kubernetes.",
+          text: "My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work, and I haven't built a large RAG system in production. Python and Kubernetes are still gaps, and mobile is basics only.",
         },
       ],
     },
@@ -383,7 +383,7 @@ export const copy = {
       items: [
         {
           title: "Me hago cargo",
-          text: "Cuando tomo un proyecto, lo trato como propio. En DriveProLink me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.",
+          text: "Cuando tomo un proyecto, lo trato como propio. En una plataforma de financiación y leasing de vehículos me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.",
         },
         {
           title: "Busco que ganemos todos",
@@ -399,18 +399,18 @@ export const copy = {
       title: "Proyectos",
       more: "Otros desarrollos",
       moreText:
-        "FlowCraft, un constructor de flujos de trabajo low-code en Next.js. Un plugin de traducción para Optimizely CMS 12 en .NET 8. La reingeniería de un proyecto Yii (PHP) a Node.js. Apps chicas para comercios: punto de venta, delivery, una bicicletería y facturación con ARCA/AFIP.",
+        "Un constructor de flujos de trabajo low-code en Next.js. Un plugin de traducción para Optimizely CMS 12 en .NET 8. La reingeniería de un proyecto Yii (PHP) a Node.js. Apps chicas para comercios: punto de venta, delivery, una bicicletería y facturación con ARCA/AFIP.",
       items: {
         comerciapp:
           "Tienda online, pedidos por WhatsApp y facturación en una sola app para comercios chicos de Argentina. Tiene un agente de ventas con IA que atiende a los clientes por WhatsApp. Soy el fundador y me ocupo del producto, la arquitectura y la entrega.",
         academy:
           "Tutoriales para los dueños de comercios que usan ComercIApp: ventas, catálogo, tienda online, personal, finanzas y las funciones de IA. La armé para que le saquen valor real a la app, no solo para que la usen a los tumbos.",
         driveprolink:
-          "Da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.",
+          "Producto de un cliente, el nombre no es público. Le da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.",
         portal:
-          "El portal de clientes de GPI para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor de traducciones y en GPMS.",
-        dealeromg: "Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.",
-        leasemax: "Cotizaciones de leasing de vehículos con el motor de API MARSE, y los reportes de LeaseMax.",
+          "Producto de un cliente, el nombre no es público. Un portal de clientes de una empresa de localización, para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor que recibe los paquetes de traducción y las cotizaciones, y en el sistema interno de gestión de proyectos.",
+        dealeromg: "Producto de un cliente, el nombre no es público. Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.",
+        leasemax: "Producto de un cliente, el nombre no es público. Un motor de cotizaciones de leasing de vehículos, más los reportes para el equipo comercial.",
       },
       industriesTitle: "Industrias",
       industries:
@@ -423,8 +423,8 @@ export const copy = {
           role: "Líder técnico e ingeniero .NET senior",
           note: "Remoto",
           bullets: [
-            "Trabajé en DriveProLink desde la primera versión, con un equipo. Me ocupé de la arquitectura, el deploy y el mantenimiento.",
-            "Mantengo plataformas para concesionarias escritas en Node.js, como DealerOMG.",
+            "Trabajé en una plataforma de financiación y leasing de vehículos desde la primera versión, con un equipo. Me ocupé de la arquitectura, el deploy y el mantenimiento.",
+            "Mantengo plataformas para concesionarias escritas en Node.js.",
             "Estabilicé un proceso de deploy frágil y refactoricé de a poco un producto legacy para concesionarias, sin frenar la operación en vivo.",
             "Estimaciones, planificación de sprints y revisiones de código. Agentes de IA en el desarrollo diario.",
           ],
@@ -443,9 +443,9 @@ export const copy = {
           role: "Desarrollador .NET senior, soluciones de globalización",
           note: "Contratista, 100% remoto, 7,5 años",
           bullets: [
-            "Trabajé en el Translation Portal, incluido el rediseño de la interfaz de 2022: dashboard, gráficos y controles de seguridad.",
+            "Trabajé en un portal de clientes de traducción y localización, incluido el rediseño de la interfaz de 2022: dashboard, gráficos y controles de seguridad.",
             "Trabajé en el servidor de traducciones, que recibe los paquetes de contenido a traducir y los pedidos de cotización.",
-            "Trabajé en GPMS, el sistema interno de gestión de proyectos de GPI.",
+            "Trabajé en el sistema interno de gestión de proyectos de GPI.",
             "Desarrollé y mantuve conectores de traducción para CMS: Sitecore XP y XM Cloud, Optimizely, Umbraco, Strapi y Amplience.",
             "Automaticé flujos de localización entre equipos de traducción, desarrolladores y editores de CMS.",
             "Resolví incidentes en producción: performance de base de datos, fallas de integración y parches de seguridad.",
@@ -505,7 +505,7 @@ export const copy = {
         },
         {
           title: "Donde soy menos fuerte",
-          text: "Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure. No armé un sistema RAG grande en producción. Python es una carencia. Ya no escribo React y TypeScript a mano, lo hacen los agentes bajo mi dirección. Mobile: solo lo básico. No usé Kubernetes.",
+          text: "Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure, y no armé un sistema RAG grande en producción. Python y Kubernetes siguen siendo carencias, y en mobile solo tengo lo básico.",
         },
       ],
     },
@@ -610,7 +610,7 @@ export const copy = {
       items: [
         {
           title: "Assumo a responsabilidade",
-          text: "Quando pego um projeto, trato como meu. No DriveProLink cuidei da arquitetura, do deploy e da manutenção. No ComercIApp eu decido o produto, não só o código.",
+          text: "Quando pego um projeto, trato como meu. Em uma plataforma de financiamento e leasing de veículos cuidei da arquitetura, do deploy e da manutenção. No ComercIApp eu decido o produto, não só o código.",
         },
         {
           title: "Busco que todos ganhem",
@@ -626,18 +626,18 @@ export const copy = {
       title: "Projetos",
       more: "Outros projetos",
       moreText:
-        "FlowCraft, um construtor de fluxos de trabalho low-code em Next.js. Um plugin de tradução para o Optimizely CMS 12 em .NET 8. A reengenharia de um projeto Yii (PHP) para Node.js. Apps pequenos para lojas: ponto de venda, delivery, uma loja de bicicletas e faturamento com ARCA/AFIP.",
+        "Um construtor de fluxos de trabalho low-code em Next.js. Um plugin de tradução para o Optimizely CMS 12 em .NET 8. A reengenharia de um projeto Yii (PHP) para Node.js. Apps pequenos para lojas: ponto de venda, delivery, uma loja de bicicletas e faturamento com ARCA/AFIP.",
       items: {
         comerciapp:
           "Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequenos comércios da Argentina. Tem um agente de vendas com IA que atende os clientes no WhatsApp. Sou o fundador e cuido do produto, da arquitetura e da entrega.",
         academy:
           "Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, loja online, equipe, finanças e os recursos de IA. Eu criei para que eles tirem valor real do app, não só para clicar por clicar.",
         driveprolink:
-          "Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.",
+          "Produto de um cliente, o nome não é público. Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.",
         portal:
-          "O portal de clientes da GPI para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor de traduções e no GPMS.",
-        dealeromg: "Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.",
-        leasemax: "Cotações de leasing de veículos com o motor de API MARSE, e os relatórios do LeaseMax.",
+          "Produto de um cliente, o nome não é público. Um portal de clientes de uma empresa de localização, para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor que recebe os pacotes de tradução e os orçamentos, e no sistema interno de gestão de projetos.",
+        dealeromg: "Produto de um cliente, o nome não é público. Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.",
+        leasemax: "Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.",
       },
       industriesTitle: "Setores",
       industries:
@@ -650,8 +650,8 @@ export const copy = {
           role: "Líder técnico e engenheiro .NET sênior",
           note: "Remoto",
           bullets: [
-            "Trabalhei no DriveProLink desde a primeira versão, com uma equipe. Cuidei da arquitetura, do deploy e da manutenção.",
-            "Mantenho plataformas para concessionárias escritas em Node.js, como o DealerOMG.",
+            "Trabalhei em uma plataforma de financiamento e leasing de veículos desde a primeira versão, com uma equipe. Cuidei da arquitetura, do deploy e da manutenção.",
+            "Mantenho plataformas para concessionárias escritas em Node.js.",
             "Estabilizei um processo de deploy frágil e refatorei aos poucos um produto legado para concessionárias, sem parar a operação em produção.",
             "Estimativas, planejamento de sprints e revisões de código. Agentes de IA no desenvolvimento diário.",
           ],
@@ -670,9 +670,9 @@ export const copy = {
           role: "Desenvolvedor .NET sênior, soluções de globalização",
           note: "Contratado, 100% remoto, 7,5 anos",
           bullets: [
-            "Trabalhei no Translation Portal, incluindo o redesenho da interface em 2022: dashboard, gráficos e verificações de segurança.",
+            "Trabalhei em um portal de clientes de tradução e localização, incluindo o redesenho da interface em 2022: dashboard, gráficos e verificações de segurança.",
             "Trabalhei no servidor de traduções, que recebe os pacotes de conteúdo para traduzir e os pedidos de orçamento.",
-            "Trabalhei no GPMS, o sistema interno de gestão de projetos da GPI.",
+            "Trabalhei no sistema interno de gestão de projetos da GPI.",
             "Desenvolvi e mantive conectores de tradução para CMS: Sitecore XP e XM Cloud, Optimizely, Umbraco, Strapi e Amplience.",
             "Automatizei fluxos de localização entre equipes de tradução, desenvolvedores e editores de CMS.",
             "Resolvi incidentes em produção: performance de banco de dados, falhas de integração e patches de segurança.",
@@ -732,7 +732,7 @@ export const copy = {
         },
         {
           title: "Onde sou menos forte",
-          text: "Minha experiência com AWS (EC2, S3, Lambda) é mais limitada que a que tenho em .NET e Azure. Não montei um sistema RAG grande em produção. Python é uma lacuna. Não escrevo mais React e TypeScript à mão, os agentes fazem isso sob a minha direção. Mobile: só o básico. Não usei Kubernetes.",
+          text: "Minha experiência com AWS (EC2, S3, Lambda) é mais limitada que a que tenho em .NET e Azure, e não montei um sistema RAG grande em produção. Python e Kubernetes ainda são lacunas, e em mobile só tenho o básico.",
         },
       ],
     },

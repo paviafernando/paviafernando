@@ -44,7 +44,7 @@ Soy miembro de Toptal como ingeniero de IA. Toptal dice que acepta al 3% superio
 
 ### Cómo trabajo
 
-**Me hago cargo.** Cuando tomo un proyecto, lo trato como propio. En DriveProLink me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.
+**Me hago cargo.** Cuando tomo un proyecto, lo trato como propio. En una plataforma de financiación y leasing de vehículos me ocupé de la arquitectura, el deploy y el mantenimiento. En ComercIApp decido el producto, no solo el código.
 
 **Busco que ganemos todos.** Antes de decidir algo, trato de entender qué necesita la otra parte. Con ComercIApp me ofrezco a ayudar a los dueños de comercios a cargar sus primeros productos, para que no tengan que resolverlo solos. En trabajo para clientes, empiezo por las reglas de negocio y después elijo la tecnología.
 
@@ -64,31 +64,31 @@ Tutoriales para los dueños de comercios que usan ComercIApp: ventas, catálogo,
 
 `ComercIApp` `Education`
 
-**[DriveProLink](https://driveprolink.com)**
+**Vehicle finance and lease platform**
 
-Da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.
+Producto de un cliente, el nombre no es público. Le da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.
 
-`.NET` `Azure` `React` `Vercel` `PostgreSQL`
+`.NET` `Azure` `React` `PostgreSQL`
 
-**[Translation Portal and GPMS](https://www.translationportal.com)**
+**Translation and localization portal**
 
-El portal de clientes de GPI para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor de traducciones y en GPMS.
+Producto de un cliente, el nombre no es público. Un portal de clientes de una empresa de localización, para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor que recibe los paquetes de traducción y las cotizaciones, y en el sistema interno de gestión de proyectos.
 
 `Localization` `CMS connectors` `.NET`
 
-**DealerOMG**
+**Dealer management platform**
 
-Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.
+Producto de un cliente, el nombre no es público. Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.
 
 `Node.js`
 
-**LeaseMax**
+**Vehicle lease quotation engine**
 
-Cotizaciones de leasing de vehículos con el motor de API MARSE, y los reportes de LeaseMax.
+Producto de un cliente, el nombre no es público. Un motor de cotizaciones de leasing de vehículos, más los reportes para el equipo comercial.
 
 `Vehicle leasing` `Reports`
 
-**Otros desarrollos.** FlowCraft, un constructor de flujos de trabajo low-code en Next.js. Un plugin de traducción para Optimizely CMS 12 en .NET 8. La reingeniería de un proyecto Yii (PHP) a Node.js. Apps chicas para comercios: punto de venta, delivery, una bicicletería y facturación con ARCA/AFIP.
+**Otros desarrollos.** Un constructor de flujos de trabajo low-code en Next.js. Un plugin de traducción para Optimizely CMS 12 en .NET 8. La reingeniería de un proyecto Yii (PHP) a Node.js. Apps chicas para comercios: punto de venta, delivery, una bicicletería y facturación con ARCA/AFIP.
 
 **Industrias.** Trabajé en banca (J.P. Morgan Chase, a través de Globant), acero (Ternium), energía (AES), automatización industrial, comunicaciones, salud, traducción y localización, financiación automotriz y comercio.
 
@@ -100,8 +100,8 @@ Cotizaciones de leasing de vehículos con el motor de API MARSE, y los reportes 
 
 *Remoto*
 
-- Trabajé en DriveProLink desde la primera versión, con un equipo. Me ocupé de la arquitectura, el deploy y el mantenimiento.
-- Mantengo plataformas para concesionarias escritas en Node.js, como DealerOMG.
+- Trabajé en una plataforma de financiación y leasing de vehículos desde la primera versión, con un equipo. Me ocupé de la arquitectura, el deploy y el mantenimiento.
+- Mantengo plataformas para concesionarias escritas en Node.js.
 - Estabilicé un proceso de deploy frágil y refactoricé de a poco un producto legacy para concesionarias, sin frenar la operación en vivo.
 - Estimaciones, planificación de sprints y revisiones de código. Agentes de IA en el desarrollo diario.
 
@@ -122,9 +122,9 @@ Cotizaciones de leasing de vehículos con el motor de API MARSE, y los reportes 
 
 *Contratista, 100% remoto, 7,5 años*
 
-- Trabajé en el Translation Portal, incluido el rediseño de la interfaz de 2022: dashboard, gráficos y controles de seguridad.
+- Trabajé en un portal de clientes de traducción y localización, incluido el rediseño de la interfaz de 2022: dashboard, gráficos y controles de seguridad.
 - Trabajé en el servidor de traducciones, que recibe los paquetes de contenido a traducir y los pedidos de cotización.
-- Trabajé en GPMS, el sistema interno de gestión de proyectos de GPI.
+- Trabajé en el sistema interno de gestión de proyectos de GPI.
 - Desarrollé y mantuve conectores de traducción para CMS: Sitecore XP y XM Cloud, Optimizely, Umbraco, Strapi y Amplience.
 - Automaticé flujos de localización entre equipos de traducción, desarrolladores y editores de CMS.
 - Resolví incidentes en producción: performance de base de datos, fallas de integración y parches de seguridad.
@@ -176,7 +176,7 @@ Cotizaciones de leasing de vehículos con el motor de API MARSE, y los reportes 
 
 **IA.** Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app.
 
-**Donde soy menos fuerte.** Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure. No armé un sistema RAG grande en producción. Python es una carencia. Ya no escribo React y TypeScript a mano, lo hacen los agentes bajo mi dirección. Mobile: solo lo básico. No usé Kubernetes.
+**Donde soy menos fuerte.** Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure, y no armé un sistema RAG grande en producción. Python y Kubernetes siguen siendo carencias, y en mobile solo tengo lo básico.
 
 ## Educación e idiomas
 
@@ -203,7 +203,7 @@ Estoy disponible para trabajo part-time y por contrato con clientes del exterior
 
 El sitio es una app de React hecha con Vite. No tiene backend. Todo el texto, en tres idiomas, está en `src/content.js`. Los README se generan desde ese mismo archivo.
 
-- Temas: Celeste, Terminal, Editorial, Aurora, Pampa. Cada uno tiene modo claro y oscuro.
+- Temas: Argentina, Matrix, Multinational, Arcade, Patagonia. Cada uno tiene modo claro y oscuro.
 - El botón Descargar CV imprime la página con un formato limpio de CV. En la ventana de impresión elegí Guardar como PDF.
 - Stack del sitio: React, Vite, CSS. Sin backend ni base de datos.
 

@@ -44,7 +44,7 @@ I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of a
 
 ### How I work
 
-**I take ownership.** When I take a project, I treat it as mine. On DriveProLink I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.
+**I take ownership.** When I take a project, I treat it as mine. On a vehicle finance and lease platform I covered architecture, deploy and maintenance. On ComercIApp I decide the product, not only the code.
 
 **I look for a win-win.** Before I decide something, I try to understand what the other side needs. With ComercIApp, I offer to help shop owners load their first products, so they don't have to figure it out alone. In client work, I start with the business rules and then choose the technology.
 
@@ -64,31 +64,31 @@ Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finan
 
 `ComercIApp` `Education`
 
-**[DriveProLink](https://driveprolink.com)**
+**Vehicle finance and lease platform**
 
-Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.
+Client product, name not public. Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.
 
-`.NET` `Azure` `React` `Vercel` `PostgreSQL`
+`.NET` `Azure` `React` `PostgreSQL`
 
-**[Translation Portal and GPMS](https://www.translationportal.com)**
+**Translation and localization portal**
 
-GPI's client portal for quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the translation server and on GPMS.
+Client product, name not public. A client portal for a localization company, for translation quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the server that receives the translation packages and quotes, and on the internal project management system.
 
 `Localization` `CMS connectors` `.NET`
 
-**DealerOMG**
+**Dealer management platform**
 
-A dealer platform written in Node.js. I maintain it at Innovate On Demand.
+Client product, name not public. A dealer management platform written in Node.js. I maintain it at Innovate On Demand.
 
 `Node.js`
 
-**LeaseMax**
+**Vehicle lease quotation engine**
 
-Vehicle lease quotations with the MARSE API engine, and the LeaseMax reports.
+Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.
 
 `Vehicle leasing` `Reports`
 
-**More builds.** FlowCraft, a low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.
+**More builds.** A low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.
 
 **Industries.** I've worked in banking (J.P. Morgan Chase, through Globant), steel (Ternium), energy (AES), industrial automation, communications, health, translation and localization, automotive finance and retail.
 
@@ -100,8 +100,8 @@ Vehicle lease quotations with the MARSE API engine, and the LeaseMax reports.
 
 *Remote*
 
-- Worked on DriveProLink from the first version, with a team. I covered architecture, deploy and maintenance.
-- Maintain dealer platforms written in Node.js, like DealerOMG.
+- Worked on a vehicle finance and lease platform from the first version, with a team. I covered architecture, deploy and maintenance.
+- Maintain dealer platforms written in Node.js.
 - Stabilized a fragile deployment process and refactored a legacy dealer product in small steps, without stopping live operations.
 - Estimation, sprint planning and code reviews. AI agents in the daily development.
 
@@ -122,9 +122,9 @@ Vehicle lease quotations with the MARSE API engine, and the LeaseMax reports.
 
 *Contractor, fully remote, 7.5 years*
 
-- Worked on the Translation Portal, including the 2022 UI re-design: dashboard, charts and security checks.
+- Worked on a translation and localization client portal, including the 2022 UI re-design: dashboard, charts and security checks.
 - Worked on the translation server that receives the content packages to translate and the quote requests.
-- Worked on GPMS, GPI's internal project management system.
+- Worked on GPI's internal project management system.
 - Built and maintained translation connectors for CMS platforms: Sitecore XP and XM Cloud, Optimizely, Umbraco, Strapi and Amplience.
 - Automated localization workflows between translation teams, developers and CMS editors.
 - Fixed production incidents: database performance, integration failures and security patches.
@@ -176,7 +176,7 @@ Vehicle lease quotations with the MARSE API engine, and the LeaseMax reports.
 
 **AI.** I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data.
 
-**Where I'm less strong.** My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work. I haven't built a large RAG system in production. Python is a gap. I don't write React and TypeScript by hand anymore, the agents do it under my direction. Mobile: basics only. I haven't used Kubernetes.
+**Where I'm less strong.** My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work, and I haven't built a large RAG system in production. Python and Kubernetes are still gaps, and mobile is basics only.
 
 ## Education and languages
 
@@ -203,7 +203,7 @@ I'm open to part-time and contract work with international clients. I work async
 
 The site is a React app made with Vite. It has no backend. All the text, in three languages, is in `src/content.js`. The README files are generated from that same file.
 
-- Themes: Celeste, Terminal, Editorial, Aurora, Pampa. Each one has light and dark mode.
+- Themes: Argentina, Matrix, Multinational, Arcade, Patagonia. Each one has light and dark mode.
 - The Download CV button prints the page with a clean CV layout. Choose Save as PDF in the print window.
 - Stack of the site: React, Vite, CSS. No backend, no database.
 
