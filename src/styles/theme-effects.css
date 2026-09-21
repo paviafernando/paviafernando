@@ -1,6 +1,9 @@
 /* Per-theme decoration. Each theme keeps the same layout and components,
    but gets a real visual identity here: texture, glow, motifs.
-   Every animated effect is gated behind prefers-reduced-motion: no-preference. */
+   Every animated effect is gated behind prefers-reduced-motion: no-preference.
+   Screen only: the print stylesheet resets to one plain, compact CV layout,
+   the same regardless of the active theme. */
+@media screen {
 
 /* ============================== Argentina ============================== */
 :root[data-theme="celeste"] .site-header {
@@ -194,3 +197,5 @@
 :root[data-theme="pampa"] .role-panel {
   border-bottom: 3px solid var(--accent-2);
 }
+
+} /* @media screen */

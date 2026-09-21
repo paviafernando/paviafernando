@@ -1,4 +1,9 @@
-/* "Download CV" prints the page. This makes the print version a clean CV. */
+/* "Download CV" prints the page. This is a separate, condensed CV layout,
+   the same for every theme: one plain typeface, tight spacing, meant to
+   fit on a single page. The full detail stays on the live site. */
+@page {
+  margin: 12mm 14mm;
+}
 @media print {
   :root[data-theme][data-mode] {
     --bg: #ffffff;
@@ -10,16 +15,29 @@
     --accent: #111111;
     --accent-fg: #ffffff;
     --hero-bg: none;
+    --font-body: Arial, Helvetica, sans-serif;
+    --font-display: Georgia, "Times New Roman", serif;
+    --font-pixel: Georgia, "Times New Roman", serif;
+    --display-weight: 700;
+    --display-tracking: -0.01em;
+    --body-leading: 1.2;
   }
   html {
-    font-size: 11px;
+    font-size: 9.5px;
   }
   body {
     background: #fff;
   }
   .no-print,
   .feature-shot,
-  .theme-mark {
+  .theme-mark,
+  .details {
+    display: none !important;
+  }
+  /* The portfolio (with screenshots and client work) is a site feature.
+     The one-page CV leans on Experience instead, which already covers
+     what was built at each job. */
+  #work {
     display: none !important;
   }
   .print-only {
@@ -27,8 +45,87 @@
   }
   .hero,
   .section {
-    padding-block: 1.2rem;
+    padding-block: 0.2rem;
     break-inside: auto;
+  }
+  /* A grid container is one unbreakable block for pagination in most
+     browsers: if it does not fully fit in what's left of the page, the
+     whole thing jumps to the next one. Block flow lets each section
+     break wherever it actually runs out of room. */
+  .section-grid {
+    display: block;
+  }
+  .section-title {
+    margin-bottom: 0.4rem;
+  }
+  .how-list,
+  .timeline,
+  .skills-grid,
+  .about-grid,
+  .plain-list {
+    display: block;
+  }
+  .how-list > * + *,
+  .skills-grid > * + * {
+    margin-top: 0.45rem;
+  }
+  .about-grid > * + * {
+    margin-top: 0.3rem;
+  }
+  .plain-list li {
+    margin-top: 0.15rem;
+  }
+  /* A 2016 short course is the least useful line on a condensed CV. */
+  .about-grid > *:nth-child(1) li:nth-child(4) {
+    display: none;
+  }
+  .how-item {
+    padding-top: 0.3rem;
+  }
+  .how-item p {
+    margin-top: 0.3rem;
+  }
+  .job {
+    padding-block: 0.15rem;
+    gap: 0.5rem;
+  }
+  .section-title {
+    font-size: 1.5rem;
+  }
+  .job-body ul {
+    margin-top: 0.25rem;
+    gap: 0.1rem;
+  }
+  .contact-mail {
+    margin-top: 0.2rem;
+    font-size: 1.1rem;
+  }
+  /* Already summarized in the print-only contact line at the very end. */
+  .contact-text {
+    display: none;
+  }
+  .about-grid {
+    gap: 0.3rem;
+  }
+  .feature {
+    padding: 0.6rem 0.8rem;
+  }
+  .featured {
+    gap: 0.6rem;
+  }
+  .rows {
+    gap: 0;
+  }
+  .row {
+    padding-block: 0.3rem;
+  }
+  .rows .tags {
+    display: none;
+  }
+  /* "Where I'm less strong" stays on the live site. The print CV is a
+     condensed, one-page version, not the full picture. */
+  #skills .skills-grid > div:nth-child(4) {
+    display: none;
   }
   .role-btn {
     font-size: 1.2rem;
@@ -36,21 +133,48 @@
     padding: 0;
     color: var(--fg);
   }
-  .role-print p {
-    font-size: 0.95rem;
-    margin-bottom: 0.4rem;
+  /* Print shows the role names in one line, not the full per-role text
+     (that belongs on the site, where it does not cost paper). */
+  .roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 0.5rem;
+    margin-top: 0.3rem;
   }
   .roles li {
     animation: none !important;
   }
+  .roles li:not(:last-child) .role-btn::after {
+    content: ",";
+  }
+  .role-print {
+    display: none !important;
+  }
+  .roles-hint {
+    display: none;
+  }
   .section-title {
     position: static;
+    margin-bottom: 0.4rem;
   }
   .job,
   .feature,
   .row,
   .how-item {
     break-inside: avoid;
+  }
+  .job-body ul li:nth-child(n + 3) {
+    display: none;
+  }
+  .timeline > .job:nth-child(n + 5) .job-body ul,
+  .timeline > .job:nth-child(n + 5) .job-note {
+    display: none;
+  }
+  p {
+    margin-top: 0.25rem;
+  }
+  .tags {
+    margin-top: 0.4rem;
   }
   a {
     text-decoration: none;
