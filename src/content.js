@@ -59,7 +59,7 @@ export const timeline = [
     company: "Innovate On Demand",
     from: "2025-09",
     to: null,
-    stack: [".NET", "Node.js", "React", "Azure", "PostgreSQL"],
+    stack: [".NET", "Node.js", "React", "Azure", "Google Cloud", "BigQuery", "PostgreSQL"],
   },
   {
     id: "comerciapp",
@@ -80,14 +80,14 @@ export const timeline = [
     company: "Globant, J.P. Morgan Chase",
     from: "2016-05",
     to: "2017-11",
-    stack: [".NET", "SQL Server", "Windows desktop"],
+    stack: [".NET", "SQL Server", "Oracle", "Sybase", "Pentaho", "Windows desktop"],
   },
   {
     id: "janus",
     company: "Janus Automation",
     from: "2013-11",
     to: "2016-05",
-    stack: ["SCADA", "SQL Server", "Windows/IIS servers"],
+    stack: ["SCADA", "QNX", "Angular", "TDD", "SQL Server", "Windows/IIS servers"],
   },
   {
     id: "aes",
@@ -266,6 +266,8 @@ export const copy = {
             "Stabilized a fragile deployment process and refactored a legacy dealer product in small steps, without stopping live operations.",
             "Estimation, sprint planning and code reviews. AI agents in the daily development.",
           ],
+          learned:
+            "Learned BigQuery on Google Cloud. Led a backend from scratch on one project: picked the stack, planned the tasks and the CI. It was in production in 4 months, no regressions, and the client was happy from day one.",
         },
         comerciapp: {
           role: "Founder and product lead",
@@ -289,6 +291,8 @@ export const copy = {
             "Fixed production incidents: database performance, integration failures and security patches.",
             "Quotes and estimates with the technical manager. Support for internal servers. Documentation for the ISO certification.",
           ],
+          learned:
+            "Promoted during my time there. Got the Sitecore Developer certification. Took courses in Java, Node.js, MongoDB, Cassandra, GraphQL, Angular, React, .NET Core, Sitecore XM Cloud, Optimizely, Strapi, Amplience, Kentico, Umbraco and Azure. Worked daily with teams across different time zones.",
         },
         globant: {
           role: ".NET semi senior developer analyst",
@@ -298,6 +302,8 @@ export const copy = {
             "SQL scripts for data processing, reports and database maintenance.",
             "Code reviews, testing and deployments.",
           ],
+          learned:
+            "Promoted during my time there. Worked in banking, with high security requirements. Learned Pentaho and Oracle, kept using Sybase, and learned more about compliance.",
         },
         janus: {
           role: "Semi senior developer",
@@ -307,6 +313,8 @@ export const copy = {
             "Deployed web applications to production and managed the web and database servers: updates, backups and security.",
             "At Ternium: support for their applications, with corrective SQL scripts on live databases.",
           ],
+          learned:
+            "Courses in English and in real-time operating systems (QNX). Worked on a SCADA system, Angular, server administration, deployments and going live, and TDD. Picked up project management along the way.",
         },
         aes: {
           role: "Developer",
@@ -315,6 +323,8 @@ export const copy = {
             "A desktop application with RFID support, SharePoint applications and web applications.",
             "Fixed web applications and databases in production.",
           ],
+          learned:
+            "Worked on medical service systems and on a physical access and personnel recognition system using RFID. Learned about compliance and what it's like working inside a multinational company.",
         },
         early: {
           role: "Freelance developer, and trainee at Eniac",
@@ -376,6 +386,7 @@ export const copy = {
         openLabel: "Ask about Fernando",
         title: "Ask about Fernando",
         intro: "Ask anything about my work, skills or background. If I'm not sure, I'll say so and you can book a call instead.",
+        hint: "Got a question? Ask me anything",
         placeholder: "Type a question",
         send: "Send",
         sending: "Sending...",
@@ -532,6 +543,8 @@ export const copy = {
             "Estabilicé un proceso de deploy frágil y refactoricé de a poco un producto legacy para concesionarias, sin frenar la operación en vivo.",
             "Estimaciones, planificación de sprints y revisiones de código. Agentes de IA en el desarrollo diario.",
           ],
+          learned:
+            "Aprendí BigQuery en Google Cloud. Lideré un backend desde cero en un proyecto: elegí el stack, planifiqué las tareas y el CI. Estuvo en producción en 4 meses, sin regresiones, y el cliente estuvo contento desde el primer día.",
         },
         comerciapp: {
           role: "Fundador y líder de producto",
@@ -555,6 +568,8 @@ export const copy = {
             "Resolví incidentes en producción: performance de base de datos, fallas de integración y parches de seguridad.",
             "Cotizaciones y estimaciones con el gerente técnico. Soporte de servidores internos. Documentación para la certificación ISO.",
           ],
+          learned:
+            "Tuve ascensos en ese tiempo. Saqué la certificación de Sitecore Developer. Hice cursos de Java, Node.js, MongoDB, Cassandra, GraphQL, Angular, React, .NET Core, Sitecore XM Cloud, Optimizely, Strapi, Amplience, Kentico, Umbraco y Azure. Trabajé día a día con equipos en distintas zonas horarias.",
         },
         globant: {
           role: "Developer analyst .NET semi senior",
@@ -564,6 +579,8 @@ export const copy = {
             "Scripts SQL para procesamiento de datos, reportes y mantenimiento de bases de datos.",
             "Revisiones de código, pruebas y deploys.",
           ],
+          learned:
+            "Tuve un ascenso en ese tiempo. Trabajé en banca, con requisitos de seguridad altos. Aprendí Pentaho y Oracle, seguí usando Sybase, y aprendí más de compliance.",
         },
         janus: {
           role: "Desarrollador semi senior",
@@ -573,6 +590,8 @@ export const copy = {
             "Publiqué aplicaciones web en producción y administré los servidores web y de bases de datos: actualizaciones, backups y seguridad.",
             "En Ternium: soporte de sus aplicaciones, con scripts SQL correctivos sobre bases en producción.",
           ],
+          learned:
+            "Cursos de inglés y de sistemas operativos en tiempo real (QNX). Trabajé en un sistema SCADA, Angular, administración de servidores, implementaciones y puestas en producción, y TDD. Aprendí bastante de project management en el camino.",
         },
         aes: {
           role: "Desarrollador",
@@ -581,6 +600,8 @@ export const copy = {
             "Una aplicación de escritorio con soporte RFID, aplicaciones SharePoint y aplicaciones web.",
             "Corrección de aplicaciones web y bases de datos en producción.",
           ],
+          learned:
+            "Trabajé en sistemas de servicio médico y en un sistema de acceso físico y reconocimiento de personal con RFID. Aprendí de compliance y de cómo es trabajar dentro de una empresa multinacional.",
         },
         early: {
           role: "Desarrollador freelance, y trainee en Eniac",
@@ -642,6 +663,7 @@ export const copy = {
         openLabel: "Preguntame sobre mí",
         title: "Preguntame sobre mí",
         intro: "Preguntá lo que quieras sobre mi trabajo, mis skills o mi trayectoria. Si no estoy seguro, te lo digo y podés reservar una llamada.",
+        hint: "¿Tenés una pregunta? Preguntame lo que sea",
         placeholder: "Escribí una pregunta",
         send: "Enviar",
         sending: "Enviando...",
@@ -798,6 +820,8 @@ export const copy = {
             "Estabilizei um processo de deploy frágil e refatorei aos poucos um produto legado para concessionárias, sem parar a operação em produção.",
             "Estimativas, planejamento de sprints e revisões de código. Agentes de IA no desenvolvimento diário.",
           ],
+          learned:
+            "Aprendi BigQuery no Google Cloud. Liderei um backend do zero em um projeto: escolhi o stack, planejei as tarefas e o CI. Ficou em produção em 4 meses, sem regressões, e o cliente ficou satisfeito desde o primeiro dia.",
         },
         comerciapp: {
           role: "Fundador e líder de produto",
@@ -821,6 +845,8 @@ export const copy = {
             "Resolvi incidentes em produção: performance de banco de dados, falhas de integração e patches de segurança.",
             "Orçamentos e estimativas com o gerente técnico. Suporte aos servidores internos. Documentação para a certificação ISO.",
           ],
+          learned:
+            "Fui promovido nesse período. Tirei a certificação Sitecore Developer. Fiz cursos de Java, Node.js, MongoDB, Cassandra, GraphQL, Angular, React, .NET Core, Sitecore XM Cloud, Optimizely, Strapi, Amplience, Kentico, Umbraco e Azure. Trabalhei todo dia com equipes em fusos horários diferentes.",
         },
         globant: {
           role: "Developer analyst .NET semi sênior",
@@ -830,6 +856,8 @@ export const copy = {
             "Scripts SQL para processamento de dados, relatórios e manutenção de banco de dados.",
             "Revisões de código, testes e deploys.",
           ],
+          learned:
+            "Fui promovido nesse período. Trabalhei no setor bancário, com requisitos altos de segurança. Aprendi Pentaho e Oracle, continuei usando Sybase, e aprendi mais sobre compliance.",
         },
         janus: {
           role: "Desenvolvedor semi sênior",
@@ -839,6 +867,8 @@ export const copy = {
             "Publiquei aplicações web em produção e administrei os servidores web e de banco de dados: atualizações, backups e segurança.",
             "Na Ternium: suporte às aplicações, com scripts SQL corretivos em bancos em produção.",
           ],
+          learned:
+            "Cursos de inglês e de sistemas operacionais em tempo real (QNX). Trabalhei em um sistema SCADA, Angular, administração de servidores, implantações e entradas em produção, e TDD. Aprendi bastante de gestão de projetos pelo caminho.",
         },
         aes: {
           role: "Desenvolvedor",
@@ -847,6 +877,8 @@ export const copy = {
             "Uma aplicação desktop com suporte a RFID, aplicações SharePoint e aplicações web.",
             "Correção de aplicações web e bancos de dados em produção.",
           ],
+          learned:
+            "Trabalhei em sistemas de serviço médico e em um sistema de acesso físico e reconhecimento de pessoal com RFID. Aprendi sobre compliance e como é trabalhar dentro de uma multinacional.",
         },
         early: {
           role: "Desenvolvedor freelance, e trainee na Eniac",
@@ -908,6 +940,7 @@ export const copy = {
         openLabel: "Pergunte sobre mim",
         title: "Pergunte sobre mim",
         intro: "Pergunte o que quiser sobre meu trabalho, minhas skills ou minha trajetória. Se eu não tiver certeza, eu digo, e você pode agendar uma call.",
+        hint: "Tem uma pergunta? Pergunte o que quiser",
         placeholder: "Digite uma pergunta",
         send: "Enviar",
         sending: "Enviando...",

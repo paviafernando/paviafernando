@@ -3,7 +3,7 @@ import { timeline, formatPeriod } from "../content.js";
 
 const EARLIER_FROM = 4; // jobs at this index and beyond collapse to one line in print
 
-function StackDetails({ t, job, open, onToggle }) {
+function StackDetails({ t, job, item, open, onToggle }) {
   if (!job.stack?.length) return null;
   return (
     <div className="details no-print">
@@ -11,11 +11,14 @@ function StackDetails({ t, job, open, onToggle }) {
         {open ? t.work.hideLabel : t.work.detailsLabel}
       </button>
       {open && (
-        <ul className="tags">
-          {job.stack.map((s) => (
-            <li key={s}>{s}</li>
-          ))}
-        </ul>
+        <>
+          <ul className="tags">
+            {job.stack.map((s) => (
+              <li key={s}>{s}</li>
+            ))}
+          </ul>
+          {item.learned && <p className="details-text">{item.learned}</p>}
+        </>
       )}
     </div>
   );
@@ -45,7 +48,7 @@ export default function Experience({ t, lang }) {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
-                  <StackDetails t={t} job={job} open={openId === job.id} onToggle={() => toggle(job.id)} />
+                  <StackDetails t={t} job={job} item={item} open={openId === job.id} onToggle={() => toggle(job.id)} />
                 </div>
               </li>
             );

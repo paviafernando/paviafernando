@@ -16,12 +16,16 @@ function CloseIcon() {
   );
 }
 
+const HINT_SEEN_KEY = "pf-chat-hint-seen";
+
 export default function AskFernando({ t, lang }) {
   const [open, setOpen] = useState(false);
   const [input, setInput] = useState("");
   const [messages, setMessages] = useState([]);
   const [sending, setSending] = useState(false);
   const [error, setError] = useState(false);
+  const [hint, setHint] = useState(false);
+  const [hintLeaving, setHintLeaving] = useState(false);
   const listRef = useRef(null);
   const c = t.contact.chat;
 
@@ -33,6 +37,47 @@ export default function AskFernando({ t, lang }) {
     document.addEventListener("keydown", onKey);
     return () => document.removeEventListener("keydown", onKey);
   }, [open]);
+
+  // A one-time, self-dismissing hint bubble: shows a few seconds after
+  // arrival, then leaves on its own. Never shown again once seen.
+  useEffect(() => {
+    let seen = false;
+    try {
+      seen = localStorage.getItem(HINT_SEEN_KEY) === "1";
+    } catch {
+      /* private mode, just skip the hint */
+    }
+    if (seen) return;
+    const showTimer = setTimeout(() => setHint(true), 2500);
+    return () => clearTimeout(showTimer);
+  }, []);
+
+  useEffect(() => {
+    if (!hint) return;
+    const leaveTimer = setTimeout(() => setHintLeaving(true), 6000);
+    const removeTimer = setTimeout(() => dismissHint(false), 6600);
+    return () => {
+      clearTimeout(leaveTimer);
+      clearTimeout(removeTimer);
+    };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [hint]);
+
+  useEffect(() => {
+    if (open) dismissHint(false);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [open]);
+
+  function dismissHint(openChat) {
+    setHint(false);
+    setHintLeaving(false);
+    try {
+      localStorage.setItem(HINT_SEEN_KEY, "1");
+    } catch {
+      /* private mode, nothing to persist */
+    }
+    if (openChat) setOpen(true);
+  }
 
   useEffect(() => {
     if (listRef.current) listRef.current.scrollTop = listRef.current.scrollHeight;
@@ -100,6 +145,15 @@ export default function AskFernando({ t, lang }) {
             </button>
           </form>
         </div>
+      )}
+      {hint && (
+        <button
+          type="button"
+          className={`ask-hint ${hintLeaving ? "ask-hint-out" : "ask-hint-in"}`}
+          onClick={() => dismissHint(true)}
+        >
+          {c.hint}
+        </button>
       )}
       <button type="button" className="ask-fab" aria-label={c.openLabel} onClick={() => setOpen((o) => !o)}>
         <ChatIcon />
