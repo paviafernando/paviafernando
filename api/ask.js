@@ -4,7 +4,7 @@
 // when it does not know something instead of guessing.
 
 const GROQ_URL = "https://api.groq.com/openai/v1/chat/completions";
-const MODEL = "llama-3.3-70b-versatile";
+const MODEL = "openai/gpt-oss-120b";
 const MAX_MESSAGE_LENGTH = 600;
 
 // Facts Fernando approved for the site (see docs/ in the project, private).
