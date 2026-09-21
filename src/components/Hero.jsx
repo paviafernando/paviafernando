@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { profile, roleIds } from "../content.js";
+import ThemeMark from "./ThemeMark.jsx";
 
-export default function Hero({ t }) {
+export default function Hero({ t, theme }) {
   const [active, setActive] = useState(roleIds[0]);
   const role = t.roles[active];
 
@@ -44,7 +45,10 @@ export default function Hero({ t }) {
         </div>
 
         <div className="hero-roles">
-          <h2 className="roles-title">{t.hero.rolesTitle}</h2>
+          <h2 className="roles-title">
+            <ThemeMark theme={theme} />
+            {t.hero.rolesTitle}
+          </h2>
           <ol className="roles">
             {roleIds.map((id, i) => (
               <li key={id} style={{ "--i": i }}>

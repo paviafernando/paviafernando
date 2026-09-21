@@ -249,11 +249,19 @@
 
 /* The role index is the main thing of the page */
 .roles-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1rem;
   font-weight: 600;
   letter-spacing: 0;
   font-family: var(--font-body);
   color: var(--muted);
+}
+.theme-mark {
+  display: inline-flex;
+  color: var(--accent);
+  flex: none;
 }
 .roles {
   margin-top: 1rem;
@@ -366,6 +374,17 @@
   background: var(--bg-elev);
   border: 1px solid var(--border-strong);
   border-radius: var(--radius);
+}
+.feature-shot {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 1280 / 800;
+  object-fit: cover;
+  object-position: top;
+  border-radius: calc(var(--radius) - 0.4rem);
+  border: 1px solid var(--border);
+  margin-bottom: 1rem;
 }
 .feature h3 {
   font-size: 1.6rem;

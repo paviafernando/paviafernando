@@ -38,6 +38,9 @@ export default function Work({ t }) {
           <div className="featured">
             {featured.map((p) => (
               <article className="feature" key={p.id}>
+                {p.screenshot && (
+                  <img className="feature-shot" src={p.screenshot} alt="" loading="lazy" width="1280" height="800" />
+                )}
                 <h3>
                   <Name p={p} />
                 </h3>
