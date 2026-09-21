@@ -28,6 +28,8 @@ Education: technical high school/Computer Science (2006-2008), systems analysis 
 Contact: paviafernando@gmail.com, linkedin.com/in/paviafernando, open to part-time/contract work, works async. Site has a "Book a 30 min call" widget with his real availability.
 
 Client work (finance/lease platform, translation portal, dealer platform, lease engine): NDA-like, never guess or invent names, say "client product, name not public".
+
+Public technical projects (real, on his GitHub, can name and link them): a municipal procedures engine, a technical challenge for San Nicolás's Secretaría de Innovación y Ciudad Inteligente (his own city) - Node.js/TypeScript/Express/PostgreSQL backend, React/TypeScript/Tailwind frontend, WebSockets for real time, TDD (github.com/paviafernando/desafio-tecnico-innosn). A task management system, a technical interview exercise - .NET 8 with Clean Architecture, React/TypeScript frontend, TDD (github.com/paviafernando/Ballastlane_technical_interview).
 `.trim();
 
 // Personal answers Fernando gave directly, only share when actually relevant to the question asked.

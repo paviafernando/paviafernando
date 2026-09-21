@@ -66,10 +66,12 @@ export const timeline = [
 export const projects = [
   { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true, screenshot: "/screenshots/comerciapp.png" },
   { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Next.js", "WordPress (headless)"], featured: true, screenshot: "/screenshots/academy.png" },
+  { id: "tramitessn", name: "Municipal procedures engine", url: "https://github.com/paviafernando/desafio-tecnico-innosn", tags: ["Node.js", "TypeScript", "React", "PostgreSQL", "WebSockets", "TDD"] },
+  { id: "taskmgmt", name: "Task management system", url: "https://github.com/paviafernando/Ballastlane_technical_interview", tags: [".NET 8", "Clean Architecture", "React", "TypeScript", "PostgreSQL"] },
   { id: "driveprolink", name: "Vehicle finance and lease platform", url: null, tags: [".NET", "Azure", "React", "PostgreSQL"] },
-  { id: "portal", name: "Translation and localization portal", url: null, tags: ["Localization", "CMS connectors", ".NET"] },
-  { id: "dealeromg", name: "Dealer management platform", url: null, tags: ["Node.js"] },
-  { id: "leasemax", name: "Vehicle lease quotation engine", url: null, tags: ["Vehicle leasing", "Reports"] },
+  { id: "portal", name: "Translation and localization portal", url: null, tags: ["Angular", "React", ".NET", "GraphQL", "Headless CMS"] },
+  { id: "dealeromg", name: "Dealer management platform", url: null, tags: [".NET", "React", "Node.js"] },
+  { id: "leasemax", name: "Vehicle lease quotation engine", url: null, tags: ["Node.js", "React", "PostgreSQL"] },
 ];
 
 export const roleIds = ["dev", "server", "db", "analyst", "pm", "founder", "lead"];
@@ -171,11 +173,15 @@ export const copy = {
           "Online store, WhatsApp orders and invoicing in one app for small shops in Argentina. It has an AI sales agent that answers customers on WhatsApp. I'm the founder and I own product, architecture and delivery.",
         academy:
           "Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finances and the AI features. I built it to help them get real value from the app, not just click through it.",
+        tramitessn:
+          "A technical challenge for the Secretaría de Innovación y Ciudad Inteligente of San Nicolás, my own city. Instead of one hardcoded procedure, a configurable engine: admins define procedure types and citizens track their request in real time, with a full history and notifications.",
+        taskmgmt:
+          "A technical interview exercise: a full-stack task management app, built with Clean Architecture and test-driven development.",
         driveprolink:
           "Client product, name not public. Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.",
         portal:
           "Client product, name not public. A client portal for a localization company, for translation quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the server that receives the translation packages and quotes, and on the internal project management system.",
-        dealeromg: "Client product, name not public. A dealer management platform written in Node.js. I maintain it at Innovate On Demand.",
+        dealeromg: "Client product, name not public. A dealer management platform: .NET backend, a React admin dashboard, and Node.js satellite services for data ingestion and integrations. I maintain it at Innovate On Demand.",
         leasemax: "Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.",
       },
       detailsLabel: "Tech details",
@@ -185,12 +191,18 @@ export const copy = {
           "Architecture: multi-tenant, each shop's data is isolated from the others. Offline-first on the shop floor, syncs automatically when the connection comes back. Payments with Stripe and MercadoPago, WhatsApp for orders, an AI sales agent built with the Claude API, and GDPR-style data deletion with an audit trail.",
         academy:
           "Next.js and React on the frontend. Content comes from a headless WordPress: PHP and MySQL behind the API, Next.js fetches and renders the tutorials and the search.",
+        tramitessn:
+          "Backend: Node.js, TypeScript, Express, PostgreSQL. Frontend: React, TypeScript, Tailwind, Vite. Real-time updates with WebSockets (Socket.IO), S3-compatible file storage, and TDD with Jest and Vitest.",
+        taskmgmt:
+          ".NET 8 Web API with Clean Architecture (API, business logic, domain and infrastructure layers), Entity Framework Core, JWT auth. React and TypeScript frontend. Backend tests with xUnit, Moq and FluentAssertions, frontend tests with Vitest and React Testing Library.",
         driveprolink:
           "Patterns: server-side rate and quote calculations, integrations with external finance and leasing rate providers. React frontend, .NET backend, deployed on Vercel.",
         portal:
-          "Patterns: role-based access per client account, CMS connectors that push translated content back automatically. .NET backend, dashboard charts for spend and turnaround time.",
-        dealeromg: "Node.js services. Incremental refactors of a legacy codebase without stopping live operations.",
-        leasemax: "A calculation engine for lease quotes, plus a reporting layer for the sales team.",
+          "Patterns: role-based access per client account, CMS connectors that push translated content back automatically. Angular and React on the frontend, .NET backend, a GraphQL API layer, and a headless CMS architecture. Dashboard charts for spend and turnaround time.",
+        dealeromg:
+          "Main backend and admin dashboard in .NET and React. Separate Node.js services handle data ingestion and third-party integrations. Incremental refactors of a legacy codebase without stopping live operations.",
+        leasemax:
+          "Node.js and Express backend with PostgreSQL. A React tool for quotes with PDF generation and Stripe payments, plus a separate React admin dashboard.",
       },
       industriesTitle: "Industries",
       industries:
@@ -427,11 +439,15 @@ export const copy = {
           "Tienda online, pedidos por WhatsApp y facturación en una sola app para comercios chicos de Argentina. Tiene un agente de ventas con IA que atiende a los clientes por WhatsApp. Soy el fundador y me ocupo del producto, la arquitectura y la entrega.",
         academy:
           "Tutoriales para los dueños de comercios que usan ComercIApp: ventas, catálogo, tienda online, personal, finanzas y las funciones de IA. La armé para que le saquen valor real a la app, no solo para que la usen a los tumbos.",
+        tramitessn:
+          "Un desafío técnico para la Secretaría de Innovación y Ciudad Inteligente de San Nicolás, mi propia ciudad. En vez de resolver un solo trámite, armé un motor configurable: los administradores crean tipos de trámite y los vecinos siguen su pedido en tiempo real, con historial completo y notificaciones.",
+        taskmgmt:
+          "Un ejercicio de entrevista técnica: una app de gestión de tareas full-stack, con Clean Architecture y desarrollo guiado por tests.",
         driveprolink:
           "Producto de un cliente, el nombre no es público. Le da a las personas la mejor cotización de financiación y leasing de un vehículo, para que lleguen a la concesionaria con un presupuesto y puedan negociar. Trabajé en ella con un equipo en Innovate On Demand, desde la primera versión.",
         portal:
           "Producto de un cliente, el nombre no es público. Un portal de clientes de una empresa de localización, para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor que recibe los paquetes de traducción y las cotizaciones, y en el sistema interno de gestión de proyectos.",
-        dealeromg: "Producto de un cliente, el nombre no es público. Una plataforma para concesionarias escrita en Node.js. La mantengo en Innovate On Demand.",
+        dealeromg: "Producto de un cliente, el nombre no es público. Una plataforma para concesionarias: backend en .NET, dashboard de administración en React, y servicios satélite en Node.js para ingesta de datos e integraciones. La mantengo en Innovate On Demand.",
         leasemax: "Producto de un cliente, el nombre no es público. Un motor de cotizaciones de leasing de vehículos, más los reportes para el equipo comercial.",
       },
       detailsLabel: "Detalles técnicos",
@@ -441,12 +457,18 @@ export const copy = {
           "Arquitectura: multi-tenant, los datos de cada comercio están aislados de los demás. Offline-first en el local, sincroniza solo cuando vuelve la conexión. Pagos con Stripe y MercadoPago, pedidos por WhatsApp, un agente de ventas con IA hecho con la API de Claude, y eliminación de datos según GDPR con registro de auditoría.",
         academy:
           "Next.js y React en el frontend. El contenido viene de un WordPress headless: PHP y MySQL detrás de la API, Next.js trae y renderiza los tutoriales y la búsqueda.",
+        tramitessn:
+          "Backend: Node.js, TypeScript, Express, PostgreSQL. Frontend: React, TypeScript, Tailwind, Vite. Actualización en tiempo real con WebSockets (Socket.IO), almacenamiento de archivos compatible con S3, y TDD con Jest y Vitest.",
+        taskmgmt:
+          "API Web .NET 8 con Clean Architecture (capas de API, lógica de negocio, dominio e infraestructura), Entity Framework Core, autenticación JWT. Frontend en React y TypeScript. Tests de backend con xUnit, Moq y FluentAssertions, tests de frontend con Vitest y React Testing Library.",
         driveprolink:
           "Patrones: cálculos de tasas y cotizaciones en el servidor, integraciones con proveedores externos de tasas de financiación y leasing. Frontend en React, backend en .NET, deploy en Vercel.",
         portal:
-          "Patrones: acceso según rol por cuenta de cliente, conectores CMS que devuelven el contenido traducido de forma automática. Backend en .NET, gráficos del dashboard de gasto y tiempos de entrega.",
-        dealeromg: "Servicios en Node.js. Refactors incrementales de un código legado sin frenar la operación.",
-        leasemax: "Un motor de cálculo para cotizaciones de leasing, más una capa de reportes para el equipo comercial.",
+          "Patrones: acceso según rol por cuenta de cliente, conectores CMS que devuelven el contenido traducido de forma automática. Angular y React en el frontend, backend en .NET, una capa de API en GraphQL, y arquitectura de CMS headless. Gráficos del dashboard de gasto y tiempos de entrega.",
+        dealeromg:
+          "Backend principal y dashboard de administración en .NET y React. Servicios separados en Node.js para ingesta de datos e integraciones con terceros. Refactors incrementales de un código legado sin frenar la operación.",
+        leasemax:
+          "Backend en Node.js y Express con PostgreSQL. Una herramienta en React para cotizaciones con generación de PDF y pagos con Stripe, más un dashboard de administración aparte, también en React.",
       },
       industriesTitle: "Industrias",
       industries:
@@ -683,11 +705,15 @@ export const copy = {
           "Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequenos comércios da Argentina. Tem um agente de vendas com IA que atende os clientes no WhatsApp. Sou o fundador e cuido do produto, da arquitetura e da entrega.",
         academy:
           "Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, loja online, equipe, finanças e os recursos de IA. Eu criei para que eles tirem valor real do app, não só para clicar por clicar.",
+        tramitessn:
+          "Um desafio técnico para a Secretaria de Inovação e Cidade Inteligente de San Nicolás, minha própria cidade. Em vez de resolver um único trâmite, montei um motor configurável: os administradores criam tipos de trâmite e os moradores acompanham o pedido em tempo real, com histórico completo e notificações.",
+        taskmgmt:
+          "Um exercício de entrevista técnica: um app full-stack de gestão de tarefas, com Clean Architecture e desenvolvimento guiado por testes.",
         driveprolink:
           "Produto de um cliente, o nome não é público. Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.",
         portal:
           "Produto de um cliente, o nome não é público. Um portal de clientes de uma empresa de localização, para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor que recebe os pacotes de tradução e os orçamentos, e no sistema interno de gestão de projetos.",
-        dealeromg: "Produto de um cliente, o nome não é público. Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.",
+        dealeromg: "Produto de um cliente, o nome não é público. Uma plataforma para concessionárias: backend em .NET, dashboard de administração em React, e serviços satélite em Node.js para ingestão de dados e integrações. Eu a mantenho na Innovate On Demand.",
         leasemax: "Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.",
       },
       detailsLabel: "Detalhes técnicos",
@@ -697,12 +723,18 @@ export const copy = {
           "Arquitetura: multi-tenant, os dados de cada comércio ficam isolados dos demais. Offline-first na loja, sincroniza automaticamente quando a conexão volta. Pagamentos com Stripe e MercadoPago, pedidos pelo WhatsApp, um agente de vendas com IA feito com a API do Claude, e exclusão de dados conforme a GDPR com trilha de auditoria.",
         academy:
           "Next.js e React no frontend. O conteúdo vem de um WordPress headless: PHP e MySQL por trás da API, o Next.js busca e renderiza os tutoriais e a busca.",
+        tramitessn:
+          "Backend: Node.js, TypeScript, Express, PostgreSQL. Frontend: React, TypeScript, Tailwind, Vite. Atualização em tempo real com WebSockets (Socket.IO), armazenamento de arquivos compatível com S3, e TDD com Jest e Vitest.",
+        taskmgmt:
+          "API Web .NET 8 com Clean Architecture (camadas de API, lógica de negócio, domínio e infraestrutura), Entity Framework Core, autenticação JWT. Frontend em React e TypeScript. Testes de backend com xUnit, Moq e FluentAssertions, testes de frontend com Vitest e React Testing Library.",
         driveprolink:
           "Padrões: cálculos de taxas e cotações no servidor, integrações com provedores externos de taxas de financiamento e leasing. Frontend em React, backend em .NET, deploy na Vercel.",
         portal:
-          "Padrões: acesso por perfil de cada conta de cliente, conectores de CMS que devolvem o conteúdo traduzido automaticamente. Backend em .NET, gráficos do dashboard de gasto e prazos de entrega.",
-        dealeromg: "Serviços em Node.js. Refatorações incrementais de um código legado sem parar a operação.",
-        leasemax: "Um motor de cálculo para cotações de leasing, mais uma camada de relatórios para o time comercial.",
+          "Padrões: acesso por perfil de cada conta de cliente, conectores de CMS que devolvem o conteúdo traduzido automaticamente. Angular e React no frontend, backend em .NET, uma camada de API em GraphQL, e arquitetura de CMS headless. Gráficos do dashboard de gasto e prazos de entrega.",
+        dealeromg:
+          "Backend principal e dashboard de administração em .NET e React. Serviços separados em Node.js para ingestão de dados e integrações com terceiros. Refatorações incrementais de um código legado sem parar a operação.",
+        leasemax:
+          "Backend em Node.js e Express com PostgreSQL. Uma ferramenta em React para cotações com geração de PDF e pagamentos com Stripe, mais um dashboard de administração à parte, também em React.",
       },
       industriesTitle: "Setores",
       industries:

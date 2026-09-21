@@ -64,6 +64,18 @@ Tutorials for ComercIApp shop owners: sales, catalog, online store, staff, finan
 
 `ComercIApp` `Next.js` `WordPress (headless)`
 
+**[Municipal procedures engine](https://github.com/paviafernando/desafio-tecnico-innosn)**
+
+A technical challenge for the Secretaría de Innovación y Ciudad Inteligente of San Nicolás, my own city. Instead of one hardcoded procedure, a configurable engine: admins define procedure types and citizens track their request in real time, with a full history and notifications.
+
+`Node.js` `TypeScript` `React` `PostgreSQL` `WebSockets` `TDD`
+
+**[Task management system](https://github.com/paviafernando/Ballastlane_technical_interview)**
+
+A technical interview exercise: a full-stack task management app, built with Clean Architecture and test-driven development.
+
+`.NET 8` `Clean Architecture` `React` `TypeScript` `PostgreSQL`
+
 **Vehicle finance and lease platform**
 
 Client product, name not public. Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.
@@ -74,19 +86,19 @@ Client product, name not public. Gives people the best cash finance and lease qu
 
 Client product, name not public. A client portal for a localization company, for translation quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the server that receives the translation packages and quotes, and on the internal project management system.
 
-`Localization` `CMS connectors` `.NET`
+`Angular` `React` `.NET` `GraphQL` `Headless CMS`
 
 **Dealer management platform**
 
-Client product, name not public. A dealer management platform written in Node.js. I maintain it at Innovate On Demand.
+Client product, name not public. A dealer management platform: .NET backend, a React admin dashboard, and Node.js satellite services for data ingestion and integrations. I maintain it at Innovate On Demand.
 
-`Node.js`
+`.NET` `React` `Node.js`
 
 **Vehicle lease quotation engine**
 
 Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.
 
-`Vehicle leasing` `Reports`
+`Node.js` `React` `PostgreSQL`
 
 **More builds.** A low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.
 

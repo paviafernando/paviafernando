@@ -64,6 +64,18 @@ Tutoriais para os donos de comércios que usam o ComercIApp: vendas, catálogo, 
 
 `ComercIApp` `Next.js` `WordPress (headless)`
 
+**[Municipal procedures engine](https://github.com/paviafernando/desafio-tecnico-innosn)**
+
+Um desafio técnico para a Secretaria de Inovação e Cidade Inteligente de San Nicolás, minha própria cidade. Em vez de resolver um único trâmite, montei um motor configurável: os administradores criam tipos de trâmite e os moradores acompanham o pedido em tempo real, com histórico completo e notificações.
+
+`Node.js` `TypeScript` `React` `PostgreSQL` `WebSockets` `TDD`
+
+**[Task management system](https://github.com/paviafernando/Ballastlane_technical_interview)**
+
+Um exercício de entrevista técnica: um app full-stack de gestão de tarefas, com Clean Architecture e desenvolvimento guiado por testes.
+
+`.NET 8` `Clean Architecture` `React` `TypeScript` `PostgreSQL`
+
 **Vehicle finance and lease platform**
 
 Produto de um cliente, o nome não é público. Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.
@@ -74,19 +86,19 @@ Produto de um cliente, o nome não é público. Dá às pessoas a melhor cotaç�
 
 Produto de um cliente, o nome não é público. Um portal de clientes de uma empresa de localização, para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor que recebe os pacotes de tradução e os orçamentos, e no sistema interno de gestão de projetos.
 
-`Localization` `CMS connectors` `.NET`
+`Angular` `React` `.NET` `GraphQL` `Headless CMS`
 
 **Dealer management platform**
 
-Produto de um cliente, o nome não é público. Uma plataforma para concessionárias escrita em Node.js. Eu a mantenho na Innovate On Demand.
+Produto de um cliente, o nome não é público. Uma plataforma para concessionárias: backend em .NET, dashboard de administração em React, e serviços satélite em Node.js para ingestão de dados e integrações. Eu a mantenho na Innovate On Demand.
 
-`Node.js`
+`.NET` `React` `Node.js`
 
 **Vehicle lease quotation engine**
 
 Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.
 
-`Vehicle leasing` `Reports`
+`Node.js` `React` `PostgreSQL`
 
 **Outros projetos.** Um construtor de fluxos de trabalho low-code em Next.js. Um plugin de tradução para o Optimizely CMS 12 em .NET 8. A reengenharia de um projeto Yii (PHP) para Node.js. Apps pequenos para lojas: ponto de venda, delivery, uma loja de bicicletas e faturamento com ARCA/AFIP.
 
