@@ -319,6 +319,16 @@ export const copy = {
         bodyIntro: "Hi Fernando, I'd like to book a 30 min call at:",
       },
     },
+    chat: {
+      openLabel: "Ask about Fernando",
+      title: "Ask about Fernando",
+      intro: "Ask anything about my work, skills or background. If I'm not sure, I'll say so and you can book a call instead.",
+      placeholder: "Type a question",
+      send: "Send",
+      sending: "Sending...",
+      error: "Something went wrong. Write to me directly instead:",
+      close: "Close",
+    },
   },
 
   // ---------------------------------------------------------------- Español
@@ -565,6 +575,16 @@ export const copy = {
         bodyIntro: "Hola Fernando, quiero reservar una llamada de 30 min a las:",
       },
     },
+    chat: {
+      openLabel: "Preguntame sobre mí",
+      title: "Preguntame sobre mí",
+      intro: "Preguntá lo que quieras sobre mi trabajo, mis skills o mi trayectoria. Si no estoy seguro, te lo digo y podés reservar una llamada.",
+      placeholder: "Escribí una pregunta",
+      send: "Enviar",
+      sending: "Enviando...",
+      error: "Algo salió mal. Mejor escribime directo:",
+      close: "Cerrar",
+    },
   },
 
   // -------------------------------------------------------------- Português
@@ -810,6 +830,16 @@ export const copy = {
         subject: "Pedido de call de 30 min",
         bodyIntro: "Oi Fernando, quero agendar uma call de 30 min às:",
       },
+    },
+    chat: {
+      openLabel: "Pergunte sobre mim",
+      title: "Pergunte sobre mim",
+      intro: "Pergunte o que quiser sobre meu trabalho, minhas skills ou minha trajetória. Se eu não tiver certeza, eu digo, e você pode agendar uma call.",
+      placeholder: "Digite uma pergunta",
+      send: "Enviar",
+      sending: "Enviando...",
+      error: "Algo deu errado. Melhor me escrever direto:",
+      close: "Fechar",
     },
   },
 };

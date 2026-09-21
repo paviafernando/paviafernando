@@ -10,6 +10,7 @@ import Skills from "./components/Skills.jsx";
 import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
+import AskFernando from "./components/AskFernando.jsx";
 
 export default function App() {
   const [prefs, update] = usePrefs();
@@ -35,6 +36,7 @@ export default function App() {
         <Contact t={t} mode={prefs.mode} lang={prefs.lang} />
       </main>
       <Footer t={t} />
+      <AskFernando t={t} lang={prefs.lang} />
     </>
   );
 }
