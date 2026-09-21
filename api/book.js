@@ -17,20 +17,6 @@ const SUBJECTS = {
   es: "Pedido de llamada",
   pt: "Pedido de call",
 };
-const VISITOR_SUBJECTS = {
-  en: "Your call with Fernando Pavia",
-  es: "Tu llamada con Fernando Pavia",
-  pt: "Sua call com Fernando Pavia",
-};
-function visitorBody(lang, slotLocal, meetLink) {
-  const lines = {
-    en: [`Hi,`, ``, `You're booked with Fernando Pavia:`, slotLocal, ``, meetLink ? `Join here: ${meetLink}` : null, ``, `If you need to reschedule, just reply to this email.`],
-    es: [`Hola,`, ``, `Quedaste agendado con Fernando Pavia:`, slotLocal, ``, meetLink ? `Unite acá: ${meetLink}` : null, ``, `Si necesitás cambiar el horario, respondé este mail.`],
-    pt: [`Oi,`, ``, `Você está agendado com Fernando Pavia:`, slotLocal, ``, meetLink ? `Entre aqui: ${meetLink}` : null, ``, `Se precisar remarcar, responda este e-mail.`],
-  };
-  return (lines[lang] || lines.en).filter((l) => l !== null).join("\n");
-}
-
 function isValidEmail(s) {
   return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(s);
 }
@@ -125,8 +111,8 @@ export default async function handler(req, res) {
   //    Jitsi Meet room instead (no account or API key needed, always works).
   // 2. It cannot invite attendees ("Service accounts cannot invite
   //    attendees without Domain-Wide Delegation"), so the event is
-  //    created without an attendee list. The visitor still gets the
-  //    time and the join link through the email below.
+  //    created without an attendee list. Fernando gets the visitor's
+  //    contact info by email below and invites them by hand.
   let meetLink = null;
   let calendarError = null;
   const calendarId = process.env.GOOGLE_CALENDAR_ID;
@@ -199,31 +185,6 @@ export default async function handler(req, res) {
     console.error("Handler error", err);
     res.status(502).json({ error: "Send failed" });
     return;
-  }
-
-  // Best effort: let the visitor know too, since Calendar can't invite them
-  // directly (see the comment above insertEvent). Never fails the request,
-  // Resend's sandbox mode may not allow sending to arbitrary recipients
-  // until Fernando verifies a domain.
-  if (hasEmail) {
-    try {
-      const visitorRes = await fetch(RESEND_URL, {
-        method: "POST",
-        headers: { Authorization: `Bearer ${resendKey}`, "Content-Type": "application/json" },
-        body: JSON.stringify({
-          from: FROM_EMAIL,
-          to: [email],
-          reply_to: TO_EMAIL,
-          subject: VISITOR_SUBJECTS[lang],
-          text: visitorBody(lang, slotLocal, meetLink),
-        }),
-      });
-      if (!visitorRes.ok) {
-        console.error("Visitor email not sent (likely Resend sandbox limit)", visitorRes.status, await visitorRes.text());
-      }
-    } catch (err) {
-      console.error("Visitor email error", err);
-    }
   }
 
   res.status(200).json({ ok: true, instant: !!meetLink });
