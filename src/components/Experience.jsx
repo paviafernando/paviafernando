@@ -1,6 +1,9 @@
 import { timeline, formatPeriod } from "../content.js";
 
+const EARLIER_FROM = 4; // jobs at this index and beyond collapse to one line in print
+
 export default function Experience({ t, lang }) {
+  const earlier = timeline.slice(EARLIER_FROM);
   return (
     <section className="section" id="experience">
       <div className="container section-grid">
@@ -25,6 +28,10 @@ export default function Experience({ t, lang }) {
             );
           })}
         </ol>
+        <p className="earlier-line print-only">
+          {t.experience.earlierLabel}:{" "}
+          {earlier.map((job) => `${job.company} (${formatPeriod(job.from, job.to, lang)})`).join(", ")}
+        </p>
       </div>
     </section>
   );

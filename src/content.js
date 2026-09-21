@@ -201,6 +201,7 @@ export const copy = {
     },
     experience: {
       title: "Experience",
+      earlierLabel: "Earlier",
       items: {
         iod: {
           role: "Technical lead and senior .NET engineer",
@@ -446,6 +447,7 @@ export const copy = {
     },
     experience: {
       title: "Experiencia",
+      earlierLabel: "Antes",
       items: {
         iod: {
           role: "Líder técnico e ingeniero .NET senior",
@@ -691,6 +693,7 @@ export const copy = {
     },
     experience: {
       title: "Experiência",
+      earlierLabel: "Antes",
       items: {
         iod: {
           role: "Líder técnico e engenheiro .NET sênior",
