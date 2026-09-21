@@ -188,7 +188,7 @@ Client product, name not public. A quotation engine for vehicle leasing, plus re
 
 **AI.** I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.
 
-**Where I'm less strong.** My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work, and I haven't built a large RAG system in production. Python and Kubernetes are still gaps, and mobile is basics only.
+**Where I'm still growing.** AWS is a smaller part of my stack than .NET and Azure. I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.
 
 ## Education and languages
 

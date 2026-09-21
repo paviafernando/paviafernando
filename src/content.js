@@ -352,8 +352,8 @@ export const copy = {
           text: "I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.",
         },
         {
-          title: "Where I'm less strong",
-          text: "My AWS experience (EC2, S3, Lambda) is more limited than my .NET and Azure work, and I haven't built a large RAG system in production. Python and Kubernetes are still gaps, and mobile is basics only.",
+          title: "Where I'm still growing",
+          text: "AWS is a smaller part of my stack than .NET and Azure. I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.",
         },
       ],
     },
@@ -629,8 +629,8 @@ export const copy = {
           text: "Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app. Sigo capacitándome en esto, y una certificación de Anthropic es lo próximo en mi lista.",
         },
         {
-          title: "Donde soy menos fuerte",
-          text: "Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure, y no armé un sistema RAG grande en producción. Python y Kubernetes siguen siendo carencias, y en mobile solo tengo lo básico.",
+          title: "Donde sigo creciendo",
+          text: "AWS es una parte más chica de mi stack que .NET y Azure. Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.",
         },
       ],
     },
@@ -906,8 +906,8 @@ export const copy = {
           text: "Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app. Continuo me capacitando nisso, e uma certificação da Anthropic é o próximo passo.",
         },
         {
-          title: "Onde sou menos forte",
-          text: "Minha experiência com AWS (EC2, S3, Lambda) é mais limitada que a que tenho em .NET e Azure, e não montei um sistema RAG grande em produção. Python e Kubernetes ainda são lacunas, e em mobile só tenho o básico.",
+          title: "Onde ainda estou crescendo",
+          text: "AWS é uma parte menor do meu stack do que .NET e Azure. Ainda não montei um sistema RAG em grande escala, Python e Kubernetes continuam na minha lista, e em mobile estou em um nível básico.",
         },
       ],
     },

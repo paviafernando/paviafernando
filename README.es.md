@@ -188,7 +188,7 @@ Producto de un cliente, el nombre no es público. Un motor de cotizaciones de le
 
 **IA.** Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app. Sigo capacitándome en esto, y una certificación de Anthropic es lo próximo en mi lista.
 
-**Donde soy menos fuerte.** Mi experiencia en AWS (EC2, S3, Lambda) es más limitada que la que tengo en .NET y Azure, y no armé un sistema RAG grande en producción. Python y Kubernetes siguen siendo carencias, y en mobile solo tengo lo básico.
+**Donde sigo creciendo.** AWS es una parte más chica de mi stack que .NET y Azure. Todavía no armé un sistema RAG a gran escala, Python y Kubernetes siguen en mi lista, y en mobile estoy en un nivel básico.
 
 ## Educación e idiomas
 
