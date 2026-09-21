@@ -9,6 +9,16 @@
     <meta property="og:description" content="Senior full-stack developer and AI agent engineer. .NET, Angular, React and AI agents." />
     <meta property="og:type" content="website" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <!-- Google Analytics (GA4). Measurement ID is public by design, same as a Turnstile site key. -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-XXXXXXXXXX", { anonymize_ip: true });
+    </script>
     <script>
       // Set language, theme and mode before the first paint, so there is no flash.
       (function () {

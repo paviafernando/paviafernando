@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { languages, themes, profile } from "../content.js";
+import { track } from "../lib/analytics.js";
 
 function SunIcon() {
   return (
@@ -64,6 +65,7 @@ function ThemeMenu({ t, prefs, update }) {
               onClick={() => {
                 update({ theme: th.id });
                 setOpen(false);
+                track("theme_change", { theme: th.id });
               }}
             >
               <span className="swatch" data-swatch={th.id} aria-hidden="true" />
@@ -100,7 +102,10 @@ export default function Header({ t, prefs, update }) {
                 aria-pressed={prefs.lang === l.code}
                 title={l.name}
                 lang={l.code}
-                onClick={() => update({ lang: l.code })}
+                onClick={() => {
+                  update({ lang: l.code });
+                  track("lang_change", { lang: l.code });
+                }}
               >
                 {l.label}
               </button>
@@ -112,7 +117,11 @@ export default function Header({ t, prefs, update }) {
             className="ctrl-btn icon-only"
             aria-label={dark ? t.ui.light : t.ui.dark}
             title={dark ? t.ui.light : t.ui.dark}
-            onClick={() => update({ mode: dark ? "light" : "dark" })}
+            onClick={() => {
+              const next = dark ? "light" : "dark";
+              update({ mode: next });
+              track("mode_change", { mode: next });
+            }}
           >
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>

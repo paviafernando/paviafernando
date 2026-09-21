@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { profile, roleIds } from "../content.js";
 import ThemeMark from "./ThemeMark.jsx";
+import { track } from "../lib/analytics.js";
 
 export default function Hero({ t, theme }) {
   const [active, setActive] = useState(roleIds[0]);
@@ -31,14 +32,38 @@ export default function Hero({ t, theme }) {
             </a>
           </p>
           <div className="cta-row no-print">
-            <a className="btn btn-primary" href={`mailto:${profile.email}`}>
+            <a
+              className="btn btn-primary"
+              href={`mailto:${profile.email}`}
+              onClick={() => track("contact_click", { method: "email", location: "hero" })}
+            >
               {t.ui.email}
             </a>
-            <button type="button" className="btn" onClick={() => window.print()}>
+            <button
+              type="button"
+              className="btn"
+              onClick={() => {
+                track("cv_download", { location: "hero" });
+                window.print();
+              }}
+            >
               {t.ui.cv}
             </button>
-            <a className="btn" href={profile.linkedin} target="_blank" rel="noopener noreferrer">
+            <a
+              className="btn"
+              href={profile.linkedin}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => track("contact_click", { method: "linkedin", location: "hero" })}
+            >
               {t.ui.linkedin}
+            </a>
+            <a
+              className="btn"
+              href="#book-call"
+              onClick={() => track("contact_click", { method: "schedule_call", location: "hero" })}
+            >
+              {t.ui.scheduleCall}
             </a>
           </div>
           <dl className="facts">
@@ -63,7 +88,10 @@ export default function Hero({ t, theme }) {
                   type="button"
                   className="role-btn"
                   aria-pressed={active === id}
-                  onClick={() => setActive(id)}
+                  onClick={() => {
+                    setActive(id);
+                    track("role_select", { role: id });
+                  }}
                   onMouseEnter={() => setActive(id)}
                   onFocus={() => setActive(id)}
                 >

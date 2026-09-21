@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { profile } from "../content.js";
+import { track } from "../lib/analytics.js";
 
 function ChatIcon() {
   return (
@@ -92,6 +93,7 @@ export default function AskFernando({ t, lang }) {
     const history = messages.map((m) => ({ role: m.role, content: m.text }));
     setMessages((m) => [...m, { role: "user", text: message }]);
     setSending(true);
+    track("chat_message_sent");
     try {
       const res = await fetch("/api/ask", {
         method: "POST",
@@ -155,7 +157,17 @@ export default function AskFernando({ t, lang }) {
           {c.hint}
         </button>
       )}
-      <button type="button" className="ask-fab" aria-label={c.openLabel} onClick={() => setOpen((o) => !o)}>
+      <button
+        type="button"
+        className="ask-fab"
+        aria-label={c.openLabel}
+        onClick={() =>
+          setOpen((o) => {
+            if (!o) track("chat_opened");
+            return !o;
+          })
+        }
+      >
         <ChatIcon />
       </button>
     </div>

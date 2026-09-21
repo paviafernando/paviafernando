@@ -1,4 +1,5 @@
 import { useEffect, useMemo, useRef, useState } from "react";
+import { track } from "../lib/analytics.js";
 
 // Argentina has no daylight saving time, always UTC-3.
 const ART_OFFSET_HOURS = 3;
@@ -149,6 +150,7 @@ export default function BookCall({ t, lang }) {
   function pickSlot(slot) {
     setSelected(slot);
     setStatus("idle");
+    track("book_call_slot_select");
   }
 
   async function submit(e) {
@@ -194,13 +196,14 @@ export default function BookCall({ t, lang }) {
       if (!res.ok) throw new Error("bad response");
       const data = await res.json();
       setStatus(data?.instant ? "doneInstant" : "done");
+      track("book_call_submitted", { instant: !!data?.instant });
     } catch {
       setStatus("error");
     }
   }
 
   return (
-    <div className="book-call no-print">
+    <div className="book-call no-print" id="book-call">
       <h3>{book.title}</h3>
       <p className="book-intro">{book.intro}</p>
       <p className="book-tz">{book.timezoneNote.replace("{tz}", tz)}</p>
