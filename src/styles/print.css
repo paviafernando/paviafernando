@@ -31,6 +31,7 @@
   .no-print,
   .feature-shot,
   .theme-mark,
+  .avatar,
   .details {
     display: none !important;
   }

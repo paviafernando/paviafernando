@@ -10,6 +10,13 @@ export default function Hero({ t, theme }) {
     <section className="hero" id="top">
       <div className="container hero-grid">
         <div className="hero-main">
+          <img
+            className="avatar"
+            src={theme === "editorial" ? "/avatar/formal.jpg" : "/avatar/default.jpg"}
+            alt={profile.name}
+            width="112"
+            height="112"
+          />
           <p className="status">
             <span className="status-dot" aria-hidden="true" />
             {t.ui.status}

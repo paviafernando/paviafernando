@@ -781,3 +781,13 @@
 .ask-form .btn {
   padding: 0.5rem 0.9rem;
 }
+
+/* ---------------- Avatar ---------------- */
+.avatar {
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid var(--border-strong);
+  margin-bottom: 1.25rem;
+}
