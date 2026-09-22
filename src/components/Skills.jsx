@@ -1,4 +1,9 @@
+import { useState } from "react";
+
 export default function Skills({ t }) {
+  const [openTitle, setOpenTitle] = useState(null);
+  const toggle = (title) => setOpenTitle((cur) => (cur === title ? null : title));
+
   return (
     <section className="section" id="skills">
       <div className="container section-grid">
@@ -7,7 +12,24 @@ export default function Skills({ t }) {
           {t.skills.groups.map((g) => (
             <div key={g.title}>
               <h3>{g.title}</h3>
-              <p>{g.text}</p>
+              {g.pitch ? (
+                <>
+                  <p>{g.pitch}</p>
+                  <div className="details no-print">
+                    <button
+                      type="button"
+                      className="details-toggle"
+                      aria-expanded={openTitle === g.title}
+                      onClick={() => toggle(g.title)}
+                    >
+                      {openTitle === g.title ? t.work.hideLabel : t.work.detailsLabel}
+                    </button>
+                    {openTitle === g.title && <p className="details-text">{g.text}</p>}
+                  </div>
+                </>
+              ) : (
+                <p>{g.text}</p>
+              )}
             </div>
           ))}
         </div>

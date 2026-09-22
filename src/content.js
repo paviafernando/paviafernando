@@ -148,15 +148,16 @@ export const copy = {
       badgeTitle: "Toptal top 3% talent badge",
     },
     hero: {
-      title: "Full-stack developer and AI agent engineer",
+      title: "I build and take care of the software your business runs on.",
       intro:
-        "I'm a senior developer from Argentina. I work mostly with .NET, Angular and React, and today I build with AI agents. I've been a developer since 2007.",
+        "I've done this since 2007: business systems, internal tools, websites, and now AI features. You work with one person who owns the problem end to end, not a ticket queue.",
+      techDetails: "I work mostly with .NET, Angular and React, and today I build with AI agents.",
       stats: [
         { value: "2007", label: "working as a developer" },
         { value: "2017", label: "remote for international clients" },
         { value: "C2", label: "Cambridge English" },
       ],
-      rolesTitle: "Roles I've had in projects",
+      rolesTitle: "What I take care of",
       rolesHint: "Choose one to read more.",
     },
     roles: {
@@ -341,15 +342,18 @@ export const copy = {
       title: "Skills",
       groups: [
         {
-          title: "What I use every day",
+          title: "Everyday business systems",
+          pitch: "The backend, admin panels and internal tools your team uses every day. Websites and CMS platforms too.",
           text: ".NET and C#, ASP.NET Web API and MVC, SQL Server, Angular, JavaScript and TypeScript, HTML and CSS, WordPress, CMS integrations, localization workflows, Azure DevOps and CI/CD, Windows and IIS servers.",
         },
         {
-          title: "What I've used in production",
+          title: "Modern web, cloud and integrations",
+          pitch: "Cloud hosting, databases, payments, and connecting your systems with the other tools your business already uses.",
           text: "Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.",
         },
         {
-          title: "AI",
+          title: "AI for your business",
+          pitch: "AI agents that help me build faster, and AI features built into real products, like an assistant that talks to your customers automatically.",
           text: "I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.",
         },
         {
@@ -435,15 +439,16 @@ export const copy = {
       badgeTitle: "Insignia Toptal top 3% de talento",
     },
     hero: {
-      title: "Desarrollador full-stack e ingeniero de agentes de IA",
+      title: "Me encargo del software que tu empresa necesita para funcionar.",
       intro:
-        "Soy desarrollador senior, de Argentina. Trabajo sobre todo con .NET, Angular y React, y hoy desarrollo con agentes de IA. Soy desarrollador desde 2007.",
+        "Hago esto desde 2007: sistemas de negocio, herramientas internas, sitios web y ahora funciones con IA. Trabajás con una sola persona que se hace cargo del problema de punta a punta, no con una fila de tickets.",
+      techDetails: "Trabajo sobre todo con .NET, Angular y React, y hoy desarrollo con agentes de IA.",
       stats: [
         { value: "2007", label: "trabajando como desarrollador" },
         { value: "2017", label: "remoto para clientes del exterior" },
         { value: "C2", label: "inglés Cambridge" },
       ],
-      rolesTitle: "Roles que tuve en proyectos",
+      rolesTitle: "De qué me encargo",
       rolesHint: "Elegí uno para leer más.",
     },
     roles: {
@@ -628,15 +633,18 @@ export const copy = {
       title: "Habilidades",
       groups: [
         {
-          title: "Lo que uso todos los días",
+          title: "Sistemas de negocio del día a día",
+          pitch: "El backend, paneles de administración y herramientas internas que usa tu equipo todos los días. También sitios web y CMS.",
           text: ".NET y C#, ASP.NET Web API y MVC, SQL Server, Angular, JavaScript y TypeScript, HTML y CSS, WordPress, integraciones con CMS, flujos de localización, Azure DevOps y CI/CD, servidores Windows e IIS.",
         },
         {
-          title: "Lo que usé en producción",
+          title: "Web moderna, nube e integraciones",
+          pitch: "Hosting en la nube, bases de datos, pagos y conexión con las otras herramientas que ya usa tu empresa.",
           text: "Node.js, React y Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceros con OAuth2 y webhooks, pagos con Stripe y MercadoPago, BigQuery, eliminación de datos personales según GDPR con registro de auditoría.",
         },
         {
-          title: "IA",
+          title: "IA para tu empresa",
+          pitch: "Agentes de IA que me ayudan a desarrollar más rápido, y funciones de IA dentro de productos reales, como un asistente que le habla a tus clientes de forma automática.",
           text: "Uso Claude Code, Cursor y la extensión de Claude en Visual Studio todos los días. Desarrollé con la API de Claude, un agente de ventas con IA dentro de ComercIApp y un modelo local (Ollama) conectado a datos reales de una app. Sigo capacitándome en esto, y una certificación de Anthropic es lo próximo en mi lista.",
         },
         {
@@ -722,15 +730,16 @@ export const copy = {
       badgeTitle: "Selo Toptal top 3% de talentos",
     },
     hero: {
-      title: "Desenvolvedor full-stack e engenheiro de agentes de IA",
+      title: "Cuido do software que sua empresa precisa para funcionar.",
       intro:
-        "Sou desenvolvedor sênior, da Argentina. Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA. Sou desenvolvedor desde 2007.",
+        "Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Você trabalha com uma só pessoa que assume o problema de ponta a ponta, não uma fila de chamados.",
+      techDetails: "Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA.",
       stats: [
         { value: "2007", label: "trabalhando como desenvolvedor" },
         { value: "2017", label: "remoto para clientes do exterior" },
         { value: "C2", label: "inglês Cambridge" },
       ],
-      rolesTitle: "Papéis que tive em projetos",
+      rolesTitle: "Do que eu cuido",
       rolesHint: "Escolha um para ler mais.",
     },
     roles: {
@@ -915,15 +924,18 @@ export const copy = {
       title: "Habilidades",
       groups: [
         {
-          title: "O que uso todos os dias",
+          title: "Sistemas de negócio do dia a dia",
+          pitch: "O backend, painéis administrativos e ferramentas internas que sua equipe usa todos os dias. Também sites e CMS.",
           text: ".NET e C#, ASP.NET Web API e MVC, SQL Server, Angular, JavaScript e TypeScript, HTML e CSS, WordPress, integrações com CMS, fluxos de localização, Azure DevOps e CI/CD, servidores Windows e IIS.",
         },
         {
-          title: "O que já usei em produção",
+          title: "Web moderna, nuvem e integrações",
+          pitch: "Hospedagem na nuvem, bancos de dados, pagamentos e integração com as outras ferramentas que sua empresa já usa.",
           text: "Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.",
         },
         {
-          title: "IA",
+          title: "IA para sua empresa",
+          pitch: "Agentes de IA que me ajudam a desenvolver mais rápido, e recursos de IA dentro de produtos reais, como um assistente que fala com seus clientes automaticamente.",
           text: "Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app. Continuo me capacitando nisso, e uma certificação da Anthropic é o próximo passo.",
         },
         {

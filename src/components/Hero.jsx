@@ -5,6 +5,7 @@ import { track } from "../lib/analytics.js";
 
 export default function Hero({ t, theme, lang }) {
   const [active, setActive] = useState(roleIds[0]);
+  const [techOpen, setTechOpen] = useState(false);
   const role = t.roles[active];
 
   return (
@@ -25,6 +26,19 @@ export default function Hero({ t, theme, lang }) {
           <h1 className="name">{profile.name}</h1>
           <p className="hero-title">{t.hero.title}</p>
           <p className="hero-intro">{t.hero.intro}</p>
+          {t.hero.techDetails && (
+            <div className="details no-print">
+              <button
+                type="button"
+                className="details-toggle"
+                aria-expanded={techOpen}
+                onClick={() => setTechOpen((o) => !o)}
+              >
+                {techOpen ? t.work.hideLabel : t.work.detailsLabel}
+              </button>
+              {techOpen && <p className="details-text">{t.hero.techDetails}</p>}
+            </div>
+          )}
           <p className="toptal-line">
             {t.toptal.line}{" "}
             <a href={profile.toptal.profile} target="_blank" rel="noopener noreferrer">
