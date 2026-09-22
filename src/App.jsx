@@ -27,7 +27,7 @@ export default function App() {
       </a>
       <Header t={t} prefs={prefs} update={update} />
       <main id="main">
-        <Hero t={t} theme={prefs.theme} />
+        <Hero t={t} theme={prefs.theme} lang={prefs.lang} />
         <How t={t} />
         <Work t={t} />
         <Experience t={t} lang={prefs.lang} />

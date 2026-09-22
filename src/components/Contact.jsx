@@ -36,16 +36,14 @@ export default function Contact({ t, mode, lang }) {
             >
               {t.ui.whatsapp}
             </a>
-            <button
-              type="button"
+            <a
               className="btn"
-              onClick={() => {
-                track("cv_download", { location: "contact" });
-                window.print();
-              }}
+              href={`/cv/Fernando-Pavia-CV-${lang}.pdf`}
+              download={`Fernando-Pavia-CV-${lang}.pdf`}
+              onClick={() => track("cv_download", { location: "contact", lang })}
             >
               {t.ui.cv}
-            </button>
+            </a>
           </div>
           <BookCall t={t} lang={lang} />
           <div className="toptal-block no-print">

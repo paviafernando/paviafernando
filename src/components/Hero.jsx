@@ -3,7 +3,7 @@ import { profile, roleIds } from "../content.js";
 import ThemeMark from "./ThemeMark.jsx";
 import { track } from "../lib/analytics.js";
 
-export default function Hero({ t, theme }) {
+export default function Hero({ t, theme, lang }) {
   const [active, setActive] = useState(roleIds[0]);
   const role = t.roles[active];
 
@@ -39,16 +39,14 @@ export default function Hero({ t, theme }) {
             >
               {t.ui.email}
             </a>
-            <button
-              type="button"
+            <a
               className="btn"
-              onClick={() => {
-                track("cv_download", { location: "hero" });
-                window.print();
-              }}
+              href={`/cv/Fernando-Pavia-CV-${lang}.pdf`}
+              download={`Fernando-Pavia-CV-${lang}.pdf`}
+              onClick={() => track("cv_download", { location: "hero", lang })}
             >
               {t.ui.cv}
-            </button>
+            </a>
             <a
               className="btn"
               href={profile.linkedin}
