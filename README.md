@@ -24,7 +24,7 @@ It has five themes, light and dark mode, and it works in English, Spanish and Po
 
 ## About me
 
-I'm a senior developer from Argentina. I work mostly with .NET, Angular and React, and today I build with AI agents. I've been a developer since 2007.
+I've done this since 2007: business systems, internal tools, websites, and now AI features. You work with one person who owns the problem end to end, not a ticket queue.
 
 I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of applicants. [See my Toptal profile](https://talent.toptal.com/resume/developers/fernando-pavia)
 
@@ -182,11 +182,11 @@ Client product, name not public. A quotation engine for vehicle leasing, plus re
 
 ## Skills
 
-**What I use every day.** .NET and C#, ASP.NET Web API and MVC, SQL Server, Angular, JavaScript and TypeScript, HTML and CSS, WordPress, CMS integrations, localization workflows, Azure DevOps and CI/CD, Windows and IIS servers.
+**Everyday business systems.** .NET and C#, ASP.NET Web API and MVC, SQL Server, Angular, JavaScript and TypeScript, HTML and CSS, WordPress, CMS integrations, localization workflows, Azure DevOps and CI/CD, Windows and IIS servers.
 
-**What I've used in production.** Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.
+**Modern web, cloud and integrations.** Node.js, React and Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, third-party APIs with OAuth2 and webhooks, payments with Stripe and MercadoPago, BigQuery, GDPR data deletion with an audit trail.
 
-**AI.** I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.
+**AI for your business.** I use Claude Code, Cursor and the Claude extension in Visual Studio every day. I've built with the Claude API, an AI sales agent inside ComercIApp, and a local model (Ollama) connected to real app data. I keep training on this, and an Anthropic certification is next on my list.
 
 **Where I'm still growing.** I haven't built a large-scale RAG system yet, Python and Kubernetes are still on my list, and I'm at a basic level with mobile.
 

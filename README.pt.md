@@ -24,7 +24,7 @@ Ele tem cinco temas, modo claro e escuro, e funciona em inglês, espanhol e port
 
 ## Sobre mim
 
-Sou desenvolvedor sênior, da Argentina. Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA. Sou desenvolvedor desde 2007.
+Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Você trabalha com uma só pessoa que assume o problema de ponta a ponta, não uma fila de chamados.
 
 Sou membro da Toptal como engenheiro de IA. A Toptal diz que aceita os 3% melhores candidatos. [Ver meu perfil na Toptal](https://talent.toptal.com/resume/developers/fernando-pavia)
 
@@ -182,11 +182,11 @@ Produto de um cliente, o nome não é público. Um motor de cotações de leasin
 
 ## Habilidades
 
-**O que uso todos os dias.** .NET e C#, ASP.NET Web API e MVC, SQL Server, Angular, JavaScript e TypeScript, HTML e CSS, WordPress, integrações com CMS, fluxos de localização, Azure DevOps e CI/CD, servidores Windows e IIS.
+**Sistemas de negócio do dia a dia.** .NET e C#, ASP.NET Web API e MVC, SQL Server, Angular, JavaScript e TypeScript, HTML e CSS, WordPress, integrações com CMS, fluxos de localização, Azure DevOps e CI/CD, servidores Windows e IIS.
 
-**O que já usei em produção.** Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.
+**Web moderna, nuvem e integrações.** Node.js, React e Next.js, PostgreSQL, MySQL, MongoDB, GraphQL, Docker, Azure, AWS (EC2, S3, Lambda), GitHub Actions, APIs de terceiros com OAuth2 e webhooks, pagamentos com Stripe e MercadoPago, BigQuery, exclusão de dados pessoais conforme a GDPR com trilha de auditoria.
 
-**IA.** Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app. Continuo me capacitando nisso, e uma certificação da Anthropic é o próximo passo.
+**IA para sua empresa.** Uso Claude Code, Cursor e a extensão do Claude no Visual Studio todos os dias. Desenvolvi com a API do Claude, um agente de vendas com IA dentro do ComercIApp e um modelo local (Ollama) conectado a dados reais de um app. Continuo me capacitando nisso, e uma certificação da Anthropic é o próximo passo.
 
 **Onde ainda estou crescendo.** Ainda não montei um sistema RAG em grande escala, Python e Kubernetes continuam na minha lista, e em mobile estou em um nível básico.
 
