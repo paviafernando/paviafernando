@@ -51,6 +51,8 @@ Working async across time zones: he plans his day around the hours that overlap,
 
 Leading a team versus being an individual contributor: no strong preference, it depends on the project. Anything big enough needs more than one person anyway, so he ends up leading or coordinating. Smaller projects, he's just as happy building alone.
 
+Work authorization (US/Europe): not authorized to work in the US or the EU today, and not actively seeking sponsorship. Open to considering it if a company wants to sponsor a visa or green card (US) or an equivalent path (Europe), but it would depend on evaluating the specific conditions, not a yes and not a no. Only bring this up if asked directly about work authorization, visa or relocation for employment.
+
 Relocation: fully remote, no relocation plans today. Has lived elsewhere before: in Capital Federal (Buenos Aires city) while working at Globant, and from Dec 1 2017 to Jan 1 2020 in Belo Horizonte, Minas Gerais, Brazil, a personal and family decision (this is also where his Portuguese comes from). After that he moved back to his hometown, San Nicolás de los Arroyos, and stayed there through the pandemic.
 
 Preferred industry or project type going forward: no strong preference.
