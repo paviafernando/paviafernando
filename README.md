@@ -24,7 +24,7 @@ It has five themes, light and dark mode, and it works in English, Spanish and Po
 
 ## About me
 
-I've done this since 2007: business systems, internal tools, websites, and now AI features. You work with one person who owns the problem end to end, not a ticket queue.
+I've done this since 2007: business systems, internal tools, websites, and now AI features. I'm usually the one person responsible for a project, from the first line of code to keeping it running.
 
 I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of applicants. [See my Toptal profile](https://talent.toptal.com/resume/developers/fernando-pavia)
 
@@ -56,7 +56,7 @@ I'm a member of Toptal as an AI engineer. Toptal says it accepts the top 3% of a
 
 Online store, WhatsApp orders and invoicing in one app for small shops in Argentina. It has an AI sales agent that answers customers on WhatsApp. I'm the founder and I own product, architecture and delivery.
 
-`.NET 8` `React` `PostgreSQL` `AI agent`
+`.NET 10` `React` `PostgreSQL` `AI agent` `Meta API`
 
 **[ComercIApp Academy](https://academy.comerci.app)**
 
@@ -80,7 +80,7 @@ A technical interview exercise: a full-stack task management app, built with Cle
 
 Client product, name not public. Gives people the best cash finance and lease quote for a vehicle, so they arrive at the dealership with a budget and can negotiate. I worked on it with a team at Innovate On Demand, from the first version.
 
-`.NET` `Azure` `React` `PostgreSQL`
+`.NET` `Azure` `AWS S3` `React` `PostgreSQL` `Stream Chat`
 
 **Translation and localization portal**
 
@@ -92,13 +92,19 @@ Client product, name not public. A client portal for a localization company, for
 
 Client product, name not public. A dealer management platform: .NET backend, a React admin dashboard, and Node.js satellite services for data ingestion and integrations. I maintain it at Innovate On Demand.
 
-`.NET` `React` `Node.js`
+`.NET` `React` `Node.js` `BigQuery` `Facebook Marketing API` `Gemini` `Fortellis`
 
 **Vehicle lease quotation engine**
 
 Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.
 
 `Node.js` `React` `PostgreSQL`
+
+**Lead capture and booking platform for collision repair shops**
+
+Client product, name not public. A lead capture and booking platform for auto body and collision repair shops: replies to leads instantly, gives estimates and schedules repairs. I joined this project recently at Innovate On Demand.
+
+`AI agent`
 
 **More builds.** A low-code workflow builder in Next.js. A translation plugin for Optimizely CMS 12 in .NET 8. A re-engineering of a Yii (PHP) project to Node.js. Small apps for shops: point of sale, delivery, a bicycle shop, and billing with ARCA/AFIP.
 
@@ -125,7 +131,7 @@ Client product, name not public. A quotation engine for vehicle leasing, plus re
 
 - Online store, WhatsApp orders and invoicing in one app, made for owners without technical knowledge.
 - An AI sales agent answers customers on WhatsApp. The app also works offline and syncs later.
-- .NET 8 Web API, React and PostgreSQL. The data of each shop is isolated from the others.
+- .NET 10 Web API, React and PostgreSQL. The data of each shop is isolated from the others.
 - I decide the product, the flows and the architecture, and I use AI coding agents to build faster.
 
 ### Globalization Partners International

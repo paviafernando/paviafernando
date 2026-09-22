@@ -24,7 +24,7 @@ Ele tem cinco temas, modo claro e escuro, e funciona em inglês, espanhol e port
 
 ## Sobre mim
 
-Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Você trabalha com uma só pessoa que assume o problema de ponta a ponta, não uma fila de chamados.
+Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Costumo ser a única pessoa responsável por um projeto, desde a primeira linha de código até mantê-lo funcionando.
 
 Sou membro da Toptal como engenheiro de IA. A Toptal diz que aceita os 3% melhores candidatos. [Ver meu perfil na Toptal](https://talent.toptal.com/resume/developers/fernando-pavia)
 
@@ -56,7 +56,7 @@ Sou membro da Toptal como engenheiro de IA. A Toptal diz que aceita os 3% melhor
 
 Loja online, pedidos pelo WhatsApp e emissão de notas em um só app para pequenos comércios da Argentina. Tem um agente de vendas com IA que atende os clientes no WhatsApp. Sou o fundador e cuido do produto, da arquitetura e da entrega.
 
-`.NET 8` `React` `PostgreSQL` `AI agent`
+`.NET 10` `React` `PostgreSQL` `AI agent` `Meta API`
 
 **[ComercIApp Academy](https://academy.comerci.app)**
 
@@ -80,7 +80,7 @@ Um exercício de entrevista técnica: um app full-stack de gestão de tarefas, c
 
 Produto de um cliente, o nome não é público. Dá às pessoas a melhor cotação de financiamento e leasing de um veículo, para que cheguem à concessionária com um orçamento e possam negociar. Trabalhei nele com uma equipe na Innovate On Demand, desde a primeira versão.
 
-`.NET` `Azure` `React` `PostgreSQL`
+`.NET` `Azure` `AWS S3` `React` `PostgreSQL` `Stream Chat`
 
 **Translation and localization portal**
 
@@ -92,13 +92,19 @@ Produto de um cliente, o nome não é público. Um portal de clientes de uma emp
 
 Produto de um cliente, o nome não é público. Uma plataforma para concessionárias: backend em .NET, dashboard de administração em React, e serviços satélite em Node.js para ingestão de dados e integrações. Eu a mantenho na Innovate On Demand.
 
-`.NET` `React` `Node.js`
+`.NET` `React` `Node.js` `BigQuery` `Facebook Marketing API` `Gemini` `Fortellis`
 
 **Vehicle lease quotation engine**
 
 Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.
 
 `Node.js` `React` `PostgreSQL`
+
+**Lead capture and booking platform for collision repair shops**
+
+Produto de um cliente, o nome não é público. Uma plataforma de captação e agendamento de leads para oficinas de funilaria e pintura: responde aos leads na hora, dá orçamentos e agenda os reparos. Entrei nesse projeto recentemente na Innovate On Demand.
+
+`AI agent`
 
 **Outros projetos.** Um construtor de fluxos de trabalho low-code em Next.js. Um plugin de tradução para o Optimizely CMS 12 em .NET 8. A reengenharia de um projeto Yii (PHP) para Node.js. Apps pequenos para lojas: ponto de venda, delivery, uma loja de bicicletas e faturamento com ARCA/AFIP.
 
@@ -125,7 +131,7 @@ Produto de um cliente, o nome não é público. Um motor de cotações de leasin
 
 - Loja online, pedidos pelo WhatsApp e emissão de notas em um só app, feito para donos sem conhecimento técnico.
 - Um agente de vendas com IA atende os clientes no WhatsApp. O app também funciona offline e sincroniza depois.
-- API web em .NET 8, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.
+- API web em .NET 10, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.
 - Decido o produto, os fluxos e a arquitetura, e uso agentes de IA para programar mais rápido.
 
 ### Globalization Partners International

@@ -25,6 +25,7 @@ export default function Hero({ t, theme, lang }) {
           </p>
           <h1 className="name">{profile.name}</h1>
           <p className="hero-title">{t.hero.title}</p>
+          {t.hero.subtitle && <p className="hero-subtitle">{t.hero.subtitle}</p>}
           <p className="hero-intro">{t.hero.intro}</p>
           {t.hero.techDetails && (
             <div className="details no-print">

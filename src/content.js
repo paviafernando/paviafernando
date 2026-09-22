@@ -66,7 +66,7 @@ export const timeline = [
     company: "ComercIApp",
     from: "2025",
     to: null,
-    stack: [".NET 8", "React", "PostgreSQL", "Claude API"],
+    stack: [".NET 10", "React", "PostgreSQL", "Claude API", "Gemini"],
   },
   {
     id: "gpi",
@@ -106,14 +106,15 @@ export const timeline = [
 ];
 
 export const projects = [
-  { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 8", "React", "PostgreSQL", "AI agent"], featured: true, screenshot: "/screenshots/comerciapp.png" },
+  { id: "comerciapp", name: "ComercIApp", url: "https://comerci.app", tags: [".NET 10", "React", "PostgreSQL", "AI agent", "Meta API"], featured: true, screenshot: "/screenshots/comerciapp.png" },
   { id: "academy", name: "ComercIApp Academy", url: "https://academy.comerci.app", tags: ["ComercIApp", "Next.js", "WordPress (headless)"], featured: true, screenshot: "/screenshots/academy.png" },
   { id: "tramitessn", name: "Municipal procedures engine", url: "https://github.com/paviafernando/desafio-tecnico-innosn", tags: ["Node.js", "TypeScript", "React", "PostgreSQL", "WebSockets", "TDD"] },
   { id: "taskmgmt", name: "Task management system", url: "https://github.com/paviafernando/Ballastlane_technical_interview", tags: [".NET 8", "Clean Architecture", "React", "TypeScript", "PostgreSQL"] },
-  { id: "driveprolink", name: "Vehicle finance and lease platform", url: null, tags: [".NET", "Azure", "React", "PostgreSQL"] },
+  { id: "driveprolink", name: "Vehicle finance and lease platform", url: null, tags: [".NET", "Azure", "AWS S3", "React", "PostgreSQL", "Stream Chat"] },
   { id: "portal", name: "Translation and localization portal", url: null, tags: ["Angular", "React", ".NET", "GraphQL", "Headless CMS"] },
-  { id: "dealeromg", name: "Dealer management platform", url: null, tags: [".NET", "React", "Node.js"] },
+  { id: "dealeromg", name: "Dealer management platform", url: null, tags: [".NET", "React", "Node.js", "BigQuery", "Facebook Marketing API", "Gemini", "Fortellis"] },
   { id: "leasemax", name: "Vehicle lease quotation engine", url: null, tags: ["Node.js", "React", "PostgreSQL"] },
+  { id: "bodyrepair", name: "Lead capture and booking platform for collision repair shops", url: null, tags: ["AI agent"] },
 ];
 
 export const roleIds = ["dev", "server", "db", "analyst", "pm", "founder", "lead"];
@@ -148,9 +149,10 @@ export const copy = {
       badgeTitle: "Toptal top 3% talent badge",
     },
     hero: {
-      title: "I build and take care of the software your business runs on.",
+      title: "I take care of the software a business runs on.",
+      subtitle: "Full-stack developer and AI agent engineer",
       intro:
-        "I've done this since 2007: business systems, internal tools, websites, and now AI features. You work with one person who owns the problem end to end, not a ticket queue.",
+        "I've done this since 2007: business systems, internal tools, websites, and now AI features. I'm usually the one person responsible for a project, from the first line of code to keeping it running.",
       techDetails: "I work mostly with .NET, Angular and React, and today I build with AI agents.",
       stats: [
         { value: "2007", label: "working as a developer" },
@@ -227,12 +229,14 @@ export const copy = {
           "Client product, name not public. A client portal for a localization company, for translation quotes, projects and reports, and the internal systems behind it. I worked on the 2022 UI re-design of the portal, on the server that receives the translation packages and quotes, and on the internal project management system.",
         dealeromg: "Client product, name not public. A dealer management platform: .NET backend, a React admin dashboard, and Node.js satellite services for data ingestion and integrations. I maintain it at Innovate On Demand.",
         leasemax: "Client product, name not public. A quotation engine for vehicle leasing, plus reporting for the leasing team.",
+        bodyrepair:
+          "Client product, name not public. A lead capture and booking platform for auto body and collision repair shops: replies to leads instantly, gives estimates and schedules repairs. I joined this project recently at Innovate On Demand.",
       },
       detailsLabel: "Tech details",
       hideLabel: "Hide details",
       details: {
         comerciapp:
-          "Architecture: multi-tenant, each shop's data is isolated from the others. Offline-first on the shop floor, syncs automatically when the connection comes back. Payments with Stripe and MercadoPago, WhatsApp for orders, an AI sales agent built with the Claude API, and GDPR-style data deletion with an audit trail.",
+          "Architecture: multi-tenant, each shop's data is isolated from the others. Offline-first on the shop floor, syncs automatically when the connection comes back. Payments with MercadoPago, WhatsApp for orders, login and catalog sync with Meta (Instagram, Facebook, WhatsApp), two AI providers (Claude and Gemini, including AI-generated product images), and GDPR-style data deletion with an audit trail.",
         academy:
           "Next.js and React on the frontend. Content comes from a headless WordPress: PHP and MySQL behind the API, Next.js fetches and renders the tutorials and the search.",
         tramitessn:
@@ -240,11 +244,11 @@ export const copy = {
         taskmgmt:
           ".NET 8 Web API with Clean Architecture (API, business logic, domain and infrastructure layers), Entity Framework Core, JWT auth. React and TypeScript frontend. Backend tests with xUnit, Moq and FluentAssertions, frontend tests with Vitest and React Testing Library.",
         driveprolink:
-          "Patterns: server-side rate and quote calculations, integrations with external finance and leasing rate providers. React frontend, .NET backend, deployed on Vercel.",
+          "Patterns: server-side rate and quote calculations, integrations with external finance and leasing rate providers (MarketScan) for the calculator. File storage is pluggable across Azure Blob Storage, AWS S3 or local disk. In-app live chat with Stream Chat. React frontend, .NET backend, deployed on Vercel.",
         portal:
           "Patterns: role-based access per client account, CMS connectors that push translated content back automatically. Angular and React on the frontend, .NET backend, a GraphQL API layer, and a headless CMS architecture. Dashboard charts for spend and turnaround time.",
         dealeromg:
-          "Main backend and admin dashboard in .NET and React. Separate Node.js services handle data ingestion and third-party integrations. Incremental refactors of a legacy codebase without stopping live operations.",
+          "Main backend and admin dashboard in .NET and React. Separate Node.js services and Azure Functions handle data ingestion and third-party integrations: BigQuery for analytics, the Facebook Marketing API for ad audiences, Gemini (turns a plain-English audience description into the BigQuery filter behind it), and bridges to dealer-industry systems (Fortellis, DealerVault, M1). Incremental refactors of a legacy codebase without stopping live operations.",
         leasemax:
           "Node.js and Express backend with PostgreSQL. A React tool for quotes with PDF generation and Stripe payments, plus a separate React admin dashboard.",
       },
@@ -277,7 +281,7 @@ export const copy = {
           bullets: [
             "Online store, WhatsApp orders and invoicing in one app, made for owners without technical knowledge.",
             "An AI sales agent answers customers on WhatsApp. The app also works offline and syncs later.",
-            ".NET 8 Web API, React and PostgreSQL. The data of each shop is isolated from the others.",
+            ".NET 10 Web API, React and PostgreSQL. The data of each shop is isolated from the others.",
             "I decide the product, the flows and the architecture, and I use AI coding agents to build faster.",
           ],
         },
@@ -439,9 +443,10 @@ export const copy = {
       badgeTitle: "Insignia Toptal top 3% de talento",
     },
     hero: {
-      title: "Me encargo del software que tu empresa necesita para funcionar.",
+      title: "Me encargo del software que necesita una empresa para funcionar.",
+      subtitle: "Desarrollador full-stack e ingeniero de agentes de IA",
       intro:
-        "Hago esto desde 2007: sistemas de negocio, herramientas internas, sitios web y ahora funciones con IA. Trabajás con una sola persona que se hace cargo del problema de punta a punta, no con una fila de tickets.",
+        "Hago esto desde 2007: sistemas de negocio, herramientas internas, sitios web y ahora funciones con IA. Suelo ser la única persona responsable de un proyecto, desde la primera línea de código hasta mantenerlo funcionando.",
       techDetails: "Trabajo sobre todo con .NET, Angular y React, y hoy desarrollo con agentes de IA.",
       stats: [
         { value: "2007", label: "trabajando como desarrollador" },
@@ -518,12 +523,14 @@ export const copy = {
           "Producto de un cliente, el nombre no es público. Un portal de clientes de una empresa de localización, para cotizaciones, proyectos y reportes, y los sistemas internos que lo sostienen. Trabajé en el rediseño de la interfaz del portal en 2022, en el servidor que recibe los paquetes de traducción y las cotizaciones, y en el sistema interno de gestión de proyectos.",
         dealeromg: "Producto de un cliente, el nombre no es público. Una plataforma para concesionarias: backend en .NET, dashboard de administración en React, y servicios satélite en Node.js para ingesta de datos e integraciones. La mantengo en Innovate On Demand.",
         leasemax: "Producto de un cliente, el nombre no es público. Un motor de cotizaciones de leasing de vehículos, más los reportes para el equipo comercial.",
+        bodyrepair:
+          "Producto de un cliente, el nombre no es público. Una plataforma de captación y agendamiento de leads para talleres de chapa y pintura: responde a los leads al instante, da presupuestos y agenda las reparaciones. Me sumé a este proyecto hace poco en Innovate On Demand.",
       },
       detailsLabel: "Detalles técnicos",
       hideLabel: "Ocultar detalles",
       details: {
         comerciapp:
-          "Arquitectura: multi-tenant, los datos de cada comercio están aislados de los demás. Offline-first en el local, sincroniza solo cuando vuelve la conexión. Pagos con Stripe y MercadoPago, pedidos por WhatsApp, un agente de ventas con IA hecho con la API de Claude, y eliminación de datos según GDPR con registro de auditoría.",
+          "Arquitectura: multi-tenant, los datos de cada comercio están aislados de los demás. Offline-first en el local, sincroniza solo cuando vuelve la conexión. Pagos con MercadoPago, pedidos por WhatsApp, login e integración de catálogo con Meta (Instagram, Facebook, WhatsApp), dos proveedores de IA (Claude y Gemini, incluida generación de imágenes de producto con IA), y eliminación de datos según GDPR con registro de auditoría.",
         academy:
           "Next.js y React en el frontend. El contenido viene de un WordPress headless: PHP y MySQL detrás de la API, Next.js trae y renderiza los tutoriales y la búsqueda.",
         tramitessn:
@@ -531,11 +538,11 @@ export const copy = {
         taskmgmt:
           "API Web .NET 8 con Clean Architecture (capas de API, lógica de negocio, dominio e infraestructura), Entity Framework Core, autenticación JWT. Frontend en React y TypeScript. Tests de backend con xUnit, Moq y FluentAssertions, tests de frontend con Vitest y React Testing Library.",
         driveprolink:
-          "Patrones: cálculos de tasas y cotizaciones en el servidor, integraciones con proveedores externos de tasas de financiación y leasing. Frontend en React, backend en .NET, deploy en Vercel.",
+          "Patrones: cálculos de tasas y cotizaciones en el servidor, integraciones con proveedores externos de tasas de financiación y leasing (MarketScan) para la calculadora. El almacenamiento de archivos es intercambiable entre Azure Blob Storage, AWS S3 o disco local. Chat en vivo dentro de la app con Stream Chat. Frontend en React, backend en .NET, deploy en Vercel.",
         portal:
           "Patrones: acceso según rol por cuenta de cliente, conectores CMS que devuelven el contenido traducido de forma automática. Angular y React en el frontend, backend en .NET, una capa de API en GraphQL, y arquitectura de CMS headless. Gráficos del dashboard de gasto y tiempos de entrega.",
         dealeromg:
-          "Backend principal y dashboard de administración en .NET y React. Servicios separados en Node.js para ingesta de datos e integraciones con terceros. Refactors incrementales de un código legado sin frenar la operación.",
+          "Backend principal y dashboard de administración en .NET y React. Servicios separados en Node.js y Azure Functions para ingesta de datos e integraciones con terceros: BigQuery para analítica, la Facebook Marketing API para audiencias publicitarias, Gemini (convierte una descripción en lenguaje simple en el filtro de BigQuery detrás de la audiencia), y bridges hacia sistemas del rubro dealer (Fortellis, DealerVault, M1). Refactors incrementales de un código legado sin frenar la operación.",
         leasemax:
           "Backend en Node.js y Express con PostgreSQL. Una herramienta en React para cotizaciones con generación de PDF y pagos con Stripe, más un dashboard de administración aparte, también en React.",
       },
@@ -568,7 +575,7 @@ export const copy = {
           bullets: [
             "Tienda online, pedidos por WhatsApp y facturación en una sola app, pensada para dueños sin conocimientos técnicos.",
             "Un agente de ventas con IA atiende a los clientes por WhatsApp. La app también funciona sin conexión y sincroniza después.",
-            "API web en .NET 8, React y PostgreSQL. Los datos de cada comercio están aislados de los de los demás.",
+            "API web en .NET 10, React y PostgreSQL. Los datos de cada comercio están aislados de los de los demás.",
             "Decido el producto, los flujos y la arquitectura, y uso agentes de IA para programar más rápido.",
           ],
         },
@@ -730,9 +737,10 @@ export const copy = {
       badgeTitle: "Selo Toptal top 3% de talentos",
     },
     hero: {
-      title: "Cuido do software que sua empresa precisa para funcionar.",
+      title: "Cuido do software que uma empresa precisa para funcionar.",
+      subtitle: "Desenvolvedor full-stack e engenheiro de agentes de IA",
       intro:
-        "Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Você trabalha com uma só pessoa que assume o problema de ponta a ponta, não uma fila de chamados.",
+        "Faço isso desde 2007: sistemas de negócio, ferramentas internas, sites e agora recursos com IA. Costumo ser a única pessoa responsável por um projeto, desde a primeira linha de código até mantê-lo funcionando.",
       techDetails: "Trabalho principalmente com .NET, Angular e React, e hoje desenvolvo com agentes de IA.",
       stats: [
         { value: "2007", label: "trabalhando como desenvolvedor" },
@@ -809,12 +817,14 @@ export const copy = {
           "Produto de um cliente, o nome não é público. Um portal de clientes de uma empresa de localização, para orçamentos, projetos e relatórios, e os sistemas internos por trás dele. Trabalhei no redesenho da interface do portal em 2022, no servidor que recebe os pacotes de tradução e os orçamentos, e no sistema interno de gestão de projetos.",
         dealeromg: "Produto de um cliente, o nome não é público. Uma plataforma para concessionárias: backend em .NET, dashboard de administração em React, e serviços satélite em Node.js para ingestão de dados e integrações. Eu a mantenho na Innovate On Demand.",
         leasemax: "Produto de um cliente, o nome não é público. Um motor de cotações de leasing de veículos, mais os relatórios para o time comercial.",
+        bodyrepair:
+          "Produto de um cliente, o nome não é público. Uma plataforma de captação e agendamento de leads para oficinas de funilaria e pintura: responde aos leads na hora, dá orçamentos e agenda os reparos. Entrei nesse projeto recentemente na Innovate On Demand.",
       },
       detailsLabel: "Detalhes técnicos",
       hideLabel: "Ocultar detalhes",
       details: {
         comerciapp:
-          "Arquitetura: multi-tenant, os dados de cada comércio ficam isolados dos demais. Offline-first na loja, sincroniza automaticamente quando a conexão volta. Pagamentos com Stripe e MercadoPago, pedidos pelo WhatsApp, um agente de vendas com IA feito com a API do Claude, e exclusão de dados conforme a GDPR com trilha de auditoria.",
+          "Arquitetura: multi-tenant, os dados de cada comércio ficam isolados dos demais. Offline-first na loja, sincroniza automaticamente quando a conexão volta. Pagamentos com MercadoPago, pedidos pelo WhatsApp, login e integração de catálogo com a Meta (Instagram, Facebook, WhatsApp), dois provedores de IA (Claude e Gemini, incluindo geração de imagens de produto com IA), e exclusão de dados conforme a GDPR com trilha de auditoria.",
         academy:
           "Next.js e React no frontend. O conteúdo vem de um WordPress headless: PHP e MySQL por trás da API, o Next.js busca e renderiza os tutoriais e a busca.",
         tramitessn:
@@ -822,11 +832,11 @@ export const copy = {
         taskmgmt:
           "API Web .NET 8 com Clean Architecture (camadas de API, lógica de negócio, domínio e infraestrutura), Entity Framework Core, autenticação JWT. Frontend em React e TypeScript. Testes de backend com xUnit, Moq e FluentAssertions, testes de frontend com Vitest e React Testing Library.",
         driveprolink:
-          "Padrões: cálculos de taxas e cotações no servidor, integrações com provedores externos de taxas de financiamento e leasing. Frontend em React, backend em .NET, deploy na Vercel.",
+          "Padrões: cálculos de taxas e cotações no servidor, integrações com provedores externos de taxas de financiamento e leasing (MarketScan) para a calculadora. O armazenamento de arquivos é intercambiável entre Azure Blob Storage, AWS S3 ou disco local. Chat ao vivo dentro do app com Stream Chat. Frontend em React, backend em .NET, deploy na Vercel.",
         portal:
           "Padrões: acesso por perfil de cada conta de cliente, conectores de CMS que devolvem o conteúdo traduzido automaticamente. Angular e React no frontend, backend em .NET, uma camada de API em GraphQL, e arquitetura de CMS headless. Gráficos do dashboard de gasto e prazos de entrega.",
         dealeromg:
-          "Backend principal e dashboard de administração em .NET e React. Serviços separados em Node.js para ingestão de dados e integrações com terceiros. Refatorações incrementais de um código legado sem parar a operação.",
+          "Backend principal e dashboard de administração em .NET e React. Serviços separados em Node.js e Azure Functions para ingestão de dados e integrações com terceiros: BigQuery para analytics, a Facebook Marketing API para audiências publicitárias, Gemini (transforma uma descrição em linguagem simples no filtro de BigQuery por trás da audiência), e bridges para sistemas do setor de concessionárias (Fortellis, DealerVault, M1). Refatorações incrementais de um código legado sem parar a operação.",
         leasemax:
           "Backend em Node.js e Express com PostgreSQL. Uma ferramenta em React para cotações com geração de PDF e pagamentos com Stripe, mais um dashboard de administração à parte, também em React.",
       },
@@ -859,7 +869,7 @@ export const copy = {
           bullets: [
             "Loja online, pedidos pelo WhatsApp e emissão de notas em um só app, feito para donos sem conhecimento técnico.",
             "Um agente de vendas com IA atende os clientes no WhatsApp. O app também funciona offline e sincroniza depois.",
-            "API web em .NET 8, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.",
+            "API web em .NET 10, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.",
             "Decido o produto, os fluxos e a arquitetura, e uso agentes de IA para programar mais rápido.",
           ],
         },
