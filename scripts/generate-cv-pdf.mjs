@@ -33,15 +33,17 @@ function esc(s) {
   return String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 }
 
-function buildHtml(lang) {
+function buildHtml(lang, full = false) {
   const t = copy[lang];
   const l = LABELS[lang];
-  const experienceItems = RECENT_JOB_IDS.map((id) => {
+  const jobIds = full ? timeline.map((j) => j.id) : RECENT_JOB_IDS;
+  const experienceItems = jobIds.map((id) => {
     const job = timeline.find((j) => j.id === id);
     const item = t.experience.items[id];
     return { job, item };
   });
-  const earlierLine = EARLIER_JOBS.map((j) => `${j.company} (${formatPeriod(j.from, j.to, lang)})`).join(" &middot; ");
+  const earlierJobs = full ? [] : EARLIER_JOBS;
+  const earlierLine = earlierJobs.map((j) => `${j.company} (${formatPeriod(j.from, j.to, lang)})`).join(" &middot; ");
   const skillGroups = t.skills.groups.slice(0, 3); // drop "still growing", not for this document
 
   return `<!doctype html>
@@ -114,7 +116,7 @@ function buildHtml(lang) {
   .summary { font-size: 10.4pt; line-height: 1.6; margin: 0 0 3mm; color: #2b3240; }
   .toptal-line { font-size: 9.4pt; margin: 3mm 0 0; font-style: italic; color: #56617a; line-height: 1.5; }
 
-  .job { margin-bottom: 6.5mm; }
+  .job { margin-bottom: ${full ? "3.6mm" : "6.5mm"}; }
   .job:last-child { margin-bottom: 0; }
   .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 3mm; }
   .job-role { font-size: 10.6pt; font-weight: 700; color: #14213d; }
@@ -174,7 +176,7 @@ function buildHtml(lang) {
       <h2>${esc(l.experience)}</h2>
       ${experienceItems
         .map(({ job, item }) => {
-          const bullets = item.bullets.slice(0, 2);
+          const bullets = item.bullets.slice(0, full ? 1 : 2);
           return `<div class="job">
           <div class="job-head">
             <span class="job-role">${esc(item.role)}</span>
@@ -185,7 +187,7 @@ function buildHtml(lang) {
         </div>`;
         })
         .join("")}
-      <p class="earlier-line"><b>${esc(l.earlier)}:</b> ${earlierLine}</p>
+      ${earlierLine ? `<p class="earlier-line"><b>${esc(l.earlier)}:</b> ${earlierLine}</p>` : ""}
     </main>
   </div>
 </body>
@@ -196,17 +198,14 @@ async function main() {
   await mkdir(OUT_DIR, { recursive: true });
   const browser = await chromium.launch();
   for (const lang of ["en", "es", "pt"]) {
-    const page = await browser.newPage();
-    await page.setContent(buildHtml(lang), { waitUntil: "networkidle" });
-    const outFile = path.join(OUT_DIR, `Fernando-Pavia-CV-${lang}.pdf`);
-    await page.pdf({
-      path: outFile,
-      format: "A4",
-      printBackground: true,
-      margin: { top: 0, bottom: 0, left: 0, right: 0 },
-    });
-    await page.close();
-    console.log("Wrote", outFile);
+    for (const full of [false, true]) {
+      const page = await browser.newPage();
+      await page.setContent(buildHtml(lang, full), { waitUntil: "networkidle" });
+      const outFile = path.join(OUT_DIR, `Fernando-Pavia-CV-${lang}${full ? "-full" : ""}.pdf`);
+      await page.pdf({ path: outFile, format: "A4", printBackground: true, margin: { top: 0, bottom: 0, left: 0, right: 0 } });
+      await page.close();
+      console.log("Wrote", outFile);
+    }
   }
   await browser.close();
 }

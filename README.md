@@ -134,6 +134,14 @@ Client product, name not public. A lead capture and booking platform for auto bo
 - .NET 10 Web API, React and PostgreSQL. The data of each shop is isolated from the others.
 - I decide the product, the flows and the architecture, and I use AI coding agents to build faster.
 
+### Toptal
+
+**AI engineer, Toptal member** | Mar 2026 - Present
+
+*Remote, contract work*
+
+- Member of the Toptal network as an AI engineer, open to contract work with Toptal clients.
+
 ### Globalization Partners International
 
 **.NET senior developer, globalization solutions** | Dec 2017 - Jul 2025

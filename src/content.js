@@ -69,6 +69,12 @@ export const timeline = [
     stack: [".NET 10", "React", "PostgreSQL", "Claude API", "Gemini"],
   },
   {
+    id: "toptal",
+    company: "Toptal",
+    from: "2026-03",
+    to: null,
+  },
+  {
     id: "gpi",
     company: "Globalization Partners International",
     from: "2017-12",
@@ -128,6 +134,7 @@ export const copy = {
       skip: "Skip to content",
       status: "Open to part-time and contract work",
       cv: "Download CV",
+      cvFull: "Full CV (all companies)",
       email: "Email me",
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
@@ -285,6 +292,13 @@ export const copy = {
             "I decide the product, the flows and the architecture, and I use AI coding agents to build faster.",
           ],
         },
+        toptal: {
+          role: "AI engineer, Toptal member",
+          note: "Remote, contract work",
+          bullets: [
+            "Member of the Toptal network as an AI engineer, open to contract work with Toptal clients.",
+          ],
+        },
         gpi: {
           role: ".NET senior developer, globalization solutions",
           note: "Contractor, fully remote, 7.5 years",
@@ -422,6 +436,7 @@ export const copy = {
       skip: "Saltar al contenido",
       status: "Disponible para trabajo part-time y por contrato",
       cv: "Descargar CV",
+      cvFull: "CV completo (todas las empresas)",
       email: "Escribime",
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
@@ -579,6 +594,13 @@ export const copy = {
             "Decido el producto, los flujos y la arquitectura, y uso agentes de IA para programar más rápido.",
           ],
         },
+        toptal: {
+          role: "Ingeniero de IA, miembro de Toptal",
+          note: "Remoto, trabajo por contrato",
+          bullets: [
+            "Miembro de la red de Toptal como ingeniero de IA, disponible para trabajo por contrato con clientes de Toptal.",
+          ],
+        },
         gpi: {
           role: "Desarrollador .NET senior, soluciones de globalización",
           note: "Contratista, 100% remoto, 7,5 años",
@@ -716,6 +738,7 @@ export const copy = {
       skip: "Ir para o conteúdo",
       status: "Disponível para trabalho part-time e por contrato",
       cv: "Baixar CV",
+      cvFull: "CV completo (todas as empresas)",
       email: "Me escreva",
       linkedin: "LinkedIn",
       whatsapp: "WhatsApp",
@@ -871,6 +894,13 @@ export const copy = {
             "Um agente de vendas com IA atende os clientes no WhatsApp. O app também funciona offline e sincroniza depois.",
             "API web em .NET 10, React e PostgreSQL. Os dados de cada loja ficam isolados dos das outras.",
             "Decido o produto, os fluxos e a arquitetura, e uso agentes de IA para programar mais rápido.",
+          ],
+        },
+        toptal: {
+          role: "Engenheiro de IA, membro da Toptal",
+          note: "Remoto, trabalho por contrato",
+          bullets: [
+            "Membro da rede da Toptal como engenheiro de IA, disponível para trabalho por contrato com clientes da Toptal.",
           ],
         },
         gpi: {

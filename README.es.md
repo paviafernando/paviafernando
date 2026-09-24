@@ -134,6 +134,14 @@ Producto de un cliente, el nombre no es público. Una plataforma de captación y
 - API web en .NET 10, React y PostgreSQL. Los datos de cada comercio están aislados de los de los demás.
 - Decido el producto, los flujos y la arquitectura, y uso agentes de IA para programar más rápido.
 
+### Toptal
+
+**Ingeniero de IA, miembro de Toptal** | mar 2026 - Actualidad
+
+*Remoto, trabajo por contrato*
+
+- Miembro de la red de Toptal como ingeniero de IA, disponible para trabajo por contrato con clientes de Toptal.
+
 ### Globalization Partners International
 
 **Desarrollador .NET senior, soluciones de globalización** | dic 2017 - jul 2025

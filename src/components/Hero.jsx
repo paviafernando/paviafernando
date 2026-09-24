@@ -64,6 +64,14 @@ export default function Hero({ t, theme, lang }) {
             </a>
             <a
               className="btn"
+              href={`/cv/Fernando-Pavia-CV-${lang}-full.pdf`}
+              download={`Fernando-Pavia-CV-${lang}-full.pdf`}
+              onClick={() => track("cv_full_download", { location: "hero", lang })}
+            >
+              {t.ui.cvFull}
+            </a>
+            <a
+              className="btn"
               href={profile.linkedin}
               target="_blank"
               rel="noopener noreferrer"

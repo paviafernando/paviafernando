@@ -44,6 +44,14 @@ export default function Contact({ t, mode, lang }) {
             >
               {t.ui.cv}
             </a>
+            <a
+              className="btn"
+              href={`/cv/Fernando-Pavia-CV-${lang}-full.pdf`}
+              download={`Fernando-Pavia-CV-${lang}-full.pdf`}
+              onClick={() => track("cv_full_download", { location: "contact", lang })}
+            >
+              {t.ui.cvFull}
+            </a>
           </div>
           <BookCall t={t} lang={lang} />
           <div className="toptal-block no-print">
