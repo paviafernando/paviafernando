@@ -1,8 +1,8 @@
-import { useState } from "react";
+import { useDetailsToggle } from "../lib/detailsToggle.js";
 
-export default function Skills({ t }) {
-  const [openTitle, setOpenTitle] = useState(null);
-  const toggle = (title) => setOpenTitle((cur) => (cur === title ? null : title));
+export default function Skills({ t, detailsDefault = false, detailsLocked = false }) {
+  const titles = t.skills.groups.filter((g) => g.pitch).map((g) => g.title);
+  const { isOpen, toggle } = useDetailsToggle(titles, detailsDefault, detailsLocked);
 
   return (
     <section className="section" id="skills">
@@ -16,15 +16,17 @@ export default function Skills({ t }) {
                 <>
                   <p>{g.pitch}</p>
                   <div className="details no-print">
-                    <button
-                      type="button"
-                      className="details-toggle"
-                      aria-expanded={openTitle === g.title}
-                      onClick={() => toggle(g.title)}
-                    >
-                      {openTitle === g.title ? t.work.hideLabel : t.work.detailsLabel}
-                    </button>
-                    {openTitle === g.title && <p className="details-text">{g.text}</p>}
+                    {!detailsLocked && (
+                      <button
+                        type="button"
+                        className="details-toggle"
+                        aria-expanded={isOpen(g.title)}
+                        onClick={() => toggle(g.title)}
+                      >
+                        {isOpen(g.title) ? t.work.hideLabel : t.work.detailsLabel}
+                      </button>
+                    )}
+                    {isOpen(g.title) && <p className="details-text">{g.text}</p>}
                   </div>
                 </>
               ) : (

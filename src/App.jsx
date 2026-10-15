@@ -11,27 +11,34 @@ import About from "./components/About.jsx";
 import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import AskFernando from "./components/AskFernando.jsx";
+import Share from "./components/Share.jsx";
 
 export default function App() {
-  const [prefs, update] = usePrefs();
+  const isShare =
+    typeof window !== "undefined" && window.location.pathname.replace(/\/$/, "") === "/share";
+  const [prefs, update, locked] = usePrefs();
   const t = copy[prefs.lang];
+  const detailsDefault = prefs.details === "expanded";
+  const detailsLocked = !!locked.details;
 
   useEffect(() => {
     document.title = t.meta.title;
   }, [t]);
+
+  if (isShare) return <Share />;
 
   return (
     <>
       <a className="skip-link" href="#main">
         {t.ui.skip}
       </a>
-      <Header t={t} prefs={prefs} update={update} />
+      <Header t={t} prefs={prefs} update={update} locked={locked} />
       <main id="main">
-        <Hero t={t} theme={prefs.theme} lang={prefs.lang} />
+        <Hero t={t} theme={prefs.theme} lang={prefs.lang} detailsDefault={detailsDefault} detailsLocked={detailsLocked} />
         <How t={t} />
-        <Work t={t} />
-        <Experience t={t} lang={prefs.lang} />
-        <Skills t={t} />
+        <Work t={t} detailsDefault={detailsDefault} detailsLocked={detailsLocked} />
+        <Experience t={t} lang={prefs.lang} detailsDefault={detailsDefault} detailsLocked={detailsLocked} />
+        <Skills t={t} detailsDefault={detailsDefault} detailsLocked={detailsLocked} />
         <About t={t} />
         <Contact t={t} mode={prefs.mode} lang={prefs.lang} />
       </main>

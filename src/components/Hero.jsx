@@ -2,10 +2,12 @@ import { useState } from "react";
 import { profile, roleIds } from "../content.js";
 import ThemeMark from "./ThemeMark.jsx";
 import { track } from "../lib/analytics.js";
+import { useDetailsToggle } from "../lib/detailsToggle.js";
 
-export default function Hero({ t, theme, lang }) {
+export default function Hero({ t, theme, lang, detailsDefault = false, detailsLocked = false }) {
   const [active, setActive] = useState(roleIds[0]);
-  const [techOpen, setTechOpen] = useState(false);
+  const { isOpen, toggle } = useDetailsToggle(["hero"], detailsDefault, detailsLocked);
+  const techOpen = isOpen("hero");
   const role = t.roles[active];
 
   return (
@@ -29,14 +31,16 @@ export default function Hero({ t, theme, lang }) {
           <p className="hero-intro">{t.hero.intro}</p>
           {t.hero.techDetails && (
             <div className="details no-print">
-              <button
-                type="button"
-                className="details-toggle"
-                aria-expanded={techOpen}
-                onClick={() => setTechOpen((o) => !o)}
-              >
-                {techOpen ? t.work.hideLabel : t.work.detailsLabel}
-              </button>
+              {!detailsLocked && (
+                <button
+                  type="button"
+                  className="details-toggle"
+                  aria-expanded={techOpen}
+                  onClick={() => toggle("hero")}
+                >
+                  {techOpen ? t.work.hideLabel : t.work.detailsLabel}
+                </button>
+              )}
               {techOpen && <p className="details-text">{t.hero.techDetails}</p>}
             </div>
           )}

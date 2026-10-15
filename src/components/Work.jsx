@@ -1,5 +1,5 @@
-import { useState } from "react";
 import { projects } from "../content.js";
+import { useDetailsToggle } from "../lib/detailsToggle.js";
 
 function host(url) {
   try {
@@ -28,24 +28,29 @@ function Name({ p }) {
   );
 }
 
-function Details({ t, p, open, onToggle }) {
+function Details({ t, p, open, locked, onToggle }) {
   const text = t.work.details?.[p.id];
   if (!text) return null;
   return (
     <div className="details no-print">
-      <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
-        {open ? t.work.hideLabel : t.work.detailsLabel}
-      </button>
+      {!locked && (
+        <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
+          {open ? t.work.hideLabel : t.work.detailsLabel}
+        </button>
+      )}
       {open && <p className="details-text">{text}</p>}
     </div>
   );
 }
 
-export default function Work({ t }) {
+export default function Work({ t, detailsDefault = false, detailsLocked = false }) {
   const featured = projects.filter((p) => p.featured);
   const rest = projects.filter((p) => !p.featured);
-  const [openId, setOpenId] = useState(null);
-  const toggle = (id) => setOpenId((cur) => (cur === id ? null : id));
+  const { isOpen, toggle } = useDetailsToggle(
+    projects.map((p) => p.id),
+    detailsDefault,
+    detailsLocked
+  );
 
   return (
     <section className="section" id="work">
@@ -65,7 +70,7 @@ export default function Work({ t }) {
                 <p>{t.work.items[p.id]}</p>
                 {!p.url && <p className="soon">{t.ui.soon}</p>}
                 <Tags tags={p.tags} />
-                <Details t={t} p={p} open={openId === p.id} onToggle={() => toggle(p.id)} />
+                <Details t={t} p={p} open={isOpen(p.id)} locked={detailsLocked} onToggle={() => toggle(p.id)} />
               </article>
             ))}
           </div>
@@ -81,7 +86,7 @@ export default function Work({ t }) {
                 </div>
                 <p>{t.work.items[p.id]}</p>
                 <Tags tags={p.tags} />
-                <Details t={t} p={p} open={openId === p.id} onToggle={() => toggle(p.id)} />
+                <Details t={t} p={p} open={isOpen(p.id)} locked={detailsLocked} onToggle={() => toggle(p.id)} />
               </li>
             ))}
           </ul>

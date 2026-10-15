@@ -1,15 +1,17 @@
-import { useState } from "react";
 import { timeline, formatPeriod } from "../content.js";
+import { useDetailsToggle } from "../lib/detailsToggle.js";
 
 const EARLIER_FROM = 4; // jobs at this index and beyond collapse to one line in print
 
-function StackDetails({ t, job, item, open, onToggle }) {
+function StackDetails({ t, job, item, open, locked, onToggle }) {
   if (!job.stack?.length) return null;
   return (
     <div className="details no-print">
-      <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
-        {open ? t.work.hideLabel : t.work.detailsLabel}
-      </button>
+      {!locked && (
+        <button type="button" className="details-toggle" aria-expanded={open} onClick={onToggle}>
+          {open ? t.work.hideLabel : t.work.detailsLabel}
+        </button>
+      )}
       {open && (
         <>
           <ul className="tags">
@@ -24,10 +26,13 @@ function StackDetails({ t, job, item, open, onToggle }) {
   );
 }
 
-export default function Experience({ t, lang }) {
+export default function Experience({ t, lang, detailsDefault = false, detailsLocked = false }) {
   const earlier = timeline.slice(EARLIER_FROM);
-  const [openId, setOpenId] = useState(null);
-  const toggle = (id) => setOpenId((cur) => (cur === id ? null : id));
+  const { isOpen, toggle } = useDetailsToggle(
+    timeline.map((j) => j.id),
+    detailsDefault,
+    detailsLocked
+  );
 
   return (
     <section className="section" id="experience">
@@ -48,7 +53,14 @@ export default function Experience({ t, lang }) {
                       <li key={b}>{b}</li>
                     ))}
                   </ul>
-                  <StackDetails t={t} job={job} item={item} open={openId === job.id} onToggle={() => toggle(job.id)} />
+                  <StackDetails
+                    t={t}
+                    job={job}
+                    item={item}
+                    open={isOpen(job.id)}
+                    locked={detailsLocked}
+                    onToggle={() => toggle(job.id)}
+                  />
                 </div>
               </li>
             );

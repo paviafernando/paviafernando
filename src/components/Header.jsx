@@ -78,7 +78,7 @@ function ThemeMenu({ t, prefs, update }) {
   );
 }
 
-export default function Header({ t, prefs, update }) {
+export default function Header({ t, prefs, update, locked = {} }) {
   const dark = prefs.mode === "dark";
   return (
     <header className="site-header no-print">
@@ -93,6 +93,7 @@ export default function Header({ t, prefs, update }) {
           <a href="#contact">{t.ui.nav.contact}</a>
         </nav>
         <div className="controls">
+          {!locked.lang && (
           <div className="seg" role="group" aria-label={t.ui.language}>
             {languages.map((l) => (
               <button
@@ -111,7 +112,9 @@ export default function Header({ t, prefs, update }) {
               </button>
             ))}
           </div>
-          <ThemeMenu t={t} prefs={prefs} update={update} />
+          )}
+          {!locked.theme && <ThemeMenu t={t} prefs={prefs} update={update} />}
+          {!locked.mode && (
           <button
             type="button"
             className="ctrl-btn icon-only"
@@ -125,6 +128,7 @@ export default function Header({ t, prefs, update }) {
           >
             {dark ? <SunIcon /> : <MoonIcon />}
           </button>
+          )}
         </div>
       </div>
     </header>
